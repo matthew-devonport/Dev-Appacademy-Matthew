@@ -8,3 +8,10 @@ export function getQuotes () {
       return res.body
     })
 }
+
+export function getQuestions () {
+  return request.get(rootURL + '/ollie')
+  .then(res => {
+    return res.body
+  })
+}
