@@ -1,16 +1,21 @@
 const env = process.env.NODE_ENV || 'development'
 const config = require('../knexfile')[env]
-const db = require('knex')(config)
+const connection = require('knex')(config)
 
 module.exports = {
   getQuotes,
-  getQuotesByName
+  getQuotesByName,
+  getQuestions
 }
 
-function getQuotes (db = db) {
+function getQuotes (db = connection) {
   return db('quotes').select()
 }
 
-function getQuotesByName (name, db = db) {
+function getQuotesByName (name, db = connection) {
   return db('quotes').where('quotes.name', name).select()
+}
+
+function getQuestions (db = connection) {
+  return db('questions').select()
 }

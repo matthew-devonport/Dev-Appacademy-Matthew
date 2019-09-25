@@ -10,7 +10,7 @@ beforeEach(() => {
   return testDb.seed.run()
 })
 
-describe('db', () => {
+describe('quote db', () => {
   test('getQuotes gets all quotes', () => {
     return db.getQuotes(testDb)
     .then((quotes) => {
@@ -22,6 +22,15 @@ describe('db', () => {
     .then((quotes) => {
       expect(quotes.length).toBe(4)
       expect(quotes[0].quote).toContain('Great hustle')
+    })
+  })
+})
+
+describe('questions db', () => {
+  testDb('getQuestions gets all questions', () => {
+    return db.getQuestions(testDb)
+    .then((questions) => {
+      expect(questions.length).toBe(19)
     })
   })
 })
