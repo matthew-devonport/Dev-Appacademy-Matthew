@@ -21,7 +21,7 @@ describe('db', () => {
     return db.getQuotesByName('Ollie', testDb)
     .then((quotes) => {
       expect(quotes.length).toBe(4)
-      expect(quotes[0].quote).toContain('Great hustle out')
+      expect(quotes[0].quote).toContain('Great hustle')
     })
   })
 })
