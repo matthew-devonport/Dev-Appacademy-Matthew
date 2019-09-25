@@ -4,7 +4,7 @@ class QuoteBox extends React.Component {
 
   render() {
     return (
-      <div id="quote-box">Quote here</div>
+      <div id="quote-box">Quote hereajsdhfgaks dhfgbaskdhjgbasg</div>
     )
   }
 }

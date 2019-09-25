@@ -7,6 +7,8 @@ import QuoteBox from './QuoteBox'
 class Jv extends Room {
   
   name = "JV"
+  top = 20
+  left = 20
 
   render() {
     return (
@@ -14,7 +16,8 @@ class Jv extends Room {
         <p>Hello, I am JV</p>
         <button onClick={() => this.handleClick(0)}>Home</button>
         <button onClick={this.toggleQuote}>Quote</button>
-        {this.state.quoteIsShowing && <QuoteBox />}
+        
+        {/* {this.state.quoteIsShowing && <QuoteBox />} */}
       </div>
     )
   }
