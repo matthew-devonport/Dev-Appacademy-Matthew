@@ -8,10 +8,9 @@ class Jv extends Room {
   render() {
     return (
       <div>
-        <p>Hello, I am JV</p>
         <button onClick={() => this.handleClick(0)}>Home</button>
       </div>
-    )
+    );
   }
 }
 
