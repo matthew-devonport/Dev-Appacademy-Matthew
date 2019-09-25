@@ -15,7 +15,7 @@ exports.seed = function(knex) {
         {id: 8, name: 'JV', quote: '*thunk*.... It\'s like a rolling pin hitting a cabbage'},
         {id: 9, name: 'JV', quote: 'Most importantly, have fun!'},
         {id: 10, name: 'Han', quote: 'Niiiiice'},
-        {id: 11, name: 'Han', quote: 'I\'m sorry'},
+        {id: 11, name: 'Han', quote: 'I\'m so sorry'},
         {id: 12, name: 'Han', quote: 'Yeaaaaah'},
         {id: 13, name: 'Kelly', quote: 'My cohort was the best cohort'},
         {id: 14, name: 'Kelly', quote: 'Look puppies!'},

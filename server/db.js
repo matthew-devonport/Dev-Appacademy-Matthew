@@ -3,9 +3,14 @@ const config = require('../knexfile')[env]
 const db = require('knex')(config)
 
 module.exports = {
-  getQuotes
+  getQuotes,
+  getQuotesByName
 }
 
 function getQuotes (db = db) {
   return db('quotes').select()
+}
+
+function getQuotesByName (name, db = db) {
+  return db('quotes').where('quotes.name', name).select()
 }
