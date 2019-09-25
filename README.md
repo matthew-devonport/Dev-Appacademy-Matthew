@@ -16,11 +16,17 @@ Completed main page + 5 teacher components
 
 ### Timeline
 
-*to do*
+- Thursday: Backend is done
+- Friday:
+- Sat/Sun:
+- Monday
+- Tuesday
+- Wednesday
 
 **Daily**
 
-Stand ups at 9, 10:30, 12/14?, 15:30, 16:50.
+Sart the day with what went well and what didn't the day before.
+Stand ups at 9, 10:30, 14, 15:30, 16:50.
 Review this document.
 
 ### *Dealing with conflicts*
