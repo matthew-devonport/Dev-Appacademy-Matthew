@@ -1,9 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Room from './Room'
+import QuoteBox from './QuoteBox'
 
 
 class Jv extends Room {
+  
+  name = "JV"
+  top = 20
+  left = 20
 
   render() {
     return (
@@ -18,6 +23,9 @@ class Jv extends Room {
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowfullscreen
         ></iframe>
+        <button onClick={this.toggleQuote}>Quote</button>
+        
+        {/* {this.state.quoteIsShowing && <QuoteBox />} */}
       </div>
     );
   }

@@ -1,0 +1,30 @@
+/* body {
+    background: black
+} */
+
+#quote-box{
+    position: fixed;
+    top: 0;
+    left: 30vw;
+    padding: 2vw;
+    text-align: center;
+	
+	background: #afbcbe;
+    border-radius: .4em;
+    width: 20vw;
+}
+
+#quote-box:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 41px solid transparent;
+	border-top-color: #afbcbe;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -20.5px;
+	margin-bottom: -41px;
+}
