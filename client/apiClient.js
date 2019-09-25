@@ -10,12 +10,12 @@ export function getQuotes () {
 }
 
 export function getQuestions () {
-  return request.get(rootURL + '/ollie')
+  return request.get(rootUrl + '/ollie')
   .then(res => {
     return res.body
   })
 }
 
-export function getQuestionsByName (name) {
-  return request.get(rootURL + `/quotes/${name}`)
+export function getQuotesByName (name) {
+  return request.get(rootUrl + `/quotes/${name}`).catch(e => console.log(e))
 }

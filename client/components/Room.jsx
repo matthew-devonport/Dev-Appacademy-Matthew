@@ -2,7 +2,7 @@ import React from 'react'
 
 import { changePage } from '../actions'
 
-
+import { getQuotesByName } from '../apiClient'
 
 class Room extends React.Component {
 
@@ -15,6 +15,7 @@ class Room extends React.Component {
         if (this.props.page == 0) { return }
         console.log('mounted boiii', this.name)
         this.setQuoteInterval()
+        this.getQuote()
     }
 
     componentWillUnmount() {
@@ -22,6 +23,13 @@ class Room extends React.Component {
         clearInterval(this.state.interval)
     }
 
+     getQuote = () => {
+      getQuotesByName(this.name)
+      .then(quotes => {
+          console.log(quotes.body)
+      })
+      
+     }
     setQuoteInterval = () => {
         let interval = setInterval(this.toggleQuote, 5000)
         this.setState({
