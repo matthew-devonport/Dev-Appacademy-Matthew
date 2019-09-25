@@ -19,10 +19,8 @@ router.get('/ollie', (req, res) => {
 })
 
 router.get('/quotes/:name', (req, res) => {
-  console.log(req.params.name)
   db.getQuotesByName(req.params.name)
   .then(results => {
-    console.log(results)
     res.json(results)
   })
 })
