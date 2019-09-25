@@ -5,6 +5,9 @@ import QuoteBox from './QuoteBox'
 
 
 class Jv extends Room {
+  
+  name = "JV"
+
   render() {
     return (
       <div>

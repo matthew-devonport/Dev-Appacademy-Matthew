@@ -9,6 +9,7 @@ import Room from './Room'
 
 
 class MainRoom extends Room {
+
   render() {
     return (
       <div>

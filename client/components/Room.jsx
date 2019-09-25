@@ -3,6 +3,7 @@ import React from 'react'
 import { changePage } from '../actions'
 
 
+
 class Room extends React.Component {
 
     state = {
@@ -11,7 +12,8 @@ class Room extends React.Component {
     }
 
     componentDidMount() {
-        console.log('mounted boiii')
+        if (this.props.page == 0) { return }
+        console.log('mounted boiii', this.name)
         this.setQuoteInterval()
     }
 
@@ -21,7 +23,7 @@ class Room extends React.Component {
     }
 
     setQuoteInterval = () => {
-        let interval = setInterval(this.toggleQuote, 1000)
+        let interval = setInterval(this.toggleQuote, 15000)
         this.setState({
             interval: interval
         })
@@ -31,16 +33,20 @@ class Room extends React.Component {
         this.setState({
             quoteIsShowing: !this.state.quoteIsShowing
         })
-        console.log(this.state)
+        setTimeout(() => {
+            this.setState({
+                quoteIsShowing: !this.state.quoteIsShowing
+            })
+        }, 5000)
+    }
+
+    showQuote = () => {
+
     }
 
     handleClick = (pageNum) => {
         const { dispatch } = this.props
         dispatch(changePage(pageNum))
-    }
-
-    createTextBox = () => {
-        console.log(this.state)
     }
 }
 
