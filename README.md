@@ -8,11 +8,11 @@ Completed main page + 5 teacher components
 
 ### "Roles"
 
-Product owner: Matt
-GitMaster: Matt
-Fun/VibeMasters: Sylvia, Nick
-VisionMaster: Caleb
-StandUpMaster/Timekeeper: Noemie
+- Product owner: Matt
+- GitMaster: Matt
+- Fun/VibeMasters: Sylvia, Nick
+- VisionMaster: Caleb
+- StandUpMaster/Timekeeper: Noemie
 
 ### Timeline
 
@@ -27,11 +27,11 @@ Review this document.
 
 ## Needs & Wants
 
-**Matt**: Exercising
-**Caleb**: Smokos. Everyone has clarity on what we are building.
-**Nick**: Exercising
-**Sylvia**: No late nights
-**Noemie**: Everyone to be heard
+- **Matt**: Exercising
+- **Caleb**: Smokos. Everyone has clarity on what we are building.
+- **Nick**: Exercising
+- **Sylvia**: No late nights
+- **Noemie**: Everyone to be heard
 
 ## Weekend
 
