@@ -15,3 +15,7 @@ export function getQuestions () {
     return res.body
   })
 }
+
+export function getQuestionsByName (name) {
+  return request.get(rootURL + `/quotes/${name}`)
+}

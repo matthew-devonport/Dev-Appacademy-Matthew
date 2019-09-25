@@ -13,7 +13,7 @@ function getQuotes (db = connection) {
 }
 
 function getQuotesByName (name, db = connection) {
-  return db('quotes').where('quotes.name', name).select()
+  return db('quotes').where('name', name)
 }
 
 function getQuestions (db = connection) {
