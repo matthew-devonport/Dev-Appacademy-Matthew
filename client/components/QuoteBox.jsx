@@ -1,12 +1,22 @@
 import React from 'react'
+import { connect } from 'react-redux';
+
 
 class QuoteBox extends React.Component {
 
   render() {
+    let {quoteBox} = this.props
+    console.log(this.props)
     return (
-      <div id="quote-box">Quote hereajsdhfgaks dhfgbaskdhjgbasg</div>
+      <div id="quote-box">{quoteBox.quote}</div>
     )
   }
 }
 
-export default QuoteBox
+function mapStateToProps(state) {
+  return {
+    quoteBox: state.quoteBox
+  }
+}
+
+export default connect(mapStateToProps)(QuoteBox)
