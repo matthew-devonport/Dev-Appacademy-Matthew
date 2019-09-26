@@ -1,72 +1,68 @@
-import React from 'react';
+import React from 'react'
 
-import { changePage, setQuoteBox } from '../actions';
+import { changePage, setQuoteBox } from '../actions'
 
-import { getQuotesByName } from '../apiClient';
+import { getQuotesByName } from '../apiClient'
 
 class Room extends React.Component {
   state = {
     quoteIsShowing: false,
     interval: null,
     quotes: []
-  };
+  }
 
-  unmounted = false;
+  unmounted = false
 
   componentDidMount() {
-    if (this.props.page == 0) {
-      return;
-    }
-    this.getQuote();
-    this.setQuoteInterval();
+    if (this.props.page == 0) { return }
+    this.getQuote()
+    this.setQuoteInterval()
   }
 
   componentWillUnmount() {
-    this.setState({ quoteIsShowing: false });
-    this.unmounted = true;
-    clearInterval(this.state.interval);
+    this.setState({ quoteIsShowing: false })
+    this.unmounted = true
+    clearInterval(this.state.interval)
   }
 
   getQuote = () => {
     getQuotesByName(this.name).then(quotes => {
-      this.setState({ quotes: quotes.body });
-    });
-  };
+      this.setState({ quotes: quotes.body })
+    })
+  }
 
   setQuoteInterval = () => {
-    let interval = setInterval(this.toggleQuote, 15000);
+    let interval = setInterval(this.toggleQuote, 3000)
     this.setState({
       interval: interval
-    });
-  };
+    })
+  }
 
   toggleQuote = () => {
-    this.setQuote();
+    this.setQuote()
     this.setState({
       quoteIsShowing: !this.state.quoteIsShowing
-    });
+    })
     setTimeout(() => {
       if (!this.unmounted) {
         this.setState({
           quoteIsShowing: !this.state.quoteIsShowing
-        });
+        })
       }
-    }, 5000);
-  };
+    }, 1000)
+  }
 
   setQuote = () => {
-    const { dispatch } = this.props;
-    let randNum = Math.floor(Math.random() * this.state.quotes.length);
+    const { dispatch } = this.props
+    let randNum = Math.floor(Math.random() * this.state.quotes.length)
 
-    dispatch(
-      setQuoteBox(this.state.quotes[randNum].quote, this.top, this.left)
-    );
-  };
+    dispatch(setQuoteBox(this.state.quotes[randNum].quote, this.top, this.left))
+  }
 
   handleClick = pageNum => {
-    const { dispatch } = this.props;
-    dispatch(changePage(pageNum));
-  };
+    const { dispatch } = this.props
+    dispatch(changePage(pageNum))
+  }
 }
 
-export default Room;
+export default Room

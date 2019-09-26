@@ -8,7 +8,7 @@ class Jv extends Room {
   name = 'JV'
   top = "20vh"
   left = "20vw"
-
+  
   render() {
     return (
       <div>
