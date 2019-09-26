@@ -6,7 +6,6 @@ class QuoteBox extends React.Component {
 
   render() {
     let {quoteBox} = this.props
-    console.log(this.props)
     return (
       <div id="quote-box">{quoteBox.quote}</div>
     )
