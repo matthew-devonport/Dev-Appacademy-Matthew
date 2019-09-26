@@ -6,9 +6,12 @@ import Sarah from './Sarah'
 import Kelly from './Kelly'
 import { connect } from 'react-redux'
 import Room from './Room'
+import QuoteBox from './QuoteBox'
+
 
 
 class MainRoom extends Room {
+
   render() {
     return (
       <div>
@@ -26,6 +29,7 @@ class MainRoom extends Room {
         {this.props.page == 3 && <Ollie />}
         {this.props.page == 4 && <Sarah />}
         {this.props.page == 5 && <Kelly />}
+        <QuoteBox />
       </div>
     )
   }
