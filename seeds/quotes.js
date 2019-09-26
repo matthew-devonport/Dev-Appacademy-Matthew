@@ -23,6 +23,10 @@ exports.seed = function(knex) {
         {id: 16, name: 'Sarrah', quote: 'That\'s toootally normal'},
         {id: 17, name: 'Sarrah', quote: 'How are you feeling?'},
         {id: 18, name: 'Sarrah', quote: 'Trust the process'},
+        {id: 19, name: 'Ollie', quote: 'I\'m pretty susceptible to peer-pressure'},
+        {id: 20, name: 'Kelly', quote: 'Sweet!'},
+        {id: 21, name: 'Kelly', quote: 'That\'s cool, it works!'},
+        {id: 22, name: 'Han', quote: 'I\m very easy to frighten!'}
         
       ]);
     });
