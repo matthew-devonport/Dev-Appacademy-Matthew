@@ -2,14 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class PopUpBox extends React.Component {
-
-myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-
+  html = <h1>Hello</h1>
   render() {
-
     return (
       <React.Fragment>
         <div className='box'>
@@ -27,6 +21,7 @@ myFunction() {
             <div className='content'>
               Thank to pop me out of that button, but now i'm done so you can
               close this window.
+              {this.html}
             </div>
           </div>
         </div>

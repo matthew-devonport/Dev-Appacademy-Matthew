@@ -6,7 +6,7 @@ import QuoteBox from './QuoteBox';
 
 class Kelly extends Room {
   name = 'Kelly'
-  top = '20vh'
+  top = '40vh'
   left = '20vw'
   
   render() {
