@@ -1,6 +1,6 @@
 import { SET_QUOTEBOX } from '../actions';
 
-function page(state = {}, action) {
+function quoteBox(state = {}, action) {
   switch (action.type) {
     case SET_QUOTEBOX:
       return {
@@ -14,4 +14,4 @@ function page(state = {}, action) {
   }
 }
 
-export default page;
+export default quoteBox;
