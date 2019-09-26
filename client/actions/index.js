@@ -9,6 +9,7 @@ export const changePage = (page) => {
 }
 
 export const setQuoteBox = (quote, top, left) => {
+  
   return {
     type: SET_QUOTEBOX,
     quote,
