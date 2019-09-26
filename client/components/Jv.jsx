@@ -1,14 +1,13 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import Room from './Room'
-import QuoteBox from './QuoteBox'
-
+import React from 'react';
+import { connect } from 'react-redux';
+import Room from './Room';
+import QuoteBox from './QuoteBox';
+import PopUpBox from './PopUpBox'
 
 class Jv extends Room {
-  
-  name = "JV"
-  top = 20
-  left = 20
+  name = 'JV'
+  top = "20vh"
+  left = "20vw"
 
   render() {
     return (
@@ -25,10 +24,14 @@ class Jv extends Room {
         ></iframe>
         <button onClick={this.toggleQuote}>Quote</button>
         
-        {/* {this.state.quoteIsShowing && <QuoteBox />} */}
+        {this.state.quoteIsShowing && <QuoteBox />}
+        <div>
+          <PopUpBox />
+        </div>
       </div>
     );
+    
   }
 }
 
-export default connect()(Jv)
+export default connect()(Jv);

@@ -12,10 +12,10 @@ exports.seed = function(knex) {
         {id: 5, name: 'JV', quote: 'Did you just commit a console.log? You\'re fired'},
         {id: 6, name: 'JV', quote: 'Only monkeys test manually'},
         {id: 7, name: 'JV', quote: '*checks watch*'},
-        {id: 8, name: 'JV', quote: 'It\'s like a rolling pin hitting a cabbage *thunk*'},
+        {id: 8, name: 'JV', quote: '*thunk*.... It\'s like a rolling pin hitting a cabbage'},
         {id: 9, name: 'JV', quote: 'Most importantly, have fun!'},
         {id: 10, name: 'Han', quote: 'Niiiiice'},
-        {id: 11, name: 'Han', quote: 'I\'m sorry'},
+        {id: 11, name: 'Han', quote: 'I\'m so sorry'},
         {id: 12, name: 'Han', quote: 'Yeaaaaah'},
         {id: 13, name: 'Kelly', quote: 'My cohort was the best cohort'},
         {id: 14, name: 'Kelly', quote: 'Look puppies!'},
@@ -23,6 +23,10 @@ exports.seed = function(knex) {
         {id: 16, name: 'Sarrah', quote: 'That\'s toootally normal'},
         {id: 17, name: 'Sarrah', quote: 'How are you feeling?'},
         {id: 18, name: 'Sarrah', quote: 'Trust the process'},
+        {id: 19, name: 'Ollie', quote: 'I\'m pretty susceptible to peer-pressure'},
+        {id: 20, name: 'Kelly', quote: 'Sweet!'},
+        {id: 21, name: 'Kelly', quote: 'That\'s cool, it works!'},
+        {id: 22, name: 'Han', quote: 'I\m very easy to frighten!'}
         
       ]);
     });
