@@ -2,57 +2,35 @@
     background: black
 } */
 
-#quote-box{
-    position: fixed;
-    top: 0;
-    left: 30vw;
-    padding: 2vw;
-    text-align: center;
-	
-	background: #afbcbe;
-    border-radius: .4em;
-    width: 20vw;
+#quote-box {
+  position: fixed;
+  top: 0;
+  left: 30vw;
+  padding: 2vw;
+  text-align: center;
+
+  background: #afbcbe;
+  border-radius: 0.4em;
+  width: 20vw;
 }
 
 #quote-box:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 41px solid transparent;
-	border-top-color: #afbcbe;
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: -20.5px;
-	margin-bottom: -41px;
-}
-/* Pop Up Box */
-.box {
-  width: 40%;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.2);
-  padding: 35px;
-  border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
-  text-align: center;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 41px solid transparent;
+  border-top-color: #afbcbe;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -20.5px;
+  margin-bottom: -41px;
 }
 
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background: #06D85F;
-}
+
+/* Pop Up Box */
 
 .overlay {
   position: fixed;
@@ -60,54 +38,51 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
 }
+
 .overlay:target {
   visibility: visible;
   opacity: 1;
 }
 
 .popup {
-  margin: 70px auto;
-  padding: 20px;
+  width: 70vw;
+  height: 70vh;
+  margin-left: 10vw;
+  margin-top: 10vh;
   background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
+  border-radius: 5vw;
+  padding: 5vw;
   transition: all 5s ease-in-out;
 }
 
 .popup h2 {
-  margin-top: 0;
   color: #333;
   font-family: Tahoma, Arial, sans-serif;
 }
 .popup .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 15vh;
+  right: 15vw;
   transition: all 200ms;
-  font-size: 30px;
+  font-size: 5vw;
   font-weight: bold;
   text-decoration: none;
   color: #333;
 }
 .popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
+  color: #06d85f;
 }
 
-@media screen and (max-width: 700px){
-  .box{
+@media screen and (max-width: 700px) {
+  .box {
     width: 70%;
   }
-  .popup{
+  .popup {
     width: 70%;
   }
 }
