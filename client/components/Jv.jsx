@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Room from './Room';
 import QuoteBox from './QuoteBox';
+import PopUpBox from './PopUpBox'
 
 class Jv extends Room {
   name = 'JV'
@@ -19,10 +20,13 @@ class Jv extends Room {
         <p>Hello, I am JV</p>
         <button onClick={() => this.handleClick(0)}>Home</button>
         <button onClick={this.printStyle}>see style</button>
-
         {this.state.quoteIsShowing && <QuoteBox />}
+        <div>
+          <PopUpBox />
+        </div>
       </div>
     );
+    
   }
 }
 
