@@ -1,11 +1,13 @@
 
 const request = require('supertest')
 const server = require('../../server/server')
+const { getQuotesByName } = require('../../server/db')
 
 jest.mock('../../server/db', () => ({
   getQuotes: () => Promise.resolve([{}, {}]),
   getQuestions: () => Promise.resolve([{}, {}, {}]),
-  
+  getQuotesByName: jest.fn(() => Promise.resolve([{},{},{},{}]))
+
 }))
 
 test('GET /', () => {
@@ -35,3 +37,11 @@ test('api gets questions', () => {
   })
 })
 
+test('api gets quotes by name', () => {
+  return request(server)
+  .get('/api/v1/quotes/Han')
+  .then(res => {
+    expect(getQuotesByName).toHaveBeenCalledWith('Han')
+    expect(res.body.length).toBe(4)
+  })
+})
