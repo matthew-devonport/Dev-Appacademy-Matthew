@@ -15,7 +15,7 @@ class MainRoom extends Room {
   render() {
     return (
       <div id="content">
-        {this.props.page == 0 && <div id='mainroom'>
+        {this.props.page == 0 && <div className="room" id='mainroom'>
           <div className="teachers" id="ollie" onClick={() => this.handleClick(3)}>Ollie</div>
           <div className="teachers" id="han" onClick={() => this.handleClick(2)}>Han</div>
           <div className="teachers" id="jv" onClick={() => this.handleClick(1)}>JV</div>
@@ -28,7 +28,7 @@ class MainRoom extends Room {
         {this.props.page == 3 && <Ollie />}
         {this.props.page == 4 && <Sarrah />}
         {this.props.page == 5 && <Kelly />}
-        <QuoteBox />
+        {/* <QuoteBox /> */}
       </div>
     )
   }

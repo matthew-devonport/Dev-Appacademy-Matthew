@@ -8,17 +8,18 @@ body {
 	width: 100%;
 }
 
+.room {
+	margin: 0 auto;
+	height: 100vh;
+	width: 195vh;
+	background-size: cover;
+}
+
 /* --------------------------------*/
 /* Main room */
 /* -------------------------------- */
 
-#content 
 #mainroom {
-	margin: 0 auto;
-	height: 100vh;
-	width: 190vh;
-	overflow: hidden;
-	background-size: cover;
 	background-image: url('images/background.JPG');
 }
 
@@ -78,6 +79,52 @@ body {
 	top:1vh;
 	left: 15vh;
 }
+
+/* --------------------------------*/
+/* Han
+---------------------------------- */
+
+#hanRoom {
+	background-image: radial-gradient(100vh at 50% 70%, #f4d03f, #16A085);
+}
+/* rgb(253, 253, 124),  rgb(67, 202, 50), rgb(105, 208, 226) */
+
+#mindfulness {
+	margin: 0 auto;
+	top: 30vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	border-radius: 50%;
+}
+
+#mindfulness a {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 6em;
+	height: 6em;
+	line-height: 80px;
+	border: solid #16A085;
+	border-radius: 50%;
+	margin: -2em; 
+}
+
+/* --------------------------------*/
+/* QuoteBox
+---------------------------------- */
+
+.deg270 { transform: rotate(270deg) translate(28vh) rotate(-270deg); }
+.deg306 { transform: rotate(306deg) translate(25vh) rotate(-306deg); }
+.deg342 { transform: rotate(342deg) translate(25vh) rotate(-342deg); }
+.deg0 { transform: translate(25vh); } /* 25vh = half the width of the wrapper */
+
+.deg135 { transform: rotate(135deg) translate(25vh) rotate(-135deg); }
+.deg180 { transform: translate(-25vh); }
+.deg236 { transform: rotate(236deg) translate(25vh) rotate(-236deg); }
+
+
 
 #quote-box{
     position: fixed;
