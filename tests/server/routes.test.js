@@ -3,7 +3,9 @@ const request = require('supertest')
 const server = require('../../server/server')
 
 jest.mock('../../server/db', () => ({
-  getQuotes: () => Promise.resolve([{}, {}], [{}])
+  getQuotes: () => Promise.resolve([{}, {}]),
+  getQuestions: () => Promise.resolve([{}, {}, {}]),
+  
 }))
 
 test('GET /', () => {
@@ -23,3 +25,13 @@ test('api gets quotes', () => {
       expect(res.body.quotes.length).toBe(2)
     })
 })
+
+test('api gets questions', () => {
+  return request(server)
+  .get('/api/v1/ollie')
+  .expect(200)
+  .then((res) => {
+    expect(res.body.questions.length).toBe(3)
+  })
+})
+
