@@ -31,6 +31,13 @@ body {
 	cursor: pointer;
 }
 
+.teachers:hover {
+	background-image: url('images/exclamation-mark.png');
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	background-position: 50% 50%;
+}
+
 #ollie {
 	position: relative;
 	width: 15vw;
