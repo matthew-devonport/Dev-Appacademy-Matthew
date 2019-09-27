@@ -9,10 +9,11 @@ export const changePage = (page) => {
   }
 }
 
-export const setPopup = (content) => {
+export const setPopup = (content, name) => {
   return {
     type: SET_POPUP,
-    content
+    content,
+    name
   }
 }
 
