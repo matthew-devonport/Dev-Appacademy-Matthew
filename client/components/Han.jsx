@@ -28,3 +28,7 @@ class Han extends Room {
 }
 
 export default connect()(Han)
+
+
+4288*3216
+5472*3648
