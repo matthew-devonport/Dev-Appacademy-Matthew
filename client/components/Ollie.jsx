@@ -15,20 +15,16 @@ class Ollie extends Room {
     })
   }
   name = 'Ollie'
-  top = '20vh'
-  left = '20vw'
-
-  popupContent = ``
-  
+  top = '10vh'
+  left = '30vw'
   render() {
     return (
-      <div>
+      <div className='room' id="ollieRoom">
         <p>Hello, I am Ollie</p>
         <button onClick={() => this.handleClick(0)}>Home</button>
         {this.state.quoteIsShowing && <QuoteBox />}
-        <h1>This is where our questions will go!</h1>
-        {this.state.questions &&
-          this.state.questions.map((question, i) => <p key={i}>{question}</p>)}
+        {/* <h1>This is where our questions will go!</h1>
+        {this.state.questions && this.state.questions.map((question, i) => <p key={i}>{question}</p>)} */}
       </div>
     )
   }
