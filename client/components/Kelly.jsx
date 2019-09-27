@@ -8,7 +8,9 @@ class Kelly extends Room {
   name = 'Kelly'
   top = '40vh'
   left = '20vw'
-  
+
+  popupContent = ``
+
   render() {
     return (
       <div>
@@ -16,7 +18,7 @@ class Kelly extends Room {
         <button onClick={() => this.handleClick(0)}>Home</button>
         {this.state.quoteIsShowing && <QuoteBox />}
       </div>
-    );
+    )
   }
 }
 
