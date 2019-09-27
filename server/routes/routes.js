@@ -25,4 +25,13 @@ router.get('/quotes/:name', (req, res) => {
   })
 })
 
+router.get('/jv', (req, res) => {
+  db.getVideos()
+  .then(results => {
+    res.json({videos:results.map(video => video.url)})
+  })
+})
+
+
+
 module.exports = router
