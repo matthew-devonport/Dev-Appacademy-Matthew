@@ -90,6 +90,10 @@ body {
 	/* background-image: radial-gradient(100vh at 50% 70%, #f4d03f, #16A085); */
 }
 /* rgb(253, 253, 124),  rgb(67, 202, 50), rgb(105, 208, 226) */
+#sarrahRoom {
+	background-image: url('images/sarrah1.JPG')
+
+}
 
 #mindfulness {
 	margin: 0 auto;
