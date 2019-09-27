@@ -15,41 +15,37 @@ class MainRoom extends Room {
       <div id='content'>
         {this.props.page == 0 && (
           <div className='room' id='mainroom'>
-            <div
-              className='teachers'
-              id='ollie'
-              onClick={() => this.handleClick(3)}
-            >
-              Ollie
-            </div>
+            {/* Changing the order of the divs will break the CSS */}
             <div
               className='teachers'
               id='han'
               onClick={() => this.handleClick(2)}
-            >
-              Han
-            </div>
-            <div
-              className='teachers'
-              id='jv'
-              onClick={() => this.handleClick(1)}
-            >
-              JV
-            </div>
+            ></div>
+            <div className="exclamation" id="exclam-han"></div>
             <div
               className='teachers'
               id='sarrah'
               onClick={() => this.handleClick(4)}
-            >
-              Sarrah
-            </div>
+            ></div>
+            <div className="exclamation" id="exclam-sarrah"></div>
+            <div
+              className='teachers'
+              id='jv'
+              onClick={() => this.handleClick(1)}
+            ></div>
+            <div className="exclamation" id="exclam-jv"></div>
+            <div
+              className='teachers'
+              id='ollie'
+              onClick={() => this.handleClick(3)}
+            ></div>
+            <div className="exclamation" id="exclam-ollie"></div>
             <div
               className='teachers'
               id='kelly'
               onClick={() => this.handleClick(5)}
-            >
-              Kelly
-            </div>
+            ></div>
+            <div className="exclamation" id="exclam-kelly"></div>
           </div>
         )}
 
