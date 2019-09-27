@@ -73,12 +73,111 @@ body {
 	left: 20vh;
 }
 
+/* --------------------------------*/
+/* Sarrah
+---------------------------------- */
+
 #sarrah {
 	position: relative;
 	width: 10vw;
 	height: 15vh;
 	top:1vh;
 	left: 15vh;
+}
+
+#sarrahRoom {
+	background-image: url('images/sarrah1.JPG')
+
+}
+
+#introFeedback {
+	margin: 0 auto;
+	top: 5vh;
+	right: 70vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#stressRegulation {
+	margin: 0 auto;
+	top: 13vh;
+	right: 70vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#internalDialogue {
+	margin: 0 auto;
+	top: 5vh;
+	right: 40vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#biasAlly {
+	margin: 0 auto;
+	bottom: 2vh;
+	right: 10vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#agileTeamwork {
+	margin: 0 auto;
+	top: 7vh;
+	right: 10vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#communicationConflict {
+	margin: 0 auto;
+	bottom: 2vh;
+	left: 17vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#trustEmpathy {
+	margin: 0 auto;
+	bottom: 10vh;
+	left: 50vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#retroReflection {
+	margin: 0 auto;
+	top: 0vh;
+	left: 50vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#sarrahPopup {
+	margin: 0 auto;
+	top: 80vh;
+	right: 47vh;
+	width: 50vh;
+	height: 50vh;
+	position: fixed;
+	
 }
 
 /* --------------------------------*/
@@ -90,10 +189,8 @@ body {
 	/* background-image: radial-gradient(100vh at 50% 70%, #f4d03f, #16A085); */
 }
 /* rgb(253, 253, 124),  rgb(67, 202, 50), rgb(105, 208, 226) */
-#sarrahRoom {
-	background-image: url('images/sarrah1.JPG')
 
-}
+
 
 #mindfulness {
 	margin: 0 auto;
