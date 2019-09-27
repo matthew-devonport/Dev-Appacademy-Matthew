@@ -27,9 +27,9 @@ class Room extends React.Component {
     clearInterval(this.state.interval)
   }
 
-  setPopup = (content = this.popupContent) => {
+  setPopup = (content = this.popupContent, ) => {
     const { dispatch } = this.props
-    dispatch(setPopup(content))
+    dispatch(setPopup(content, this.name))
   }
 
   getQuotes = () => {

@@ -4,17 +4,17 @@ import { connect } from 'react-redux'
 class PopUpBox extends React.Component {
 
   setPopupContent = () => {
-    let { popupContent } = this.props
+    let { content } = this.props.popupContent
     console.log(this)
-    let content = document.getElementById('popup-content')
-    content.innerHTML = popupContent
+    let contentBox = document.getElementById('popup-content')
+    contentBox.innerHTML = content
   }
 
   render() {
     return (
       <React.Fragment>
         <div className='box'>
-          <a className='button' href='#popup-overlay' onClick={this.setPopupContent}>
+          <a className='button' href='#popup-overlay' onClick={this.setPopupContent} id={`popup-${this.props.popupContent.name}`}>
             Let me Pop up
           </a>
         </div>
@@ -31,6 +31,7 @@ class PopUpBox extends React.Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state)
   return {
     popupContent: state.popupContent
   }
