@@ -2,21 +2,19 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 class PopUpBox extends React.Component {
-  html = `
-  <h1>Hello</h1>
-  <p>Content here!</p>
-  `
 
-  componentDidMount() {
+  setPopupContent = () => {
+    let { popupContent } = this.props
+    console.log(this)
     let content = document.getElementById('popup-content')
-    content.innerHTML = this.html
+    content.innerHTML = popupContent
   }
 
   render() {
     return (
       <React.Fragment>
         <div className='box'>
-          <a className='button' href='#popup-overlay'>
+          <a className='button' href='#popup-overlay' onClick={this.setPopupContent}>
             Let me Pop up
           </a>
         </div>
@@ -34,7 +32,7 @@ class PopUpBox extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    popUpBox: state.popUpBox
+    popupContent: state.popupContent
   }
 }
 

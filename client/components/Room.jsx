@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { changePage, setQuoteBox } from '../actions'
+import { changePage, setQuoteBox, setPopup } from '../actions'
 
 import { getQuotesByName } from '../apiClient'
 
@@ -14,18 +14,25 @@ class Room extends React.Component {
   unmounted = false
 
   componentDidMount() {
+    this.setPopup()
     if (this.props.page == 0) { return }
-    this.getQuote()
+    this.getQuotes()
     this.setQuoteInterval()
   }
 
   componentWillUnmount() {
+    this.setPopup('')
     this.setState({ quoteIsShowing: false })
     this.unmounted = true
     clearInterval(this.state.interval)
   }
 
-  getQuote = () => {
+  setPopup = (content = this.popupContent) => {
+    const { dispatch } = this.props
+    dispatch(setPopup(content))
+  }
+
+  getQuotes = () => {
     getQuotesByName(this.name).then(quotes => {
       this.setState({ quotes: quotes.body })
     })
@@ -43,6 +50,7 @@ class Room extends React.Component {
     this.setState({
       quoteIsShowing: !this.state.quoteIsShowing
     })
+
     setTimeout(() => {
       if (!this.unmounted) {
         this.setState({
@@ -55,7 +63,6 @@ class Room extends React.Component {
   setQuote = () => {
     const { dispatch } = this.props
     let randNum = Math.floor(Math.random() * this.state.quotes.length)
-
     dispatch(setQuoteBox(this.state.quotes[randNum].quote, this.top, this.left))
   }
 
