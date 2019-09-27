@@ -91,7 +91,6 @@ body {
 #hanRoom {
 	background-image: url('images/han7.png');
 }
-/* rgb(253, 253, 124),  rgb(67, 202, 50), rgb(105, 208, 226) */
 
 #mindfulness {
 	left: 57vh;
@@ -109,8 +108,8 @@ body {
 	left: 50%;
 	width: 6em;
 	height: 6em;
-	line-height: 80px;
-	background-color: #16A085;
+	line-height: 85px;
+	background-color: rgb(102, 177, 162);
 	border: solid #16A085;
 	border-radius: 50%;
 	margin: -2em; 
@@ -122,7 +121,7 @@ body {
 
 .deg270 { transform: rotate(270deg) translate(30vh) rotate(-270deg); }
 .deg320 { transform: rotate(320deg) translate(30vh) rotate(-320deg); }
-.deg342 { transform: rotate(40deg) translate(30vh) rotate(-40deg); }
+.deg45 { transform: rotate(45deg) translate(30vh) rotate(-45deg); }
 .deg0 { transform: translate(30vh); } /* 30vh = half the width of the wrapper */
 .deg135 { transform: rotate(135deg) translate(30vh) rotate(-135deg); }
 .deg180 { transform: translate(-30vh); }

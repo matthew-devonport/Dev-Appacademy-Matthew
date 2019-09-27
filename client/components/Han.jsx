@@ -6,8 +6,8 @@ import QuoteBox from './QuoteBox';
 
 class Han extends Room {
   name = 'Han'
-  top = '20vh'
-  left = '20vw'
+  top = '80vh'
+  left = '33vw'
 
   popupContent = `<p>test</p>`
 
@@ -35,7 +35,7 @@ class Han extends Room {
           <a className='technic button deg320' href='#popup'>
             5 Senses
           </a>
-          <a className='technic button deg342' href='#popup'>
+          <a className='technic button deg45' href='#popup'>
             R.A.I.N
           </a>
         </div>
