@@ -19,7 +19,7 @@ class Ollie extends Room {
   left = '20vw'
   render() {
     return (
-      <div>
+      <div className='room' id="ollieRoom">
         <p>Hello, I am Ollie</p>
         <button onClick={() => this.handleClick(0)}>Home</button>
         {this.state.quoteIsShowing && <QuoteBox />}
