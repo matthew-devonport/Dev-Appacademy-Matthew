@@ -5,7 +5,9 @@ const connection = require('knex')(config)
 module.exports = {
   getQuotes,
   getQuotesByName,
-  getQuestions
+  getQuestions,
+  getVideos,
+  getVideosByName
 }
 
 function getQuotes (db = connection) {
@@ -18,4 +20,12 @@ function getQuotesByName (name, db = connection) {
 
 function getQuestions (db = connection) {
   return db('questions').select()
+}
+
+function getVideos (db = connection) {
+  return db('youtube').select()
+}
+
+function getVideosByName (name, db = connection) {
+  return db('youtube').where('name', name)
 }

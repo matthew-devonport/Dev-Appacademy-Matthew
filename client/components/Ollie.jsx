@@ -6,17 +6,20 @@ import { getQuestions } from '../apiClient'
 
 
 class Ollie extends Room {
-  constructor(props){
+  constructor(props) {
     super(props)
     getQuestions().then(result => {
       this.setState({
         questions: result.questions
-      }) 
+      })
     })
   }
   name = 'Ollie'
   top = '20vh'
   left = '20vw'
+
+  popupContent = ``
+  
   render() {
     return (
       <div>
@@ -24,9 +27,10 @@ class Ollie extends Room {
         <button onClick={() => this.handleClick(0)}>Home</button>
         {this.state.quoteIsShowing && <QuoteBox />}
         <h1>This is where our questions will go!</h1>
-        {this.state.questions && this.state.questions.map((question, i) => <p key={i}>{question}</p>)}
+        {this.state.questions &&
+          this.state.questions.map((question, i) => <p key={i}>{question}</p>)}
       </div>
-    );
+    )
   }
 }
 

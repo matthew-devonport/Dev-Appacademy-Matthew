@@ -1,40 +1,40 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
 
 class PopUpBox extends React.Component {
-  html = <h1>Hello</h1>
+
+  setPopupContent = () => {
+    let { content } = this.props.popupContent
+    console.log(this)
+    let contentBox = document.getElementById('popup-content')
+    contentBox.innerHTML = content
+  }
+
   render() {
     return (
       <React.Fragment>
         <div className='box'>
-          <a className='button' href='#popup1'>
+          <a className='button' href='#popup-overlay' onClick={this.setPopupContent} id={`popup-${this.props.popupContent.name}`}>
             Let me Pop up
           </a>
         </div>
 
-        <div id='popup1' className='overlay'>
-          <div className='popup'>
-            <h2>Here i am</h2>
-            <a className='close' href='#'>
-              &times;
-            </a>
-            <div className='content'>
-              Thank to pop me out of that button, but now i'm done so you can
-              close this window.
-              {this.html}
-            </div>
+        <div id='popup-overlay'>
+          <div id='popup'>
+              <div id='popup-content'></div>
+              <a id='popup-close' href='#'>&times;</a>
           </div>
         </div>
       </React.Fragment>
-    );
+    )
   }
 }
 
 function mapStateToProps(state) {
+  console.log(state)
   return {
-    popUpBox: state.popUpBox
-  };
+    popupContent: state.popupContent
+  }
 }
 
-
-export default connect(mapStateToProps)(PopUpBox);
+export default connect(mapStateToProps)(PopUpBox)

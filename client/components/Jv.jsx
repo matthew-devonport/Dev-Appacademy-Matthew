@@ -9,20 +9,24 @@ class Jv extends Room {
   top = "20vh"
   left = "20vw"
 
+  popupContent = `
+  <h1>JV's Popup</h1>
+  <p>This is a popup for JV</p> 
+  ` 
+  
   render() {
     return (
       <div>
         <button onClick={() => this.handleClick(0)}>Home</button>
         <p>Hello, I am JV</p>
-        <iframe
+        {/* <iframe
           width='560'
           height='315'
           src='https://www.youtube.com/embed/GdJO2aDWayE'
           frameborder='0'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowfullscreen
-        ></iframe>
-        <button onClick={this.toggleQuote}>Quote</button>
+        ></iframe> */}
         
         {this.state.quoteIsShowing && <QuoteBox />}
         <div>
