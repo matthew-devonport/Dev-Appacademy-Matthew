@@ -30,7 +30,7 @@ class Jv extends Room {
         
         {this.state.quoteIsShowing && <QuoteBox />}
         <div>
-          <PopUpBox />
+          <PopUpBox content={this.popupContent} top='30vh' left='30vw' height='5vh' width='5vw' />
         </div>
       </div>
     );

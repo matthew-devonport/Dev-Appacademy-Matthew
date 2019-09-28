@@ -14,6 +14,7 @@ body {
 	height: 100vh;
 	width: 195vh;
 	background-size: cover;
+	position: relative;
 }
 
 /* --------------------------------*/
@@ -21,7 +22,7 @@ body {
 /* -------------------------------- */
 
 #mainroom {
-	background-image: url('images/background.JPG');
+	background-image: url('images/mainRoom1.JPG');
 }
 
 #mainroom p {
@@ -29,48 +30,67 @@ body {
 }
 
 .teachers {
-	border: solid white;
 	cursor: pointer;
 }
 
-.teachers:hover {
+.exclamation {
+	display: none;
 	background-image: url('images/exclamation-mark.png');
 	background-repeat: no-repeat;
-	background-size: 100px 100px;
+	background-size: 5vh 5vh;
 	background-position: 50% 50%;
-}
-
-#ollie {
-	position: relative;
-	width: 15vw;
-	height: 15vh;
-	top: 10vh;
-	left: 125vh;
-	
-}
-
-#kelly {
-	position: relative;
-	width: 10vw;
-	height: 20vh;
-	top:-10vh;
-	left: 140vh;
-}
-
-#jv {
-	position: relative;
-	width: 15vh;
-	height: 15vh;
-	top:15vh;
-	left: 80vh;
+	height: 5vh;
+	width: 5vh;
 }
 
 #han {
-	position: relative;
+	position: absolute;
+	width: 15vh;
+	height: 25vh;
+	top:56vh;
+	left: 15vh;
+}
+
+#exclam-han {
+	position: absolute;
+	top:48vh;
+	left: 16vh;
+}
+
+#han:hover + #exclam-han{
+	display: block;
+}
+
+#sarrah {
+	position: absolute;
+	width: 15vh;
+	height: 25vh;
+	top:56vh;
+	left: 45vh;
+}
+
+#exclam-sarrah {
+	position: absolute;
+	top:48vh;
+	left: 46vh;
+}
+
+#sarrah:hover + #exclam-sarrah{
+	display: block;
+}
+
+#jv {
+	position: absolute;
 	width: 15vh;
 	height: 15vh;
-	top:10vh;
-	left: 20vh;
+	top:56vh;
+	left: 80vh;
+}
+
+#exclam-jv {
+	position: absolute;
+	top:48vh;
+	left: 90vh;
 }
 
 /* --------------------------------*/
@@ -179,24 +199,68 @@ body {
 	position: fixed;
 	
 }
+=======
+#jv:hover + #exclam-jv{
+	display: block;
+}
+
+#ollie {
+	position: absolute;
+	width: 10vh;
+	height: 45vh;
+	top: 40vh;
+	left: 118vh;
+}
+
+#exclam-ollie {
+	position: absolute;
+	top: 33vh;
+	left: 123vh;
+}
+
+#ollie:hover + #exclam-ollie{
+	display: block;
+}
+
+#kelly {
+	position: absolute;
+	width: 16vh;
+	height: 30vh;
+	top:43vh;
+	left: 161vh;
+}
+
+#exclam-kelly {
+	position: absolute;
+	top: 35vh;
+	left: 163vh;
+}
+
+#kelly:hover + #exclam-kelly{
+	display: block;
+}
+
+
+/* Add div for the ringing bowl */
 
 /* --------------------------------*/
 /* Han
 ---------------------------------- */
+#hanBackground {
+	background-image: radial-gradient(100vh at 50% 70%, #f5c507, rgb(1, 161, 129));
+}
 
 #hanRoom {
-	background-image: url('images/han2.JPG')
-	/* background-image: radial-gradient(100vh at 50% 70%, #f4d03f, #16A085); */
+	background-image: url('images/han7.png');
 }
-/* rgb(253, 253, 124),  rgb(67, 202, 50), rgb(105, 208, 226) */
 
 
 
 #mindfulness {
-	margin: 0 auto;
-	top: 30vh;
-	width: 50vh;
-	height: 50vh;
+	left: 57vh;
+	top: 10vh;
+	width: 60vh;
+	height: 60vh;
 	position: relative;
 	border-radius: 50%;
 }
@@ -208,7 +272,8 @@ body {
 	left: 50%;
 	width: 6em;
 	height: 6em;
-	line-height: 80px;
+	line-height: 85px;
+	background-color: rgb(102, 177, 162);
 	border: solid #16A085;
 	border-radius: 50%;
 	margin: -2em; 
@@ -218,14 +283,13 @@ body {
 /* QuoteBox
 ---------------------------------- */
 
-.deg270 { transform: rotate(270deg) translate(28vh) rotate(-270deg); }
-.deg306 { transform: rotate(306deg) translate(25vh) rotate(-306deg); }
-.deg342 { transform: rotate(342deg) translate(25vh) rotate(-342deg); }
-.deg0 { transform: translate(25vh); } /* 25vh = half the width of the wrapper */
-
-.deg135 { transform: rotate(135deg) translate(25vh) rotate(-135deg); }
-.deg180 { transform: translate(-25vh); }
-.deg236 { transform: rotate(236deg) translate(25vh) rotate(-236deg); }
+.deg270 { transform: rotate(270deg) translate(30vh) rotate(-270deg); }
+.deg320 { transform: rotate(320deg) translate(30vh) rotate(-320deg); }
+.deg45 { transform: rotate(45deg) translate(30vh) rotate(-45deg); }
+.deg0 { transform: translate(30vh); } /* 30vh = half the width of the wrapper */
+.deg135 { transform: rotate(135deg) translate(30vh) rotate(-135deg); }
+.deg180 { transform: translate(-30vh); }
+.deg220 { transform: rotate(220deg) translate(30vh) rotate(-220deg); }
 
 #quote-box {
   position: fixed;
