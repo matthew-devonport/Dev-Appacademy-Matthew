@@ -405,3 +405,12 @@ padding-top: 4vh
 #popup-close:hover {
   color: #06d85f;
 }
+
+#jv-image {
+	margin: 0 auto;
+	height: 100vh;
+	width: 203vh;
+	background-size: cover;
+	position: relative;
+	background-image: url('images/jv.JPG')
+}
