@@ -18,7 +18,7 @@ class PopUpBox extends React.Component {
 
   setLinkPosition = () => {
     let { top, left, height, width } = this.props
-    let linkBox= document.getElementById('popup-link-box')
+    let linkBox = document.getElementById('popup-link-box')
     linkBox.style.position = 'fixed'
     linkBox.style.top = top
     linkBox.style.left = left
@@ -29,11 +29,9 @@ class PopUpBox extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className='box'>
-          <a className='button' href='#popup-overlay' id='popup-link'>
-            <div id="popup-link-box"></div>
-          </a>
-        </div>
+        <a className='button' href='#popup-overlay' id='popup-link'>
+          <div id='popup-link-box'></div>
+        </a>
 
         <div id='popup-overlay'>
           <div id='popup'>
