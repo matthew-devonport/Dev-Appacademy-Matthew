@@ -28,7 +28,7 @@ class Kelly extends Room {
         {this.state.quoteIsShowing && <QuoteBox />}
         <PopUpBox
           content={this.popupContent1}
-          top='70vh'
+          top='20vh'
           left='32vw'
           height='10vh'
           width='5vw'

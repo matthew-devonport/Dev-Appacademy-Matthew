@@ -26,7 +26,7 @@ class PopUpBox extends React.Component {
       <React.Fragment>
         <a className='button' onClick={this.togglePopup} id='popup-link'>
           <div id='popup-link-box' style={{
-            position: 'fixed',
+            position: 'relative',
             top,
             left,
             width,
