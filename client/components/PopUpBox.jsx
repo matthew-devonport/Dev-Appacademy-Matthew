@@ -24,15 +24,13 @@ class PopUpBox extends React.Component {
     let { showing, top, left, height, width, content } = this.state
     return (
       <React.Fragment>
-        <a className='button' onClick={this.togglePopup} id='popup-link'>
           <div id='popup-link-box' style={{
             position: 'relative',
             top,
             left,
             width,
             height
-          }}></div>
-        </a>
+          }} onClick={this.togglePopup}></div>
 
         {showing && <div id='popup-overlay'>
           <div id='popup'>
