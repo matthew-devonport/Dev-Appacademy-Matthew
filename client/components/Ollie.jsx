@@ -16,6 +16,7 @@ class Ollie extends Room {
   }
   name = 'Ollie'
 <<<<<<< HEAD
+<<<<<<< HEAD
   top = '10vh'
   left = '30vw'
 =======
@@ -25,12 +26,17 @@ class Ollie extends Room {
   popupContent = ``
   
 >>>>>>> 5c0ec91cafca1b406f99a8838126ac9f7ddf9e0d
+=======
+  top = '10vh'
+  left = '30vw'
+>>>>>>> 10da396850dfb6d00b9d5c1b25e29d8bc3669c8d
   render() {
     return (
       <div className='room' id="ollieRoom">
         <p>Hello, I am Ollie</p>
         <button onClick={() => this.handleClick(0)}>Home</button>
         {this.state.quoteIsShowing && <QuoteBox />}
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* <h1>This is where our questions will go!</h1>
         {this.state.questions && this.state.questions.map((question, i) => <p key={i}>{question}</p>)} */}
@@ -39,6 +45,10 @@ class Ollie extends Room {
         {this.state.questions &&
           this.state.questions.map((question, i) => <p key={i}>{question}</p>)}
 >>>>>>> 5c0ec91cafca1b406f99a8838126ac9f7ddf9e0d
+=======
+        {/* <h1>This is where our questions will go!</h1>
+        {this.state.questions && this.state.questions.map((question, i) => <p key={i}>{question}</p>)} */}
+>>>>>>> 10da396850dfb6d00b9d5c1b25e29d8bc3669c8d
       </div>
     )
   }
