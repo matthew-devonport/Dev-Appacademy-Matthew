@@ -11,7 +11,12 @@ class Kelly extends Room {
   top = '8vh'
   left = '58vw'
 
-  popupContent1 = <Test />
+  popupContent1 = (
+    <div>
+      <h1>You clicked the head!</h1>
+      <p>Congratulations!</p>
+    </div>
+  )
 
   popupContent2 = (
     <div>
@@ -28,7 +33,7 @@ class Kelly extends Room {
         {this.state.quoteIsShowing && <QuoteBox />}
         <PopUpBox
           content={this.popupContent1}
-          top='20vh'
+          top='70vh'
           left='32vw'
           height='10vh'
           width='5vw'
