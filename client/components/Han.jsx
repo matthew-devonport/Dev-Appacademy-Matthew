@@ -18,9 +18,10 @@ class Han extends Room {
         <div className='room' id='hanRoom'>
           <button onClick={() => this.handleClick(0)}>Home</button>
           <div id='mindfulness'>
-            <a className='technic button deg270' href='#popup'>
+            <p className='technic button deg270'>
               Mindfulness
-          </a>
+          </p>
+       
             <a className='technic button deg0' href='#popup'>
               Sounds
           </a>
@@ -39,15 +40,16 @@ class Han extends Room {
             <a className='technic button deg45' href='#popup'>
               R.A.I.N
           </a>
+          
           </div>
-          {/* {this.state.quoteIsShowing && <QuoteBox />} */}
           <PopUpBox
             content={this.popupContent}
-            top='10vh'
-            left='10vw'
+            top='1vh'
+            left='1vw'
             height='10vh'
             width='5vw'
           />
+          {/* {this.state.quoteIsShowing && <QuoteBox />} */}
         </div>
       </div>
     )
