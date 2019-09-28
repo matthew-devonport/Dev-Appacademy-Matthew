@@ -5,15 +5,25 @@ import QuoteBox from './QuoteBox';
 import PopUpBox from './PopUpBox'
 
 
+
 class Kelly extends Room {
   name = 'Kelly'
-  top = '40vh'
-  left = '20vw'
+  top = '8vh'
+  left = '58vw'
 
-  popupContent = `
-  <h1>You clicked the head!</h1>
-  <p>Congratulations!</p>
-  `
+  popupContent1 = (
+    <div>
+      <h1>You clicked the head!</h1>
+      <p>Congratulations!</p>
+    </div>
+  )
+
+  popupContent2 = (
+    <div>
+      <h1>You clicked the second head!</h1>
+      <p>Congratulations!</p>
+    </div>
+  )
 
   render() {
     return (
@@ -22,8 +32,15 @@ class Kelly extends Room {
         <button onClick={() => this.handleClick(0)}>Home</button>
         {this.state.quoteIsShowing && <QuoteBox />}
         <PopUpBox
-          content={this.popupContent}
+          content={this.popupContent1}
           top='70vh'
+          left='32vw'
+          height='10vh'
+          width='5vw'
+        />
+        <PopUpBox
+          content={this.popupContent2}
+          top='40vh'
           left='32vw'
           height='10vh'
           width='5vw'
