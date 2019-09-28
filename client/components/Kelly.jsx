@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import Room from './Room'
 import QuoteBox from './QuoteBox';
 import PopUpBox from './PopUpBox'
-import Test from './Test'
+
 
 
 class Kelly extends Room {
