@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Room from './Room'
 import QuoteBox from './QuoteBox';
+import PopUpBox from './PopUpBox'
 
 
 class Han extends Room {
@@ -9,38 +10,45 @@ class Han extends Room {
   top = '80vh'
   left = '33vw'
 
-  popupContent = `<p>test</p>`
+  popupContent = <p>test</p>
 
   render() {
     return (
       <div id='hanBackground'>
-      <div className='room' id='hanRoom'>
-      <button onClick={() => this.handleClick(0)}>Home</button>
-        <div id='mindfulness'>
-          <a className='technic button deg270' href='#popup'>
-            Mindfulness
+        <div className='room' id='hanRoom'>
+          <button onClick={() => this.handleClick(0)}>Home</button>
+          <div id='mindfulness'>
+            <a className='technic button deg270' href='#popup'>
+              Mindfulness
           </a>
-          <a className='technic button deg0' href='#popup'>
-            Sounds
+            <a className='technic button deg0' href='#popup'>
+              Sounds
           </a>
-          <a className='technic button deg135' href='#popup'>
-            Body Scan
+            <a className='technic button deg135' href='#popup'>
+              Body Scan
           </a>
-          <a className='technic button deg180' href='#popup'>
-            Breath
+            <a className='technic button deg180' href='#popup'>
+              Breath
           </a>
-          <a className='technic button deg220' href='#popup'>
-            Metta
+            <a className='technic button deg220' href='#popup'>
+              Metta
           </a>
-          <a className='technic button deg320' href='#popup'>
-            5 Senses
+            <a className='technic button deg320' href='#popup'>
+              5 Senses
           </a>
-          <a className='technic button deg45' href='#popup'>
-            R.A.I.N
+            <a className='technic button deg45' href='#popup'>
+              R.A.I.N
           </a>
+          </div>
+          {/* {this.state.quoteIsShowing && <QuoteBox />} */}
+          <PopUpBox
+            content={this.popupContent}
+            top='10vh'
+            left='10vw'
+            height='10vh'
+            width='5vw'
+          />
         </div>
-        {this.state.quoteIsShowing && <QuoteBox />}
-      </div>
       </div>
     )
   }
