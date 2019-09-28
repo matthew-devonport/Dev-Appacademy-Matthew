@@ -93,17 +93,97 @@
 	left: 90vh;
 }
 
+
+#jv:hover + #exclam-jv{
+	display: block;
+}
+
+#ollie {
+	position: absolute;
+	width: 10vh;
+	height: 45vh;
+	top: 40vh;
+	left: 118vh;
+}
+
+#exclam-ollie {
+	position: absolute;
+	top: 33vh;
+	left: 123vh;
+}
+
+#ollie:hover + #exclam-ollie{
+	display: block;
+}
+
+#kelly {
+	position: absolute;
+	width: 16vh;
+	height: 30vh;
+	top:43vh;
+	left: 161vh;
+}
+
+#exclam-kelly {
+	position: absolute;
+	top: 35vh;
+	left: 163vh;
+}
+
+#kelly:hover + #exclam-kelly{
+	display: block;
+}
+
+
+/* Add div for the ringing bowl */
+
+/* --------------------------------*/
+/* Han
+---------------------------------- */
+#hanBackground {
+	background-image: radial-gradient(100vh at 50% 70%, #f5c507, rgb(1, 161, 129));
+}
+
+#hanRoom {
+	background-image: url('images/han7.png');
+}
+
+
+
+#mindfulness {
+	left: 57vh;
+	top: 10vh;
+	width: 60vh;
+	height: 60vh;
+	position: relative;
+	border-radius: 50%;
+}
+
+#mindfulness a {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 6em;
+	height: 6em;
+	line-height: 85px;
+	background-color: rgb(102, 177, 162);
+	border: solid #16A085;
+	border-radius: 50%;
+	margin: -2em; 
+}
+
 /* --------------------------------*/
 /* Sarrah
 ---------------------------------- */
-
+/* 
 #sarrah {
 	position: relative;
 	width: 10vw;
 	height: 15vh;
 	top:1vh;
 	left: 15vh;
-}
+} */
 
 #sarrahRoom {
 	background-image: url('images/sarrah1.JPG')
@@ -199,85 +279,7 @@
 	position: fixed;
 	
 }
-=======
-#jv:hover + #exclam-jv{
-	display: block;
-}
 
-#ollie {
-	position: absolute;
-	width: 10vh;
-	height: 45vh;
-	top: 40vh;
-	left: 118vh;
-}
-
-#exclam-ollie {
-	position: absolute;
-	top: 33vh;
-	left: 123vh;
-}
-
-#ollie:hover + #exclam-ollie{
-	display: block;
-}
-
-#kelly {
-	position: absolute;
-	width: 16vh;
-	height: 30vh;
-	top:43vh;
-	left: 161vh;
-}
-
-#exclam-kelly {
-	position: absolute;
-	top: 35vh;
-	left: 163vh;
-}
-
-#kelly:hover + #exclam-kelly{
-	display: block;
-}
-
-
-/* Add div for the ringing bowl */
-
-/* --------------------------------*/
-/* Han
----------------------------------- */
-#hanBackground {
-	background-image: radial-gradient(100vh at 50% 70%, #f5c507, rgb(1, 161, 129));
-}
-
-#hanRoom {
-	background-image: url('images/han7.png');
-}
-
-
-
-#mindfulness {
-	left: 57vh;
-	top: 10vh;
-	width: 60vh;
-	height: 60vh;
-	position: relative;
-	border-radius: 50%;
-}
-
-#mindfulness a {
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 6em;
-	height: 6em;
-	line-height: 85px;
-	background-color: rgb(102, 177, 162);
-	border: solid #16A085;
-	border-radius: 50%;
-	margin: -2em; 
-}
 
 /* --------------------------------*/
 /* Kelly
@@ -286,10 +288,10 @@
 #kelly-background {
 	margin: 0 auto;
 	height: 100vh;
-	width: 203vh;
+	width: 195vh;
 	background-size: cover;
 	position: relative;
-	background-image: url('images/kelly1.JPG');
+	background-image: url('images/kelly5.JPG');
 }
 
 /* --------------------------------*/
