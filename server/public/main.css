@@ -93,6 +93,113 @@ body {
 	left: 90vh;
 }
 
+/* --------------------------------*/
+/* Sarrah
+---------------------------------- */
+
+#sarrah {
+	position: relative;
+	width: 10vw;
+	height: 15vh;
+	top:1vh;
+	left: 15vh;
+}
+
+#sarrahRoom {
+	background-image: url('images/sarrah1.JPG')
+
+}
+
+#introFeedback {
+	margin: 0 auto;
+	top: 5vh;
+	right: 70vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#stressRegulation {
+	margin: 0 auto;
+	top: 13vh;
+	right: 70vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#internalDialogue {
+	margin: 0 auto;
+	top: 5vh;
+	right: 40vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#biasAlly {
+	margin: 0 auto;
+	bottom: 2vh;
+	right: 10vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#agileTeamwork {
+	margin: 0 auto;
+	top: 7vh;
+	right: 10vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#communicationConflict {
+	margin: 0 auto;
+	bottom: 2vh;
+	left: 17vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#trustEmpathy {
+	margin: 0 auto;
+	bottom: 10vh;
+	left: 50vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#retroReflection {
+	margin: 0 auto;
+	top: 0vh;
+	left: 50vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#sarrahPopup {
+	margin: 0 auto;
+	top: 80vh;
+	right: 47vh;
+	width: 50vh;
+	height: 50vh;
+	position: fixed;
+	
+}
+=======
 #jv:hover + #exclam-jv{
 	display: block;
 }
@@ -136,9 +243,6 @@ body {
 
 /* Add div for the ringing bowl */
 
-
-
-
 /* --------------------------------*/
 /* Han
 ---------------------------------- */
@@ -149,6 +253,8 @@ body {
 #hanRoom {
 	background-image: url('images/han7.png');
 }
+
+
 
 #mindfulness {
 	left: 57vh;
