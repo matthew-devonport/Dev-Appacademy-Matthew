@@ -9,14 +9,6 @@ export const changePage = (page) => {
   }
 }
 
-export const setPopup = (content, name) => {
-  return {
-    type: SET_POPUP,
-    content,
-    name
-  }
-}
-
 export const setQuoteBox = (quote, top, left) => {
   
   return {
