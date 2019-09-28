@@ -1,5 +1,5 @@
 
-body {
+* {
 	margin: 0;
     /* background: black */
 }
@@ -280,6 +280,19 @@ body {
 }
 
 /* --------------------------------*/
+/* Kelly
+---------------------------------- */
+
+#kelly-background {
+	margin: 0 auto;
+	height: 100vh;
+	width: 203vh;
+	background-size: cover;
+	position: relative;
+	background-image: url('images/kelly1.JPG');
+}
+
+/* --------------------------------*/
 /* QuoteBox
 ---------------------------------- */
 
@@ -337,6 +350,11 @@ body {
   visibility: visible;
   opacity: 1;
 }
+
+/* #popup-link {
+	width: 100%;
+	height: 100%;
+} */
 
 #popup {
   width: 70vw;
