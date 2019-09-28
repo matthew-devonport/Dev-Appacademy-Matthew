@@ -25,7 +25,7 @@ class PopUpBox extends React.Component {
     return (
       <React.Fragment>
           <div id='popup-link-box' style={{
-            position: 'relative',
+            position: 'absolute',
             top,
             left,
             width,

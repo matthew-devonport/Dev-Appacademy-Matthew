@@ -8,19 +8,12 @@ import PopUpBox from './PopUpBox'
 
 class Kelly extends Room {
   name = 'Kelly'
-  top = '8vh'
-  left = '58vw'
+  top = '1vh'
+  left = '120vh'
 
-  popupContent1 = (
+  popupContent = (
     <div>
-      <h1>You clicked the head!</h1>
-      <p>Congratulations!</p>
-    </div>
-  )
-
-  popupContent2 = (
-    <div>
-      <h1>You clicked the second head!</h1>
+      <h1>You clicked the POTATO!</h1>
       <p>Congratulations!</p>
     </div>
   )
@@ -32,18 +25,11 @@ class Kelly extends Room {
         <button onClick={() => this.handleClick(0)}>Home</button>
         {this.state.quoteIsShowing && <QuoteBox />}
         <PopUpBox
-          content={this.popupContent1}
-          top='70vh'
-          left='32vw'
+          content={this.popupContent}
+          top='90vh'
+          left='37vh'
           height='10vh'
-          width='5vw'
-        />
-        <PopUpBox
-          content={this.popupContent2}
-          top='40vh'
-          left='32vw'
-          height='10vh'
-          width='5vw'
+          width='22vh'
         />
       </div>
     )
