@@ -3,44 +3,45 @@ import React from 'react'
 class PopUpBox extends React.Component {
   constructor(props) {
     super(props)
+    let { top, left, height, width, content } = this.props
+    this.state = {
+      showing: false,
+      top,
+      left,
+      height,
+      width,
+      content
+    }
   }
 
-  componentDidMount() {
-    this.setPopupContent()
-    this.setLinkPosition()
-  }
-
-  setPopupContent = () => {
-    let { content } = this.props
-    let contentBox = document.getElementById('popup-content')
-    contentBox.innerHTML = content
-  }
-
-  setLinkPosition = () => {
-    let { top, left, height, width } = this.props
-    let linkBox = document.getElementById('popup-link-box')
-    linkBox.style.position = 'fixed'
-    linkBox.style.top = top
-    linkBox.style.left = left
-    linkBox.style.width = width
-    linkBox.style.height = height
+  togglePopup = () => {
+    this.setState({
+      showing: !this.state.showing
+    })
   }
 
   render() {
+    let { showing, top, left, height, width, content } = this.state
     return (
       <React.Fragment>
-        <a className='button' href='#popup-overlay' id='popup-link'>
-          <div id='popup-link-box'></div>
+        <a className='button' onClick={this.togglePopup} id='popup-link'>
+          <div id='popup-link-box' style={{
+            position: 'relative',
+            top,
+            left,
+            width,
+            height
+          }}></div>
         </a>
 
-        <div id='popup-overlay'>
+        {showing && <div id='popup-overlay'>
           <div id='popup'>
-            <div id='popup-content'></div>
-            <a id='popup-close' href='#'>
+            <div id='popup-content'>{content}</div>
+            <a id='popup-close' onClick={this.togglePopup}>
               &times;
             </a>
           </div>
-        </div>
+        </div>}
       </React.Fragment>
     )
   }
