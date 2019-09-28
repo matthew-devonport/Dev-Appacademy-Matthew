@@ -254,12 +254,6 @@
 	background-image: url('images/han7.png');
 }
 
-
-
-#ollieRoom {
-  background-image: url('./images/ollieBackground.jpg')
-}
-
 #mindfulness {
 	left: 57vh;
 	top: 10vh;
@@ -281,6 +275,14 @@
 	border: solid #16A085;
 	border-radius: 50%;
 	margin: -2em; 
+}
+
+/* --------------------------------*/
+/* Ollie
+---------------------------------- */
+
+#ollieRoom {
+  background-image: url('./images/ollieBackground1.jpg')
 }
 
 /* --------------------------------*/

@@ -7,7 +7,8 @@ module.exports = {
   getQuotesByName,
   getQuestions,
   getVideos,
-  getVideosByName
+  getVideosByName,
+  getStudents
 }
 
 function getQuotes (db = connection) {
@@ -28,4 +29,8 @@ function getVideos (db = connection) {
 
 function getVideosByName (name, db = connection) {
   return db('youtube').where('name', name)
+}
+
+function getStudents (db=connection) {
+  return db('students').select()
 }
