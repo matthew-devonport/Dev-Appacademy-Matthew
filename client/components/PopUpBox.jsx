@@ -30,7 +30,7 @@ class PopUpBox extends React.Component {
             left,
             width,
             height
-          }} onClick={this.togglePopup}></div>
+          }} onClick={this.togglePopup}>sail hatan</div>
 
         {showing && <div id='popup-overlay'>
           <div id='popup'>

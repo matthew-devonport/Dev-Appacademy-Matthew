@@ -110,6 +110,11 @@
 
 }
 
+/* .popupScroller {
+	overflow-y: auto;
+  height: 100px;
+} */
+
 #introFeedback {
 	margin: 0 auto;
 	top: 5vh;
@@ -198,6 +203,31 @@
 	height: 50vh;
 	position: fixed;
 	
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/* align-items: flex-start; */
+	/* flex-wrap: nowrap; */
+	padding-top: 4vh;
+}
+
+#popupLinks {
+display: flex;
+justify-content: space-evenly;
+padding-top: 4vh
+
+}
+
+#compass-img {
+	height: 40vh;
+	width: auto;
+	padding-right: 4vh;
+
+
+
 }
 
 #jv:hover + #exclam-jv{
