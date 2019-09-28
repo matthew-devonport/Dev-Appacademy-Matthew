@@ -7,8 +7,8 @@ import PopUpBox from './PopUpBox'
 
 class Kelly extends Room {
   name = 'Kelly'
-  top = '40vh'
-  left = '20vw'
+  top = '8vh'
+  left = '58vw'
 
   popupContent = `
   <h1>You clicked the head!</h1>
