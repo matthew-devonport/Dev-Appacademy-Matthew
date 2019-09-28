@@ -1,40 +1,48 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
 
 class PopUpBox extends React.Component {
-  html = <h1>Hello</h1>
+  constructor(props) {
+    super(props)
+    let { top, left, height, width, content } = this.props
+    this.state = {
+      showing: false,
+      top,
+      left,
+      height,
+      width,
+      content
+    }
+  }
+
+  togglePopup = () => {
+    this.setState({
+      showing: !this.state.showing
+    })
+  }
+
   render() {
+    let { showing, top, left, height, width, content } = this.state
     return (
       <React.Fragment>
-        <div className='box'>
-          <a className='button' href='#popup1'>
-            Let me Pop up
-          </a>
-        </div>
+          <div id='popup-link-box' style={{
+            position: 'relative',
+            top,
+            left,
+            width,
+            height
+          }} onClick={this.togglePopup}></div>
 
-        <div id='popup1' className='overlay'>
-          <div className='popup'>
-            <h2>Here i am</h2>
-            <a className='close' href='#'>
+        {showing && <div id='popup-overlay'>
+          <div id='popup'>
+            <div id='popup-content'>{content}</div>
+            <a id='popup-close' onClick={this.togglePopup}>
               &times;
             </a>
-            <div className='content'>
-              Thank to pop me out of that button, but now i'm done so you can
-              close this window.
-              {this.html}
-            </div>
           </div>
-        </div>
+        </div>}
       </React.Fragment>
-    );
+    )
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    popUpBox: state.popUpBox
-  };
-}
-
-
-export default connect(mapStateToProps)(PopUpBox);
+export default PopUpBox

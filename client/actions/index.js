@@ -1,5 +1,6 @@
 export const CHANGE_PAGE = 'CHANGE_PAGE'
 export const SET_QUOTEBOX = 'SET_QUOTEBOX';
+export const SET_POPUP = 'SET_POPUP';
 
 export const changePage = (page) => {
   return {

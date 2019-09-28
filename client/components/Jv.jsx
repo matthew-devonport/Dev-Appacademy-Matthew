@@ -6,31 +6,41 @@ import PopUpBox from './PopUpBox'
 
 class Jv extends Room {
   name = 'JV'
-  top = "20vh"
-  left = "20vw"
+  top = '20vh'
+  left = '20vw'
+
+  popupContent = (
+    <div>
+      <h1>JV's Popup!</h1>
+      <p>This is a popup for JV!</p>
+    </div>
+  )
 
   render() {
     return (
       <div>
         <button onClick={() => this.handleClick(0)}>Home</button>
         <p>Hello, I am JV</p>
-        <iframe
+        {/* <iframe
           width='560'
           height='315'
           src='https://www.youtube.com/embed/GdJO2aDWayE'
-          frameborder='0'
+          frameBorder='0'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-          allowfullscreen
-        ></iframe>
-        <button onClick={this.toggleQuote}>Quote</button>
-        
+          allowFullScreen
+        ></iframe> */}
+
         {this.state.quoteIsShowing && <QuoteBox />}
-        <div>
-          <PopUpBox />
-        </div>
+        
+          <PopUpBox
+            content={this.popupContent}
+            top='30vh'
+            left='30vw'
+            height='5vh'
+            width='5vw'
+          />
       </div>
-    );
-    
+    )
   }
 }
 
