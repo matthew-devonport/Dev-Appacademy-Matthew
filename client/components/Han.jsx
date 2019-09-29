@@ -34,23 +34,32 @@ class Han extends Room {
 
   setAudio = (track) => {
     this.setState({
-      playing: !this.state.playing,
+      playing: true,
       track: track
     })
   }
   
   play = () => {
-    let audio = new Audio(this.state.track + '.mp3')
+    let audio = document.querySelector("audio")
+    if (audio.canPlayType('audio/mpeg;')) {
+      audio.type= 'audio/mpeg';
+      audio.src= this.state.track + '.mp3';
+      } else {
+      audio.type= 'audio/ogg';
+      audio.src= this.state.track + '.ogg';
+    }
+    audio.load()
     audio.play()
-  }  
+  }
 
-  componentDidUpdate(prevProps) {
-    if(this.props != prevProps.props && this.state.playing) {
+  componentDidUpdate(prevProps, prevState) {
+    if(this.state.track != prevState.track) {
       this.play()
     }
   }
 
   render() {
+    
     return (
       <React.Fragment>
         <div id='hanBackground'></div>
@@ -58,9 +67,10 @@ class Han extends Room {
           <button onClick={() => this.handleClick(0)}>Home</button>
           {this.state.playing &&
           <audio controls>
-            <source src={this.state.track + ".ogg"} type="audio/ogg" />
-            <source src={this.state.track + ".mp3"} type="audio/mpeg" />
-          </audio>}
+            <source src="" type="audio/ogg" />
+            <source src="" type="audio/mpeg" />
+          </audio>
+        }
           <div id='mindfulness'>
             <a className='technic button deg270' onClick={() => this.setPopup(this.mindfulness)}>
               {/* trigger popup */}
@@ -96,9 +106,11 @@ class Han extends Room {
           {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}/>}
           {/* {this.state.quoteIsShowing && <QuoteBox />} */}
         </div>
-
+        
       </React.Fragment>
+    
     )
+    
   }
 }
 
