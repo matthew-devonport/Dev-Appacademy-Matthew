@@ -16,8 +16,6 @@ class Han extends Room {
   top = '80vh'
   left = '33vw'
 
-  popupContent = ''
-
   setPopup = (content) => {
     this.togglePopup(),
     this.popupContent = content
