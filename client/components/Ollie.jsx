@@ -20,6 +20,11 @@ class Ollie extends Room {
     })
     })
   }
+
+  setPopup = () => {
+    this.togglePopup()
+  }
+
   name = 'Ollie'
   top = '10vh'
   left = '30vw'
@@ -30,18 +35,16 @@ class Ollie extends Room {
   }
   
   render() {
-    console.log(this.audio)
     return (
       <div className='room' id="ollieRoom">
         <button onClick={() => this.handleClick(0)}>Home</button>
-        {this.state.quoteIsShowing && <QuoteBox />}
-      {this.state.questions && <PopUpBox
+      <div id ='ollie-popUp' onClick={() => this.setPopup()}></div>
+      {this.state.quoteIsShowing && <QuoteBox />}
+
+      {this.state.questions && this.state.popupIsShowing && <PopUpBox
       content={<div><h1 id='QOTD-Title'>Question of the day:</h1>{this.state.questions[Math.floor(Math.random() * 19)]}</div>}
-      top='5vh'
-      left='5vw'
-      height='7vh'
-      width='25vw'
-      />}
+      togglePopup={this.togglePopup}/>}
+
       <div id='clap-box' onClick={() => this.play()}> </div>
       </div>
     )
