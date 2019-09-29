@@ -17,6 +17,15 @@
 	position: relative;
 }
 
+#home-button {
+	position: fixed;
+	top: 5vh;
+	left: 5vh;
+	padding: 1vh;
+	border: none;
+	background-color: #6d9297;
+}
+
 /* --------------------------------*/
 /* Main room */
 /* -------------------------------- */
@@ -321,10 +330,27 @@
 #kelly-background {
 	margin: 0 auto;
 	height: 100vh;
-	width: 203vh;
+	width: 195vh;
 	background-size: cover;
 	position: relative;
 	background-image: url('images/kelly5.JPG');
+}
+
+#potato-box {
+	width: 25vh;
+	height: 13vh;
+	position: fixed;
+	top: 87vh;
+	left: 35vh;
+	cursor: pointer;
+}
+
+#codewars-link {
+	position: fixed;
+	top: 62vh;
+	left: 116vh;
+	width: 70vh;
+	height: 34vh;
 }
 
 /* --------------------------------*/
@@ -347,7 +373,7 @@
   left: 30vw;
   padding: 2vw;
   text-align: center;
-  background: #afbcbe;
+  background: #6d9297;
   border-radius: 0.4em;
   width: 20vw;
 }
@@ -360,7 +386,7 @@
 	width: 0;
 	height: 0;
 	border: 41px solid transparent;
-	border-top-color: #afbcbe;
+	border-top-color: #6d9297;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -20.5px;
@@ -379,7 +405,7 @@
   width: 0;
   height: 0;
   border: 41px solid transparent;
-  border-bottom-color: #afbcbe;
+  border-bottom-color: #6d9297;
   border-top: 0;
   margin-left: -25.5px;
   margin-top: -25.5px;
@@ -422,9 +448,10 @@
   font-size: 5vw;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+	color: #333;
+	cursor: pointer;
 }
 
 #popup-close:hover {
-  color: #06d85f;
+  color: #6d9297;
 }
