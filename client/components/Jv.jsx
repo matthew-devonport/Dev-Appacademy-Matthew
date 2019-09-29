@@ -3,8 +3,19 @@ import { connect } from 'react-redux';
 import Room from './Room';
 import QuoteBox from './QuoteBox';
 import PopUpBox from './PopUpBox'
+import {getVideos} from '../apiClient'
 
 class Jv extends Room {
+ constructor(props) {
+   super(props)
+   getVideos().then(result => {
+    this.setState({
+      videos: result.videos,
+      name: result.name
+    })
+  })
+ }
+
   name = 'JV'
   top = '20vh'
   left = '20vw'
@@ -29,6 +40,13 @@ class Jv extends Room {
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
         ></iframe> */}
+        <div id = 'jv-box'>
+          {this.state.videos && <ul>
+            {this.state.videos.map((video, i) => <li key = {i}>
+              <a href={video.url} target='blank'>{video.name}</a>
+              </li>)}
+            </ul>}
+        </div>
       
 
         {this.state.quoteIsShowing && <QuoteBox />}

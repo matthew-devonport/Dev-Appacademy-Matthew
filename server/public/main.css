@@ -414,3 +414,11 @@ padding-top: 4vh
 	position: relative;
 	background-image: url('images/jv.JPG')
 }
+
+#jv-box {
+	height:120px;widows: 50vh;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:scroll;
+	position: absolute;
+	top: 50%;
+	left:50%
+
+}
