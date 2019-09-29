@@ -18,7 +18,7 @@
 }
 
 #home-button {
-	position: fixed;
+	position: absolute;
 	top: 5vh;
 	left: 5vh;
 	padding: 1vh;
@@ -338,15 +338,15 @@
 
 #potato-box {
 	width: 25vh;
-	height: 13vh;
-	position: fixed;
-	top: 87vh;
-	left: 35vh;
+	height: 16vh;
+	position: absolute;
+	top: 84vh;
+	left: 38vh;
 	cursor: pointer;
 }
 
 #codewars-link {
-	position: fixed;
+	position: absolute;
 	top: 62vh;
 	left: 116vh;
 	width: 70vh;
