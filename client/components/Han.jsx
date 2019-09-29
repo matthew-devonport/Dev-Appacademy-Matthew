@@ -40,7 +40,7 @@ class Han extends Room {
   }
   
   play = () => {
-    let audio = new Audio(this.state.track)
+    let audio = new Audio(this.state.track + '.mp3')
     audio.play()
   }  
 
@@ -55,22 +55,22 @@ class Han extends Room {
       <React.Fragment>
         <div id='hanBackground'></div>
         <div className='room' id='hanRoom'>
-
-          <audio controls>
-            <source src="./sounds/forest.ogg" type="audio/ogg" />
-            <source src="./sounds/forest.mp3" type="audio/mpeg" />
-          </audio>
           <button onClick={() => this.handleClick(0)}>Home</button>
+          {this.state.playing &&
+          <audio controls>
+            <source src={this.state.track + ".ogg"} type="audio/ogg" />
+            <source src={this.state.track + ".mp3"} type="audio/mpeg" />
+          </audio>}
           <div id='mindfulness'>
             <a className='technic button deg270' onClick={() => this.setPopup(this.mindfulness)}>
               {/* trigger popup */}
               Mindfulness
             </a>
-            <div className='technic button deg0' onClick={() => this.setAudio('./sounds/forest.mp3')}>
+            <div className='technic button deg0' onClick={() => this.setAudio('./sounds/forest')}>
               <div className="arrow-right"></div>
               Sounds
             </div>
-            <div className='technic button deg135' onClick={() => this.setAudio('river')}>
+            <div className='technic button deg135' onClick={() => this.setAudio('./sounds/river')}>
               <div className="arrow-right"></div>
               Body Scan
             </div>
