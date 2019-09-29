@@ -329,6 +329,33 @@
 
 
 /* --------------------------------*/
+/* Ollie
+---------------------------------- */
+
+#ollieRoom {
+  background-image: url('./images/ollieBackground1.jpg');
+  width: 100vw;
+}
+
+#QOTD {
+	font-size: 50px;
+	text-align: center;
+	margin-top: 180px;
+}
+
+#QOTD-Title {
+	font-size: 60px;
+}
+
+#clap-box {
+	position: absolute;
+	top: 45vh;
+	left: 50vh;
+	width: 28vw;
+	height: 60px;
+}
+
+/* --------------------------------*/
 /* Kelly
 ---------------------------------- */
 
