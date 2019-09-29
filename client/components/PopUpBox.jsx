@@ -3,14 +3,15 @@ import React from 'react'
 class PopUpBox extends React.Component {
   constructor(props) {
     super(props)
-    let { top, left, height, width, content } = this.props
+    let { top, left, height, width, content, title } = this.props
     this.state = {
       showing: false,
       top,
       left,
       height,
       width,
-      content
+      content,
+      title
     }
   }
 
@@ -21,7 +22,7 @@ class PopUpBox extends React.Component {
   }
 
   render() {
-    let { showing, top, left, height, width, content } = this.state
+    let { showing, top, left, height, width, content, title } = this.state
     return (
       <React.Fragment>
           <div id='popup-link-box' style={{
@@ -30,7 +31,7 @@ class PopUpBox extends React.Component {
             left,
             width,
             height
-          }} onClick={this.togglePopup}>sail hatan</div>
+          }} onClick={this.togglePopup}>{title}</div>
 
         {showing && <div id='popup-overlay'>
           <div id='popup'>

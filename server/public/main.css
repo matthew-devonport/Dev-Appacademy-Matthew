@@ -125,6 +125,40 @@
 	
 }
 
+.sarrahTitle {
+	font-size: 3vw;
+	font-family: 'Cabin', sans-serif;
+}
+
+.sarrahAsk {
+	font-size: 4vw;
+	padding-left: 8.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+}
+
+#popupLinks {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 4vh;
+	font-size: 1.2vw;
+	font-family: 'Cabin', sans-serif;
+	
+	}
+	
+	#compass-img {
+		height: 40vh;
+		width: auto;
+		padding-left: 6vw;
+
+	}
+
+.sarrahPoints {
+	font-size: 2.5vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+}
+
 #stressRegulation {
 	margin: 0 auto;
 	top: 13vh;
@@ -209,25 +243,15 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	/* align-items: flex-start; */
-	/* flex-wrap: nowrap; */
-	padding-top: 4vh;
+	align-items: center;
+	/* padding-top: 2vh; */
 }
 
-#popupLinks {
-display: flex;
-justify-content: space-evenly;
-padding-top: 4vh
 
-}
-
-#compass-img {
-	height: 40vh;
-	width: auto;
-	padding-right: 4vh;
+	
 
 
-
+/* ------------- */
 }
 
 #jv:hover + #exclam-jv{

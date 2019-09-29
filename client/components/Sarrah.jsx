@@ -17,16 +17,17 @@ class Sarrah extends Room {
 
   introFeedback = (
     <div>
-      <h1>Intro &amp; Feedback</h1>
+      <h1 class='sarrahTitle'>Intro &amp; Feedback</h1>
       <div class='container'>
-        <img src="/images/Sarrah/compass-of-shame.jpg" id="compass-img"></img>
-        <p>
+       
+        <p class='sarrahPoints'>
           - Gratitude<br />
           - Pause &amp; Reflect<br />
-          - Take Only What's Useful<br />
-          - Seek For More Feedback<br />
+          - Take What's Useful<br />
+          - Seek More Feedback<br />
         </p>
-        <p>
+        <img src="/images/Sarrah/compass-of-shame.jpg" id="compass-img"></img>
+        <p class ='sarrahAsk'>
           <h3>ASK</h3>
           Actionable<br />
           Specific<br />
@@ -42,7 +43,7 @@ class Sarrah extends Room {
           <a href='https://docs.google.com/document/d/178QAtvlPYSpVOdQf2zlnHOHKZRO8uyjbE3t3obhH0_I/edit' target='_blank'>Feedback - Facilitator Runsheet</a>
           <br />  <br />
           <a href='https://docs.google.com/document/d/1Vjwpml96tPkcWO9bXsKmuCD_8BvxhuMiizpLUG5RJJQ/edit' target='_blank'>Feedback - Student Notes</a>
-          &nbsp;-&nbsp;
+         
       <a href='https://drive.google.com/open?id=1KQzhvZr8jTgilNJuHifDNxfBDDEtMiTx' target='_blank'>(Feedback - Student Notes PDF)</a>
           <br />  <br />
           <a href='https://drive.google.com/open?id=1AA3yQ7Z55Prt8j-rL7WBxxag3IkPJ-ZT' target='_blank'>Human Skills - Session 1 Workbook PDF</a>
@@ -131,6 +132,7 @@ class Sarrah extends Room {
               width='5vh' />
             <PopUpBox
               content={this.introFeedback}
+              title='Intro &amp; Feedback'
               margin='0 auto'
               top='5vh'
               right='70vh'
