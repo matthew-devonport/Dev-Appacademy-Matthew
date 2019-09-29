@@ -9,30 +9,39 @@ class Sarrah extends Room {
   top = '33vh'
   left = '42vw'
 
+  popupTitle = ''
+  popupContent = ''
+
   popupEasterEgg = (
     <div><h1>Sarrah's Popup</h1>
       <p>This is a popup for Sarrah</p>
     </div>)
 
-
+  setPopup = (title, content) => {
+    console.log(this)
+    this.togglePopup(),
+    this.popupTitle = title,
+    this.popupContent = content
+  }
+  
   introFeedback = (
     <div>
-      <h1 class='sarrahTitle'>Intro &amp; Feedback</h1>
-      <div class='container'>
+      <h1 className='sarrahTitle'>Intro &amp; Feedback</h1>
+      <div className='container'>
        
-        <p class='sarrahPoints'>
+        <p className='sarrahPoints'>
           - Gratitude<br />
           - Pause &amp; Reflect<br />
           - Take What's Useful<br />
           - Seek More Feedback<br />
         </p>
         <img src="/images/Sarrah/compass-of-shame.jpg" id="compass-img"></img>
-        <p class ='sarrahAsk'>
+        <div className='sarrahAsk'>
           <h3>ASK</h3>
           Actionable<br />
           Specific<br />
           Kind<br />
-          </p>
+          </div>
 </div>
         <div id='popupLinks'>
 
@@ -57,9 +66,16 @@ class Sarrah extends Room {
         <div className='room' id='sarrahRoom'>
           <p>Human Skills</p>
           <button onClick={() => this.handleClick(0)}>Home</button>
-          {this.state.quoteIsShowing && <QuoteBox />}
+          {/* {this.state.quoteIsShowing && <QuoteBox />} */}
           <div>
             <div>
+              <a
+                onClick={()=> this.setPopup('Intro &#38; Feedback', this.introFeedback)}
+                id='introFeedback'
+              >
+                Intro &#38; Feedback
+              </a>
+              <br />
               <a
                 href='https://drive.google.com/folderview?id=13wzi0w2w8p46sCJaIkxkl4ShEc0QT0rJ'
                 target='_blank'
@@ -118,22 +134,17 @@ class Sarrah extends Room {
               <br />
             </div>
 
-            <PopUpBox
+            {/* <PopUpBox
               content={this.popupEasterEgg}
               top='57vh'
               left='150vh'
               height='10vh'
-              width='5vh' />
-            <PopUpBox
-              content={this.introFeedback}
-              title='Intro &amp; Feedback'
-              margin='0 auto'
-              top='5vh'
-              right='70vh'
-              width='50vh'
-              height='50vh'
-              position='relative' />
-
+              width='5vh' /> */}
+            {this.state.popupIsShowing && <PopUpBox
+              content={this.popupContent}
+              title={this.popupTitle}
+              togglePopup={this.togglePopup}
+            />}
           </div>
         </div>
       </React.Fragment>
