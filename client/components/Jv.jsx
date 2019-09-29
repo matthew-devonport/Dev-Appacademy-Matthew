@@ -30,10 +30,9 @@ class Jv extends Room {
   render() {
     return (
       <React.Fragment>
-        <div id='jv-image'>
-          <button onClick={() => this.handleClick(0)}>Home</button>
-          <p>Hello, I am JV</p>
-          {/* <iframe
+      <div id='jv-image'>
+        <button onClick={() => this.handleClick(0)}>Home</button>
+        {/* <iframe
           width='560'
           height='315'
           src='https://www.youtube.com/embed/GdJO2aDWayE'
@@ -41,24 +40,27 @@ class Jv extends Room {
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
         ></iframe> */}
-          {this.state.quoteIsShowing && <QuoteBox />}
+        
 
-          <PopUpBox
-            content={this.popupContent}
-            top='30vh'
-            left='30vw'
-            height='5vh'
-            width='5vw'
-          />
-        </div>
-        <div id='jv-box'>
-          {this.state.videos && <ul>
-            {this.state.videos.map((video, i) => <li key={i}>
-              <a href={video.url} target='blank'>{video.name}</a>
-            </li>)}
-          </ul>}
-        </div>
-      </React.Fragment>
+
+        {/* {this.state.quoteIsShowing && <QuoteBox />}
+  */}
+        <PopUpBox
+          content={this.popupContent}
+          top='30vh'
+          left='30vw'
+          height='5vh'
+          width='5vw'
+        />
+        
+      </div>
+      <div id='jv-box'>
+      {this.state.videos && this.state.videos.map((video, i) => <a key={i} href={video.url} target='blank'>{video.name}</a>
+        )
+      }
+      
+    </div>
+    </React.Fragment> 
     )
   }
 }

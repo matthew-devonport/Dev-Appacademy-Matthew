@@ -416,9 +416,19 @@ padding-top: 4vh
 }
 
 #jv-box {
-	height: 20vh;
-	width: 20vh;
+	height: 70vh;
+	overflow: scroll;
+	width: 110vh;
 	display: flex;
-	justify-content: space-evenly;
-	border:20px solid black
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: absolute;	
+	justify-content: space-around;
+	top: 24vh;
+	left: 62vh	
+}	
+
+#jv-box a {
+display: block;
+padding: 7px;
 }
