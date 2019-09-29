@@ -17,8 +17,8 @@ class Jv extends Room {
   }
 
   name = 'JV'
-  top = '20vh'
-  left = '20vw'
+  top = '18vh'
+  left = '18vh'
 
   setPopup = (e) => {
     console.log(e.target.textContent)
@@ -26,6 +26,7 @@ class Jv extends Room {
     this.popupContent = (
       <React.Fragment>
      <h1>{e.target.textContent}</h1>
+     <br/>
       <iframe
           width='560'
           height='315'
@@ -43,12 +44,9 @@ class Jv extends Room {
       <React.Fragment>
       <div id='jv-image'>
         <button onClick={() => this.handleClick(0)}>Home</button>
-        {/*  */}
-        
-
-
-        {/* {this.state.quoteIsShowing && <QuoteBox />}
-  */}
+         
+        {this.state.quoteIsShowing && <QuoteBox />}
+ 
    
 
       </div>
