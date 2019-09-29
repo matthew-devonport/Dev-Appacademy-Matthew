@@ -340,6 +340,30 @@ a:active {
 	
 }
 
+#allyQuestion {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+}
+
+#unconsciousBiasImg {
+	padding-top: 5vh;
+	height: 35vh;
+	width: auto;
+}
+
+#allyImg {
+	height: 40vh;
+	padding-left: 8vh;
+	padding-top: 5vh;
+	padding-bottom: 3vh;
+	width: auto;
+}
+
+
+
+/* ---- Agile & Teamwork ---- */
+
 #agileTeamwork {
 	margin: 0 auto;
 	top: 7vh;

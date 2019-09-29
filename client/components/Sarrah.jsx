@@ -82,7 +82,7 @@ class Sarrah extends Room {
       <div className='container'>
         <img src='/images/Sarrah/Internal_Dialogue_01.jpg' id='internalDialogueImg'></img>
         <p className='sarrahPoints'>
-          <strong>Self Compassion</strong><br/>
+          <strong>Self Compassion</strong><br />
           - Mindfulness<br />
           - Kindness<br />
           - Acceptance<br />
@@ -102,7 +102,29 @@ class Sarrah extends Room {
     </div>
   )
 
+  biasAlly = (
+    <div>
+      <h1 className='sarrahTitle'>Bias &amp; Ally Skills</h1>
+      <p id='allyQuestion'>
+        "How do I become a good ally?"
+        </p>
+      <div className='container'>
+        <img src='/images/Sarrah/unconscious-bias.jpg' id='unconsciousBiasImg'></img>
+        <img src='/images/Sarrah/ally.jpg' id='allyImg'></img>
+   
+      </div>
+     
+      <div id='popupLinks'>
+        <a href='https://docs.google.com/document/d/1fqOBF7VZIToEtA-ESpynO_ZyJpEH0u7_I4N9N3_PGWo/edit' target='_blank'>Bias, Diversity &amp; Growth Mindset</a>
+        <a href='https://docs.google.com/document/d/1tWbdfjseh4ggPfzBcSIiYt37LpqocQLwaW4WLXRm-jg/edit' target='_blank'>Facilitator Notes</a>
+        <a href='https://docs.google.com/document/d/1iCjkv637O0XU0mT6cFu8I250byF75Woh2BLLhLuRTRU/edit' target='_blank'>Resources</a>
+        <a href='https://docs.google.com/document/d/1Uigp00nIS-SETioNU3j3dS1DhxjFw4SLSysfRPomVoA/edit' target='_blank'>Runsheet</a>
+        <a href='https://docs.google.com/document/d/1j1k5zTsgYDdRHURYpS3hnPXux7337GExlzjDnmLkxX4/edit' target='_blank'>Student Notes</a>
+        <a href='https://drive.google.com/open?id=19AD_fFV45QztRGC_zb6ftpQKLqr_7Z0o' target='_blank'>Student Notes (PDF)</a>
 
+      </div>
+    </div>
+  )
 
 
   render() {
@@ -137,7 +159,7 @@ class Sarrah extends Room {
               </a>
               <br />
               <a
-
+                onClick={() => this.setPopup(this.biasAlly)}
                 id='biasAlly'
               >
                 Bias &#38; Ally Skills
