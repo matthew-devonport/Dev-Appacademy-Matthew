@@ -223,6 +223,20 @@
 
 }
 
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+    color: red;
+  
+}
+
 #introFeedback {
 	margin: 0 auto;
 	top: 5vh;
@@ -231,6 +245,41 @@
 	height: 50vh;
 	position: relative;
 	
+}
+
+.sarrahTitle {
+	font-size: 3vw;
+	font-family: 'Cabin', sans-serif;
+}
+
+.sarrahAsk {
+	font-size: 4vw;
+	padding-left: 8.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+}
+
+#popupLinks {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 3.5vh;
+	font-size: 1.3vw;
+	font-family: 'Cabin', sans-serif;
+	
+	}
+	
+
+	#compass-img {
+		height: 40vh;
+		width: auto;
+		padding-left: 6vw;
+
+	}
+
+.sarrahPoints {
+	font-size: 2.5vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
 }
 
 #stressRegulation {
@@ -313,7 +362,16 @@
 	
 }
 
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	/* padding-top: 2vh; */
+}
 
+
+	
 /* --------------------------------*/
 /* Kelly
 ---------------------------------- */
@@ -427,4 +485,13 @@
 
 #popup-close:hover {
   color: #06d85f;
+}
+
+#jv-image {
+	margin: 0 auto;
+	height: 100vh;
+	width: 203vh;
+	background-size: cover;
+	position: relative;
+	background-image: url('images/jv.JPG')
 }

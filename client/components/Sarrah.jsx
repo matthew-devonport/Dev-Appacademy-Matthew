@@ -9,21 +9,65 @@ class Sarrah extends Room {
   top = '33vh'
   left = '42vw'
 
-  popupContent = `<h1>Sarrah's Popup</h1>
-  <p>This is a popup for Sarrah</p> `
+  popupContent = ''
 
+  setPopup = (content) => {
+    this.togglePopup(),
+    this.popupContent = content
+  }
+
+  easterEgg = (
+    <div><h1>Sarrah's Popup</h1>
+      <p>This is a popup for Sarrah</p>
+    </div>)
+  
+  introFeedback = (
+    <div>
+      <h1 className='sarrahTitle'>Intro &amp; Feedback</h1>
+      <div className='container'>
+       
+        <p className='sarrahPoints'>
+          - Gratitude<br />
+          - Pause &amp; Reflect<br />
+          - Take What's Useful<br />
+          - Seek More Feedback<br />
+        </p>
+        <img src="/images/Sarrah/compass-of-shame.jpg" id="compass-img"></img>
+        <div className='sarrahAsk'>
+          <h3>ASK</h3>
+          Actionable<br />
+          Specific<br />
+          Kind<br />
+          </div>
+</div>
+        <div id='popupLinks'>
+
+          <a href='https://docs.google.com/document/d/1mXGydSKXC8J3WAXIyHJoT_r7SNHlouXj8nzFDbxzmyc/edit' target='_blank'>Facilitator Notes</a>
+          <a href='https://docs.google.com/document/d/1sOqLO0KTRDm8Fo-Ge-fcA11jgrHyWYoChwZ6D64PEzA/edit' target='_blank'>Facilitator Recommended Reading</a>
+          <a href='https://docs.google.com/document/d/178QAtvlPYSpVOdQf2zlnHOHKZRO8uyjbE3t3obhH0_I/edit' target='_blank'>Facilitator Runsheet</a>
+          <a href='https://docs.google.com/document/d/1Vjwpml96tPkcWO9bXsKmuCD_8BvxhuMiizpLUG5RJJQ/edit' target='_blank'>Student Notes</a> 
+      <a href='https://drive.google.com/open?id=1KQzhvZr8jTgilNJuHifDNxfBDDEtMiTx' target='_blank'>Student Notes (PDF)</a>
+          <a href='https://drive.google.com/open?id=1AA3yQ7Z55Prt8j-rL7WBxxag3IkPJ-ZT' target='_blank'>Human Skills<br /> Session 1 Workbook PDF</a>
+          <a href='https://docs.google.com/document/d/16sxw6CnGI987h97AsR6bZuTwShAmn-gOic7tTvZqs7A/edit' target='_blank'>Additional Student Resources</a>
+
+        </div>
+      
+    </div>
+
+
+
+  )
   render() {
     return (
       <React.Fragment>
         <div className='room' id='sarrahRoom'>
           <p>Human Skills</p>
           <button onClick={() => this.handleClick(0)}>Home</button>
-          {this.state.quoteIsShowing && <QuoteBox />}
+          {/* {this.state.quoteIsShowing && <QuoteBox />} */}
           <div>
             <div>
               <a
-                href='https://drive.google.com/folderview?id=1iExqsngQPqJX15ALewKMhRqe8dA-CPk3'
-                target='_blank'
+                onClick={()=> this.setPopup(this.introFeedback)}
                 id='introFeedback'
               >
                 Intro &#38; Feedback
@@ -86,9 +130,11 @@ class Sarrah extends Room {
               </a>
               <br />
             </div>
-            <div id='sarrahPopup'>
-              <PopUpBox />
-            </div>
+            <div id="temporary" onClick={()=> this.setPopup(this.easterEgg)}>Easter egg: Click me!</div>
+            {this.state.popupIsShowing && <PopUpBox
+              content={this.popupContent}
+              togglePopup={this.togglePopup}
+            />}
           </div>
         </div>
       </React.Fragment>
