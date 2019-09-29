@@ -17,8 +17,19 @@ class Han extends Room {
   top = '80vh'
   left = '33vw'
 
-  popupTitle = 'Mindfulness'
-  popupContent = <p>test</p>
+  popupContent = ''
+
+  setPopup = (content) => {
+    this.togglePopup(),
+    this.popupContent = content
+  }
+
+  mindfulness = (
+    <React.Fragment>
+    <h1>Mindfulness</h1>
+    <p>test</p>
+    </React.Fragment>
+  )
 
   setAudio = (track) => {
     this.setState({
@@ -39,7 +50,7 @@ class Han extends Room {
           </audio>
           <button onClick={() => this.handleClick(0)}>Home</button>
           <div id='mindfulness'>
-            <a className='technic button deg270' onClick={this.togglePopup}>
+            <a className='technic button deg270' onClick={() => this.setPopup(this.mindfulness)}>
               {/* trigger popup */}
               Mindfulness
             </a>
@@ -70,7 +81,7 @@ class Han extends Room {
 
           </div>
 
-          {this.state.popupIsShowing && <PopUpBox title={this.popupTitle} content={this.popupContent} togglePopup={this.togglePopup}/>}
+          {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}/>}
           {/* {this.state.quoteIsShowing && <QuoteBox />} */}
         </div>
 

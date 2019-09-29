@@ -9,20 +9,17 @@ class Sarrah extends Room {
   top = '33vh'
   left = '42vw'
 
-  popupTitle = ''
   popupContent = ''
 
-  popupEasterEgg = (
+  setPopup = (content) => {
+    this.togglePopup(),
+    this.popupContent = content
+  }
+
+  easterEgg = (
     <div><h1>Sarrah's Popup</h1>
       <p>This is a popup for Sarrah</p>
     </div>)
-
-  setPopup = (title, content) => {
-    console.log(this)
-    this.togglePopup(),
-    this.popupTitle = title,
-    this.popupContent = content
-  }
   
   introFeedback = (
     <div>
@@ -70,7 +67,7 @@ class Sarrah extends Room {
           <div>
             <div>
               <a
-                onClick={()=> this.setPopup('Intro &#38; Feedback', this.introFeedback)}
+                onClick={()=> this.setPopup(this.introFeedback)}
                 id='introFeedback'
               >
                 Intro &#38; Feedback
@@ -133,16 +130,9 @@ class Sarrah extends Room {
               </a>
               <br />
             </div>
-
-            {/* <PopUpBox
-              content={this.popupEasterEgg}
-              top='57vh'
-              left='150vh'
-              height='10vh'
-              width='5vh' /> */}
+            <div id="temporary" onClick={()=> this.setPopup(this.easterEgg)}>Easter egg: Click me!</div>
             {this.state.popupIsShowing && <PopUpBox
               content={this.popupContent}
-              title={this.popupTitle}
               togglePopup={this.togglePopup}
             />}
           </div>
