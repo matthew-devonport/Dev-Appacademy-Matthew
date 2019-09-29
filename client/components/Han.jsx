@@ -8,16 +8,17 @@ import PopUpBox from './PopUpBox'
 
 class Han extends Room {
 
-  state = {
-    playing: false,
-    track: null,
+  constructor(props) {
+    super(props)
+    this.state = {
+      playing: false,
+      track: '',
+    }
   }
   
   name = 'Han'
   top = '80vh'
   left = '33vw'
-
-  popupContent = ''
 
   setPopup = (content) => {
     this.togglePopup(),
@@ -33,9 +34,20 @@ class Han extends Room {
 
   setAudio = (track) => {
     this.setState({
-      playing: true,
-      track: track,
+      playing: !this.state.playing,
+      track: track
     })
+  }
+  
+  play = () => {
+    let audio = new Audio(this.state.track)
+    audio.play()
+  }  
+
+  componentDidUpdate(prevProps) {
+    if(this.props != prevProps.props && this.state.playing) {
+      this.play()
+    }
   }
 
   render() {
@@ -45,8 +57,8 @@ class Han extends Room {
         <div className='room' id='hanRoom'>
 
           <audio controls>
-            <source src="#" type="audio/ogg" />
-            <source src="#" type="audio/mpeg" />
+            <source src="./sounds/forest.ogg" type="audio/ogg" />
+            <source src="./sounds/forest.mp3" type="audio/mpeg" />
           </audio>
           <button onClick={() => this.handleClick(0)}>Home</button>
           <div id='mindfulness'>
@@ -54,11 +66,11 @@ class Han extends Room {
               {/* trigger popup */}
               Mindfulness
             </a>
-            <div className='technic button deg0' onClick={() => this.setAudio('track1')}>
+            <div className='technic button deg0' onClick={() => this.setAudio('./sounds/forest.mp3')}>
               <div className="arrow-right"></div>
               Sounds
             </div>
-            <div className='technic button deg135' href='#popup'>
+            <div className='technic button deg135' onClick={() => this.setAudio('river')}>
               <div className="arrow-right"></div>
               Body Scan
             </div>
