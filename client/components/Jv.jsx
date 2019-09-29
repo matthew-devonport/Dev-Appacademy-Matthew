@@ -20,46 +20,48 @@ class Jv extends Room {
   top = '20vh'
   left = '20vw'
 
-  popupContent = (
-    <div>
-      <h1>JV's Popup!</h1>
-      <p>This is a popup for JV!</p>
-    </div>
-  )
+  setPopup = (e) => {
+    console.log(e.target.textContent)
+    this.togglePopup(),
+    this.popupContent = (
+      <React.Fragment>
+     <h1>{e.target.textContent}</h1>
+      <iframe
+          width='560'
+          height='315'
+          src={e.target.attributes[0].value}
+          frameBorder='0'
+          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        ></iframe>
+        </React.Fragment>
+    )
+  }
 
   render() {
     return (
       <React.Fragment>
       <div id='jv-image'>
         <button onClick={() => this.handleClick(0)}>Home</button>
-        {/* <iframe
-          width='560'
-          height='315'
-          src='https://www.youtube.com/embed/GdJO2aDWayE'
-          frameBorder='0'
-          allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen
-        ></iframe> */}
+        {/*  */}
         
 
 
         {/* {this.state.quoteIsShowing && <QuoteBox />}
   */}
-        <PopUpBox
-          content={this.popupContent}
-          top='30vh'
-          left='30vw'
-          height='5vh'
-          width='5vw'
-        />
-        
+   
+
       </div>
       <div id='jv-box'>
-      {this.state.videos && this.state.videos.map((video, i) => <a key={i} href={video.url} target='blank'>{video.name}</a>
+      {this.state.videos && this.state.videos.map((video, i) => <p key={i} onClick={(e) => this.setPopup(e)} value = {video.url}>{video.name}</p>
         )
       }
       
     </div>
+    {this.state.popupIsShowing && <PopUpBox
+          content={this.popupContent}
+          togglePopup={this.togglePopup}
+        />}
     </React.Fragment> 
     )
   }
