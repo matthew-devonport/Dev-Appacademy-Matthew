@@ -3,18 +3,18 @@ import { connect } from 'react-redux';
 import Room from './Room';
 import QuoteBox from './QuoteBox';
 import PopUpBox from './PopUpBox'
-import {getVideos} from '../apiClient'
+import { getVideos } from '../apiClient'
 
 class Jv extends Room {
- constructor(props) {
-   super(props)
-   getVideos().then(result => {
-    this.setState({
-      videos: result.videos,
-      name: result.name
+  constructor(props) {
+    super(props)
+    getVideos().then(result => {
+      this.setState({
+        videos: result.videos,
+        name: result.name
+      })
     })
-  })
- }
+  }
 
   name = 'JV'
   top = '20vh'
@@ -29,10 +29,11 @@ class Jv extends Room {
 
   render() {
     return (
-      <div id='jv-image'>
-        <button onClick={() => this.handleClick(0)}>Home</button>
-        <p>Hello, I am JV</p>
-        {/* <iframe
+      <React.Fragment>
+        <div id='jv-image'>
+          <button onClick={() => this.handleClick(0)}>Home</button>
+          <p>Hello, I am JV</p>
+          {/* <iframe
           width='560'
           height='315'
           src='https://www.youtube.com/embed/GdJO2aDWayE'
@@ -40,17 +41,8 @@ class Jv extends Room {
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
         ></iframe> */}
-        <div id = 'jv-box'>
-          {this.state.videos && <ul>
-            {this.state.videos.map((video, i) => <li key = {i}>
-              <a href={video.url} target='blank'>{video.name}</a>
-              </li>)}
-            </ul>}
-        </div>
-      
+          {this.state.quoteIsShowing && <QuoteBox />}
 
-        {this.state.quoteIsShowing && <QuoteBox />}
-        
           <PopUpBox
             content={this.popupContent}
             top='30vh'
@@ -58,7 +50,15 @@ class Jv extends Room {
             height='5vh'
             width='5vw'
           />
-      </div>
+        </div>
+        <div id='jv-box'>
+          {this.state.videos && <ul>
+            {this.state.videos.map((video, i) => <li key={i}>
+              <a href={video.url} target='blank'>{video.name}</a>
+            </li>)}
+          </ul>}
+        </div>
+      </React.Fragment>
     )
   }
 }

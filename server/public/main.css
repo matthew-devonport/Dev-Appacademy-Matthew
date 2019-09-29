@@ -416,9 +416,9 @@ padding-top: 4vh
 }
 
 #jv-box {
-	height:120px;widows: 50vh;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:scroll;
-	position: absolute;
-	top: 50%;
-	left:50%
-
+	height: 20vh;
+	width: 20vh;
+	display: flex;
+	justify-content: space-evenly;
+	border:20px solid black
 }
