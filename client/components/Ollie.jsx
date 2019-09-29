@@ -42,7 +42,7 @@ class Ollie extends Room {
       height='7vh'
       width='25vw'
       />}
-      <button onClick={() => this.play()}>Clap</button>
+      <div id='clap-box' onClick={() => this.play()}> </div>
       </div>
     )
   }
