@@ -471,7 +471,7 @@
 }
 
 #jv-box {
-	height: 70vh;
+	height: 65vh;
 	overflow: scroll;
 	width: 110vh;
 	display: flex;
@@ -486,5 +486,6 @@
 #jv-box p {
 display: block;
 padding: 7px;
-
+font-family: 'Indie Flower', cursive;
+font-size: 10vh
 }

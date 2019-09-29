@@ -51,7 +51,7 @@ class Room extends React.Component {
           quoteIsShowing: !this.state.quoteIsShowing
         })
       }
-    }, 15000)
+    }, 3000)
   }
 
   setQuote = () => {
