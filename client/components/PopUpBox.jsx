@@ -19,7 +19,7 @@ class PopUpBox extends React.Component {
           <div id='popup'>
             <div id='popup-content'>
             <h1>{title}</h1>
-            <p>{content}</p>
+            <div>{content}</div>
             </div>
             <a id='popup-close' onClick={this.props.togglePopup}>
               &times;

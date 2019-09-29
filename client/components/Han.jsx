@@ -12,12 +12,13 @@ class Han extends Room {
     playing: false,
     track: null,
   }
+  
   name = 'Han'
   top = '80vh'
   left = '33vw'
 
   popupTitle = 'Mindfulness'
-  popupContent = 'test'
+  popupContent = <p>test</p>
 
   setAudio = (track) => {
     this.setState({

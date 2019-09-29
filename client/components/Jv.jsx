@@ -18,7 +18,7 @@ class Jv extends Room {
 
   render() {
     return (
-      <div>
+      <div id='jv-image'>
         <button onClick={() => this.handleClick(0)}>Home</button>
         <p>Hello, I am JV</p>
         {/* <iframe
@@ -29,6 +29,7 @@ class Jv extends Room {
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowFullScreen
         ></iframe> */}
+      
 
         {this.state.quoteIsShowing && <QuoteBox />}
         
