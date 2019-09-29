@@ -49,7 +49,7 @@ class Han extends Room {
           </audio>
           <button onClick={() => this.handleClick(0)}>Home</button>
           <div id='mindfulness'>
-            <a className='technic button deg270' onClick={this.togglePopup}>
+            <a className='technic button deg270' onClick={() => this.setPopup(this.mindfulness)}>
               {/* trigger popup */}
               Mindfulness
             </a>
