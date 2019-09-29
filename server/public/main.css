@@ -206,6 +206,12 @@
 .deg180 { transform: translate(-30vh); }
 .deg220 { transform: rotate(220deg) translate(30vh) rotate(-220deg); }
 
+#hanRoom audio {
+	position: absolute;
+	top: 5vh;
+	left: 140vh;
+}
+
 /* --------------------------------*/
 /* Sarrah
 ---------------------------------- */
