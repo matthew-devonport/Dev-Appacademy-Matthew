@@ -16,8 +16,19 @@ class Han extends Room {
   top = '80vh'
   left = '33vw'
 
-  popupTitle = 'Mindfulness'
-  popupContent = 'test'
+  popupContent = ''
+
+  setPopup = (content) => {
+    this.togglePopup(),
+    this.popupContent = content
+  }
+
+  mindfulness = (
+    <React.Fragment>
+    <h1>Mindfulness</h1>
+    <p>test</p>
+    </React.Fragment>
+  )
 
   setAudio = (track) => {
     this.setState({
@@ -69,7 +80,7 @@ class Han extends Room {
 
           </div>
 
-          {this.state.popupIsShowing && <PopUpBox title={this.popupTitle} content={this.popupContent} togglePopup={this.togglePopup}/>}
+          {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}/>}
           {/* {this.state.quoteIsShowing && <QuoteBox />} */}
         </div>
 
