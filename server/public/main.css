@@ -210,13 +210,6 @@
 /* Sarrah
 ---------------------------------- */
 
-/* #sarrah {
-	position: relative;
-	width: 10vw;
-	height: 15vh;
-	top:1vh;
-	left: 15vh;
-} */
 
 #sarrahRoom {
 	background-image: url('images/sarrah1.JPG')
@@ -236,6 +229,8 @@ a:active {
     color: red;
   
 }
+
+/* ---- Intro & Feedback ---- */
 
 #introFeedback {
 	margin: 0 auto;
@@ -268,7 +263,6 @@ a:active {
 	
 	}
 	
-
 	#compass-img {
 		height: 40vh;
 		width: auto;
@@ -282,6 +276,8 @@ a:active {
 	font-family: 'Indie Flower', cursive;
 }
 
+/* ---- Stress & Regulation ---- */
+
 #stressRegulation {
 	margin: 0 auto;
 	top: 13vh;
@@ -290,6 +286,27 @@ a:active {
 	height: 50vh;
 	position: relative;
 	
+}
+
+#windowOfTolerance {
+	padding-top: 3vh;
+	height: 45vh;
+	width: auto;
+	
+}
+
+#emotionalThinking {
+	height: 35vh;
+	width: auto;
+	padding-left: 5vw;
+}
+
+#stressRegulationPoints {
+	/* padding-left: 2vw; */
+	font-size: 2vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+
 }
 
 #internalDialogue {
