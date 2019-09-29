@@ -5,53 +5,75 @@ import QuoteBox from './QuoteBox';
 import PopUpBox from './PopUpBox'
 
 
+
 class Han extends Room {
+
+  state = {
+    playing: false,
+    track: null,
+  }
   name = 'Han'
   top = '80vh'
   left = '33vw'
 
-  popupContent = <p>test</p>
+  popupTitle = 'Mindfulness'
+  popupContent = 'test'
+
+  setAudio = (track) => {
+    this.setState({
+      playing: true,
+      track: track,
+    })
+  }
 
   render() {
     return (
-      <div id='hanBackground'>
+      <React.Fragment>
+        <div id='hanBackground'></div>
         <div className='room' id='hanRoom'>
+
+          <audio controls>
+            <source src="#" type="audio/ogg" />
+            <source src="#" type="audio/mpeg" />
+          </audio>
           <button onClick={() => this.handleClick(0)}>Home</button>
           <div id='mindfulness'>
-            <p className='technic button deg270'>
+            <a className='technic button deg270' onClick={this.togglePopup}>
+              {/* trigger popup */}
               Mindfulness
-          </p>
-       
-            <a className='technic button deg0' href='#popup'>
+            </a>
+            <div className='technic button deg0' onClick={() => this.setAudio('track1')}>
+              <div className="arrow-right"></div>
               Sounds
-          </a>
-            <a className='technic button deg135' href='#popup'>
+            </div>
+            <div className='technic button deg135' href='#popup'>
+              <div className="arrow-right"></div>
               Body Scan
-          </a>
-            <a className='technic button deg180' href='#popup'>
+            </div>
+            <div className='technic button deg180' href='#popup'>
+              <div className="arrow-right"></div>
               Breath
-          </a>
-            <a className='technic button deg220' href='#popup'>
+            </div>
+            <div className='technic button deg220' href='#popup'>
+              <div className="arrow-right"></div>
               Metta
-          </a>
-            <a className='technic button deg320' href='#popup'>
+            </div>
+            <div className='technic button deg320' href='#popup'>
+              <div className="arrow-right"></div>
               5 Senses
-          </a>
-            <a className='technic button deg45' href='#popup'>
+            </div>
+            <div className='technic button deg45' href='#popup'>
+              <div className="arrow-right"></div>
               R.A.I.N
-          </a>
-          
+            </div>
+
           </div>
-          <PopUpBox
-            content={this.popupContent}
-            top='1vh'
-            left='1vw'
-            height='10vh'
-            width='5vw'
-          />
+
+          {this.state.popupIsShowing && <PopUpBox title={this.popupTitle} content={this.popupContent} togglePopup={this.togglePopup}/>}
           {/* {this.state.quoteIsShowing && <QuoteBox />} */}
         </div>
-      </div>
+
+      </React.Fragment>
     )
   }
 }

@@ -93,7 +93,6 @@
 	left: 90vh;
 }
 
-
 #jv:hover + #exclam-jv{
 	display: block;
 }
@@ -142,6 +141,19 @@
 ---------------------------------- */
 #hanBackground {
 	background-image: radial-gradient(100vh at 50% 70%, #f5c507, rgb(1, 161, 129));
+	animation: pulse 3s infinite alternate;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+@keyframes pulse {
+	0% {
+	  opacity: 0.8;
+	}
+	100% {
+	  opacity: 1;
+	}
 }
 
 #hanRoom {
@@ -157,19 +169,34 @@
 	border-radius: 50%;
 }
 
-#mindfulness a {
+#mindfulness .technic {
 	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 6em;
 	height: 6em;
-	line-height: 85px;
+	line-height: 40px;
 	background-color: rgb(102, 177, 162);
 	border: solid #16A085;
 	border-radius: 50%;
 	margin: -2em; 
 }
+
+.arrow-right {
+	margin: 2vh auto 0;
+	width: 0; 
+	height: 0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 20px solid #f5d143de;
+  }
+
+#mindfulness .technic:hover {
+	background-color:#16A085;
+	cursor: pointer;
+}
+
 
 .deg270 { transform: rotate(270deg) translate(30vh) rotate(-270deg); }
 .deg320 { transform: rotate(320deg) translate(30vh) rotate(-320deg); }
@@ -286,82 +313,6 @@
 	
 }
 
-#jv:hover + #exclam-jv{
-	display: block;
-}
-
-#ollie {
-	position: absolute;
-	width: 10vh;
-	height: 45vh;
-	top: 40vh;
-	left: 118vh;
-}
-
-#exclam-ollie {
-	position: absolute;
-	top: 33vh;
-	left: 123vh;
-}
-
-#ollie:hover + #exclam-ollie{
-	display: block;
-}
-
-#kelly {
-	position: absolute;
-	width: 16vh;
-	height: 30vh;
-	top:43vh;
-	left: 161vh;
-}
-
-#exclam-kelly {
-	position: absolute;
-	top: 35vh;
-	left: 163vh;
-}
-
-#kelly:hover + #exclam-kelly{
-	display: block;
-}
-
-
-/* Add div for the ringing bowl */
-
-/* --------------------------------*/
-/* Han
----------------------------------- */
-#hanBackground {
-	background-image: radial-gradient(100vh at 50% 70%, #f5c507, rgb(1, 161, 129));
-}
-
-#hanRoom {
-	background-image: url('images/han7.png');
-}
-
-#mindfulness {
-	left: 57vh;
-	top: 10vh;
-	width: 60vh;
-	height: 60vh;
-	position: relative;
-	border-radius: 50%;
-}
-
-#mindfulness a, #mindfulness p {
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 6em;
-	height: 6em;
-	line-height: 85px;
-	background-color: rgb(102, 177, 162);
-	border: solid #16A085;
-	border-radius: 50%;
-	margin: -2em; 
-}
 
 /* --------------------------------*/
 /* Kelly
@@ -373,7 +324,7 @@
 	width: 203vh;
 	background-size: cover;
 	position: relative;
-	background-image: url('images/kelly1.JPG');
+	background-image: url('images/kelly5.JPG');
 }
 
 /* --------------------------------*/
@@ -433,8 +384,6 @@
   margin-left: -25.5px;
   margin-top: -25.5px;
 }
-
-
 
 
 /* Pop Up Box */

@@ -8,7 +8,8 @@ class Room extends React.Component {
   state = {
     quoteIsShowing: false,
     interval: null,
-    quotes: []
+    quotes: [],
+    popupIsShowing: false,
   }
 
   unmounted = false
@@ -57,6 +58,12 @@ class Room extends React.Component {
     const { dispatch } = this.props
     let randNum = Math.floor(Math.random() * this.state.quotes.length)
     dispatch(setQuoteBox(this.state.quotes[randNum].quote, this.top, this.left))
+  }
+
+  togglePopup = () => {
+    this.setState({
+      popupIsShowing: !this.state.popupIsShowing
+    })
   }
 
   handleClick = pageNum => {
