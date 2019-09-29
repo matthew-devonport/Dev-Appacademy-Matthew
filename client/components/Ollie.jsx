@@ -18,19 +18,15 @@ class Ollie extends Room {
         questions:
       result.questions.map((question, i) => <p id ='QOTD' key={i}>{question}</p>)  
     })
-    this.audio = new Audio("../../sounds/groupClap.mp3")
-    this.play = this.play.bind(this)
     })
   }
   name = 'Ollie'
   top = '10vh'
   left = '30vw'
 
-  play(){
-    this.setState({
-      play: true
-    })
-    this.audio.play()
+  play = () => {
+    let audio = new Audio("./sounds/groupClap.mp3")
+    audio.play()
   }
   
   render() {
@@ -46,7 +42,7 @@ class Ollie extends Room {
       height='7vh'
       width='25vw'
       />}
-      <button onClick={this.play}>Clap</button>
+      <button onClick={() => this.play()}>Clap</button>
       </div>
     )
   }
