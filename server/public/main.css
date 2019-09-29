@@ -302,12 +302,13 @@ a:active {
 }
 
 #stressRegulationPoints {
-	/* padding-left: 2vw; */
 	font-size: 2vw;
 	color: #f5c507;
 	font-family: 'Indie Flower', cursive;
 
 }
+
+/* ---- Internal Dialogue & Acceptance ---- */
 
 #internalDialogue {
 	margin: 0 auto;
@@ -318,6 +319,16 @@ a:active {
 	position: relative;
 	
 }
+
+#internalDialogueImg {
+	padding-right: 20vh;
+	height: 55vh;
+	width: auto;
+}
+
+
+
+/* ---- Bias & Ally ---- */
 
 #biasAlly {
 	margin: 0 auto;
