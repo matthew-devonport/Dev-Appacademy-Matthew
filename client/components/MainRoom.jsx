@@ -10,6 +10,12 @@ import Room from './Room'
 
 class MainRoom extends Room {
   popupContent = ``
+
+  play = () => {
+    let audio = new Audio("./sounds/Gong.mp3")
+    audio.play()
+  }
+
   render() {
     return (
       <div id='content'>
@@ -47,7 +53,9 @@ class MainRoom extends Room {
             ></div>
             <div className="exclamation" id="exclam-kelly"></div>
           </div>
-        )}
+ 
+        )}         
+        <div id ='gong-noise' onClick={() => this.play()}> </div>
 
         {this.props.page == 1 && <Jv />}
         {this.props.page == 2 && <Han />}
