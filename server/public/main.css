@@ -1,5 +1,5 @@
 
-body {
+* {
 	margin: 0;
     /* background: black */
 }
@@ -14,6 +14,16 @@ body {
 	height: 100vh;
 	width: 195vh;
 	background-size: cover;
+	position: relative;
+}
+
+#home-button {
+	position: absolute;
+	top: 5vh;
+	left: 5vh;
+	padding: 1vh;
+	border: none;
+	background-color: #6d9297;
 }
 
 /* --------------------------------*/
@@ -21,7 +31,7 @@ body {
 /* -------------------------------- */
 
 #mainroom {
-	background-image: url('images/background.JPG');
+	background-image: url('images/mainRoom1.JPG');
 }
 
 #mainroom p {
@@ -29,101 +39,486 @@ body {
 }
 
 .teachers {
-	border: solid white;
 	cursor: pointer;
 }
 
-.teachers:hover {
+.exclamation {
+	display: none;
 	background-image: url('images/exclamation-mark.png');
 	background-repeat: no-repeat;
-	background-size: 100px 100px;
+	background-size: 5vh 5vh;
 	background-position: 50% 50%;
-}
-
-#ollie {
-	position: relative;
-	width: 15vw;
-	height: 15vh;
-	top: 10vh;
-	left: 125vh;
-	
-}
-
-#kelly {
-	position: relative;
-	width: 10vw;
-	height: 20vh;
-	top:-10vh;
-	left: 140vh;
-}
-
-#jv {
-	position: relative;
-	width: 15vh;
-	height: 15vh;
-	top:15vh;
-	left: 80vh;
+	height: 5vh;
+	width: 5vh;
 }
 
 #han {
-	position: relative;
+	position: absolute;
 	width: 15vh;
-	height: 15vh;
-	top:10vh;
-	left: 20vh;
+	height: 25vh;
+	top:56vh;
+	left: 15vh;
+}
+
+#exclam-han {
+	position: absolute;
+	top:48vh;
+	left: 16vh;
+}
+
+#han:hover + #exclam-han{
+	display: block;
 }
 
 #sarrah {
-	position: relative;
-	width: 10vw;
-	height: 15vh;
-	top:1vh;
-	left: 15vh;
+	position: absolute;
+	width: 15vh;
+	height: 25vh;
+	top:56vh;
+	left: 45vh;
 }
+
+#exclam-sarrah {
+	position: absolute;
+	top:48vh;
+	left: 46vh;
+}
+
+#sarrah:hover + #exclam-sarrah{
+	display: block;
+}
+
+#jv {
+	position: absolute;
+	width: 15vh;
+	height: 15vh;
+	top:56vh;
+	left: 80vh;
+}
+
+#exclam-jv {
+	position: absolute;
+	top:48vh;
+	left: 90vh;
+}
+
+#jv:hover + #exclam-jv{
+	display: block;
+}
+
+#ollie {
+	position: absolute;
+	width: 10vh;
+	height: 45vh;
+	top: 40vh;
+	left: 118vh;
+}
+
+#exclam-ollie {
+	position: absolute;
+	top: 33vh;
+	left: 123vh;
+}
+
+#ollie:hover + #exclam-ollie{
+	display: block;
+}
+
+#kelly {
+	position: absolute;
+	width: 16vh;
+	height: 30vh;
+	top:43vh;
+	left: 161vh;
+}
+
+#exclam-kelly {
+	position: absolute;
+	top: 35vh;
+	left: 163vh;
+}
+
+#kelly:hover + #exclam-kelly{
+	display: block;
+}
+
+
+/* Add div for the ringing bowl */
 
 /* --------------------------------*/
 /* Han
 ---------------------------------- */
+#hanBackground {
+	background-image: radial-gradient(100vh at 50% 70%, #f5c507, rgb(1, 161, 129));
+	animation: pulse 3s infinite alternate;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+@keyframes pulse {
+	0% {
+	  opacity: 0.8;
+	}
+	100% {
+	  opacity: 1;
+	}
+}
 
 #hanRoom {
-	background-image: radial-gradient(100vh at 50% 70%, #f4d03f, #16A085);
+	background-image: url('images/han7.png');
 }
-/* rgb(253, 253, 124),  rgb(67, 202, 50), rgb(105, 208, 226) */
 
 #mindfulness {
-	margin: 0 auto;
-	top: 30vh;
-	width: 50vh;
-	height: 50vh;
+	left: 57vh;
+	top: 10vh;
+	width: 60vh;
+	height: 60vh;
 	position: relative;
 	border-radius: 50%;
 }
 
-#mindfulness a {
+#mindfulness .technic {
 	display: block;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 6em;
 	height: 6em;
-	line-height: 80px;
+	line-height: 40px;
+	background-color: rgb(102, 177, 162);
 	border: solid #16A085;
 	border-radius: 50%;
 	margin: -2em; 
+}
+
+.arrow-right {
+	margin: 2vh auto 0;
+	width: 0; 
+	height: 0; 
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 20px solid #f5d143de;
+  }
+
+#mindfulness .technic:hover {
+	background-color:#16A085;
+	cursor: pointer;
+}
+
+
+.deg270 { transform: rotate(270deg) translate(30vh) rotate(-270deg); }
+.deg320 { transform: rotate(320deg) translate(30vh) rotate(-320deg); }
+.deg45 { transform: rotate(45deg) translate(30vh) rotate(-45deg); }
+.deg0 { transform: translate(30vh); } /* 30vh = half the width of the wrapper */
+.deg135 { transform: rotate(135deg) translate(30vh) rotate(-135deg); }
+.deg180 { transform: translate(-30vh); }
+.deg220 { transform: rotate(220deg) translate(30vh) rotate(-220deg); }
+
+#hanRoom audio {
+	position: absolute;
+	top: 5vh;
+	left: 140vh;
+}
+
+/* --------------------------------*/
+/* Sarrah
+---------------------------------- */
+
+
+#sarrahRoom {
+	background-image: url('images/sarrah1.JPG')
+
+}
+
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+    color: red;
+  
+}
+
+/* ---- Intro & Feedback ---- */
+
+#introFeedback {
+	margin: 0 auto;
+	top: 5vh;
+	right: 70vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+.sarrahTitle {
+	font-size: 3vw;
+	font-family: 'Cabin', sans-serif;
+}
+
+.sarrahAsk {
+	font-size: 4vw;
+	padding-left: 8.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+}
+
+#popupLinks {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 3.5vh;
+	font-size: 1.3vw;
+	font-family: 'Cabin', sans-serif;
+	
+	}
+	
+	#compass-img {
+		height: 40vh;
+		width: auto;
+		padding-left: 6vw;
+
+	}
+
+.sarrahPoints {
+	font-size: 2.5vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+}
+
+/* ---- Stress & Regulation ---- */
+
+#stressRegulation {
+	margin: 0 auto;
+	top: 13vh;
+	right: 70vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#windowOfTolerance {
+	padding-top: 3vh;
+	height: 45vh;
+	width: auto;
+	
+}
+
+#emotionalThinking {
+	height: 35vh;
+	width: auto;
+	padding-left: 5vw;
+}
+
+#stressRegulationPoints {
+	font-size: 2vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+
+}
+
+/* ---- Internal Dialogue & Acceptance ---- */
+
+#internalDialogue {
+	margin: 0 auto;
+	top: 5vh;
+	right: 40vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#internalDialogueImg {
+	padding-right: 20vh;
+	height: 55vh;
+	width: auto;
+}
+
+
+
+/* ---- Bias & Ally ---- */
+
+#biasAlly {
+	margin: 0 auto;
+	bottom: 2vh;
+	right: 10vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#allyQuestion {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+}
+
+#unconsciousBiasImg {
+	padding-top: 5vh;
+	height: 35vh;
+	width: auto;
+}
+
+#allyImg {
+	height: 40vh;
+	padding-left: 8vh;
+	padding-top: 5vh;
+	padding-bottom: 3vh;
+	width: auto;
+}
+
+
+
+/* ---- Agile & Teamwork ---- */
+
+#agileTeamwork {
+	margin: 0 auto;
+	top: 7vh;
+	right: 10vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#communicationConflict {
+	margin: 0 auto;
+	bottom: 2vh;
+	left: 17vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#trustEmpathy {
+	margin: 0 auto;
+	bottom: 10vh;
+	left: 50vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#retroReflection {
+	margin: 0 auto;
+	top: 0vh;
+	left: 50vh;
+	width: 50vh;
+	height: 50vh;
+	position: relative;
+	
+}
+
+#sarrahPopup {
+	margin: 0 auto;
+	top: 80vh;
+	right: 47vh;
+	width: 50vh;
+	height: 50vh;
+	position: fixed;
+	
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	/* padding-top: 2vh; */
+}
+
+
+/* --------------------------------*/
+/* Ollie
+---------------------------------- */
+
+#ollieRoom {
+  background-image: url('./images/ollieBackground1.jpg');
+  width: 100vw;
+}
+
+#QOTD {
+	font-size: 50px;
+	text-align: center;
+	margin-top: 180px;
+}
+
+#QOTD-Title {
+	font-size: 60px;
+}
+
+#clap-box {
+	position: absolute;
+	top: 45vh;
+	left: 50vh;
+	width: 28vw;
+	height: 60px;
+	cursor: pointer;
+}
+
+#ollie-popUp {
+	position: absolute;
+	top: 10vh;
+	left: 5vw;
+	height: 7vh;
+	width: 25vw;
+	cursor: pointer;
+}
+
+	
+/* --------------------------------*/
+/* Kelly
+---------------------------------- */
+
+#kelly-background {
+	margin: 0 auto;
+	height: 100vh;
+	width: 195vh;
+	background-size: cover;
+	position: relative;
+	background-image: url('images/kelly5.JPG');
+}
+
+#potato-box {
+	width: 25vh;
+	height: 16vh;
+	position: absolute;
+	top: 84vh;
+	left: 38vh;
+	cursor: pointer;
+}
+
+#codewars-link {
+	position: absolute;
+	top: 62vh;
+	left: 116vh;
+	width: 70vh;
+	height: 34vh;
 }
 
 /* --------------------------------*/
 /* QuoteBox
 ---------------------------------- */
 
-.deg270 { transform: rotate(270deg) translate(28vh) rotate(-270deg); }
-.deg306 { transform: rotate(306deg) translate(25vh) rotate(-306deg); }
-.deg342 { transform: rotate(342deg) translate(25vh) rotate(-342deg); }
-.deg0 { transform: translate(25vh); } /* 25vh = half the width of the wrapper */
+.deg270 { transform: rotate(270deg) translate(30vh) rotate(-270deg); }
+.deg320 { transform: rotate(320deg) translate(30vh) rotate(-320deg); }
+.deg45 { transform: rotate(45deg) translate(30vh) rotate(-45deg); }
+.deg0 { transform: translate(30vh); } /* 30vh = half the width of the wrapper */
+.deg135 { transform: rotate(135deg) translate(30vh) rotate(-135deg); }
+.deg180 { transform: translate(-30vh); }
+.deg220 { transform: rotate(220deg) translate(30vh) rotate(-220deg); }
 
-.deg135 { transform: rotate(135deg) translate(25vh) rotate(-135deg); }
-.deg180 { transform: translate(-25vh); }
-.deg236 { transform: rotate(236deg) translate(25vh) rotate(-236deg); }
+
 
 #quote-box {
   position: fixed;
@@ -131,25 +526,42 @@ body {
   left: 30vw;
   padding: 2vw;
   text-align: center;
-
-  background: #afbcbe;
+  background: #6d9297;
   border-radius: 0.4em;
   width: 20vw;
 }
 
 #quote-box:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 41px solid transparent;
+	border-top-color: #6d9297;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -20.5px;
+	margin-bottom: -41px;
+}
+
+#hanRoom > #quote-box:after {
+	display: none
+}
+
+#hanRoom > #quote-box:before {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 50%;
   width: 0;
   height: 0;
   border: 41px solid transparent;
-  border-top-color: #afbcbe;
-  border-bottom: 0;
-  border-left: 0;
-  margin-left: -20.5px;
-  margin-bottom: -41px;
+  border-bottom-color: #6d9297;
+  border-top: 0;
+  margin-left: -25.5px;
+  margin-top: -25.5px;
 }
 
 
@@ -163,13 +575,10 @@ body {
   right: 0;
   background: rgba(0, 0, 0, 0.5);
   transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
 }
 
-#popup-overlay:target {
-  visibility: visible;
-  opacity: 1;
+#popup-link-box {
+	cursor: pointer;
 }
 
 #popup {
@@ -192,9 +601,39 @@ body {
   font-size: 5vw;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+	color: #333;
+	cursor: pointer;
 }
 
 #popup-close:hover {
-  color: #06d85f;
+  color: #6d9297;
+}
+
+#jv-image {
+	margin: 0 auto;
+	height: 100vh;
+	width: 203vh;
+	background-size: cover;
+	position: relative;
+	background-image: url('images/jv.JPG')
+}
+
+#jv-box {
+	height: 64vh;
+	overflow: scroll;
+	width: 110vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: absolute;	
+	justify-content: space-around;
+	top: 24vh;
+	left: 62vh	
+}	
+
+#jv-box p {
+display: block;
+padding: 7px;
+font-family: 'Indie Flower', cursive;
+font-size: 10vh
 }

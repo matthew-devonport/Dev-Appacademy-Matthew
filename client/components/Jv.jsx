@@ -3,38 +3,65 @@ import { connect } from 'react-redux';
 import Room from './Room';
 import QuoteBox from './QuoteBox';
 import PopUpBox from './PopUpBox'
+import { getVideos } from '../apiClient'
 
 class Jv extends Room {
-  name = 'JV'
-  top = "20vh"
-  left = "20vw"
+  constructor(props) {
+    super(props)
+    getVideos().then(result => {
+      this.setState({
+        videos: result.videos,
+        name: result.name
+      })
+    })
+  }
 
-  popupContent = `
-  <h1>JV's Popup</h1>
-  <p>This is a popup for JV</p> 
-  ` 
-  
-  render() {
-    return (
-      <div>
-        <button onClick={() => this.handleClick(0)}>Home</button>
-        <p>Hello, I am JV</p>
-        {/* <iframe
+  name = 'JV'
+  top = '18vh'
+  left = '18vh'
+
+  setPopup = (e) => {
+    console.log(e.target.textContent)
+    this.togglePopup(),
+    this.popupContent = (
+      <React.Fragment>
+     <h1>{e.target.textContent}</h1>
+     <br/>
+      <iframe
           width='560'
           height='315'
-          src='https://www.youtube.com/embed/GdJO2aDWayE'
-          frameborder='0'
+          src={e.target.attributes[0].value}
+          frameBorder='0'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-          allowfullscreen
-        ></iframe> */}
-        
+          allowFullScreen
+        ></iframe>
+        </React.Fragment>
+    )
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+      <div id='jv-image'>
+        <button onClick={() => this.handleClick(0)}>Home</button>
+         
         {this.state.quoteIsShowing && <QuoteBox />}
-        <div>
-          <PopUpBox />
-        </div>
+ 
+   
+
       </div>
-    );
-    
+      <div id='jv-box'>
+      {this.state.videos && this.state.videos.map((video, i) => <p key={i} onClick={(e) => this.setPopup(e)} value = {video.url}>{video.name}</p>
+        )
+      }
+      
+    </div>
+    {this.state.popupIsShowing && <PopUpBox
+          content={this.popupContent}
+          togglePopup={this.togglePopup}
+        />}
+    </React.Fragment> 
+    )
   }
 }
 
