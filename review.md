@@ -12,8 +12,8 @@
   - (DONE) App test is failing, delete it
   - Where are the component tests??
   - (DONE) apiClient / getVideos doesn't use the name param - try getVideos(name='jv') for a default
-  - in the ollie component don't store html elements in the state - just store the questions and then map over them in your render method
-  - for Ollie, put the name, top, left vars at the top of hte page like in Kelly's room
+  - (DONE) in the ollie component don't store html elements in the state - just store the questions and then map over them in your render method
+  - (DONE) for Ollie, put the name, top, left vars at the top of hte page like in Kelly's room
   - console.log in jv component (you'd better be trolling....)
   - in JV setupPopup I would just store the src value of the iframe in the state and then build the popupContent var in the render method - stashing it on the component object is messy
   - MainRoom is acting like your App component in that it is conditionally displaying all the rooms as well as showing the actual mainroom - I'd suggest separating that functionality into two separate components (perhaps bring App back)
