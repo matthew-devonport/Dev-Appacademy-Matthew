@@ -249,13 +249,28 @@ a:active {
 #sarrahLinkTitles {
 	font-size: 3vh;
 	font-family: 'Cabin', sans-serif;
-	background-color: rgba(0, 0, 0, 0.1)
+	background-color: rgba(35, 201, 192, 0.1)
 }
 
 #humanSkillsTitle {
 	font-size: 10vh;
 	color: #f5c507;
 	font-family: 'Indie Flower', cursive;
+}
+
+#sarrahPhotoBook { 
+	height: 60vh;
+	width: auto;
+	margin-top: 5vh;
+}
+
+#sarrahEasterEgg {
+	margin: 0 auto;
+	top: 34vh;
+	left: 55vh;
+	width: 20vh;
+	height: 10vh;
+	position: relative;
 }
 
 /* ---- Intro & Feedback ---- */

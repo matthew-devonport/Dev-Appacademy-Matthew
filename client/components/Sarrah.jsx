@@ -17,8 +17,8 @@ class Sarrah extends Room {
   }
 
   easterEgg = (
-    <div><h1>Sarrah's Popup</h1>
-      <p>This is a popup for Sarrah</p>
+    <div>
+      <a href='https://drive.google.com/drive/folders/1L-l1U3Mxl0aIev2fHtdtiDKysfbvglYf' target='_blank'><img src ='/images/Sarrah/Photobook.jpg' id="sarrahPhotoBook"></img></a>
     </div>)
 
   introFeedback = (
@@ -190,7 +190,7 @@ class Sarrah extends Room {
         <div className='room' id='sarrahRoom'>
         
          
-          {/* {this.state.quoteIsShowing && <QuoteBox />} */}
+          {this.state.quoteIsShowing && <QuoteBox />}
           <div>
             <div id='sarrahLinkTitles'>
             <h1 id='humanSkillsTitle'>Human Skills</h1>
@@ -247,7 +247,7 @@ class Sarrah extends Room {
               </a>
               <br />
             </div>
-            <div id="temporary" onClick={() => this.setPopup(this.easterEgg)}>Easter egg: Click me!</div>
+            <div id='sarrahEasterEgg' onClick={() => this.setPopup(this.easterEgg)}></div>
             {this.state.popupIsShowing && <PopUpBox
               content={this.popupContent}
               togglePopup={this.togglePopup}
