@@ -15,19 +15,18 @@ class Ollie extends Room {
     }
     getQuestions().then(result => {
       this.setState({
-        questions:
-      result.questions.map((question, i) => <p id ='QOTD' key={i}>{question}</p>)  
+        questions: result.questions 
     })
     })
-  }
-
-  setPopup = () => {
-    this.togglePopup()
   }
 
   name = 'Ollie'
   top = '10vh'
   left = '30vw'
+
+  setPopup = () => {
+    this.togglePopup()
+  }
 
   play = () => {
     let audio = new Audio("./sounds/groupClap.mp3")
@@ -42,7 +41,7 @@ class Ollie extends Room {
       {this.state.quoteIsShowing && <QuoteBox />}
 
       {this.state.questions && this.state.popupIsShowing && <PopUpBox
-      content={<div><h1 id='QOTD-Title'>Question of the day:</h1>{this.state.questions[Math.floor(Math.random() * 19)]}</div>}
+      content={<div><h1 id='QOTD-Title'>Question of the day:</h1><p id='QOTD'>{this.state.questions[Math.floor(Math.random() * 19)]}</p></div>}
       togglePopup={this.togglePopup}/>}
 
       <div id='clap-box' onClick={() => this.play()}> </div>
