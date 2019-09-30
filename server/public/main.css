@@ -411,6 +411,16 @@ a:active {
 	left: 50vh;
 	width: 28vw;
 	height: 60px;
+	cursor: pointer;
+}
+
+#ollie-popUp {
+	position: absolute;
+	top: 10vh;
+	left: 5vw;
+	height: 7vh;
+	width: 25vw;
+	cursor: pointer;
 }
 
 	
