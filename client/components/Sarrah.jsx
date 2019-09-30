@@ -31,9 +31,9 @@ class Sarrah extends Room {
           - Take What's Useful<br />
           - Seek More Feedback<br />
         </p>
-        <img src="/images/Sarrah/compass-of-shame.jpg" id="compass-img"></img>
+        <img src="/images/Sarrah/compass-of-shame.png" id="compass-img"></img>
         <div className='sarrahAsk'>
-          <h3>ASK</h3>
+          <h3>ASK&#58;</h3>
           Actionable<br />
           Specific<br />
           Kind<br />
@@ -53,6 +53,7 @@ class Sarrah extends Room {
       <h1 className='sarrahTitle'>Stress &amp; Regulation</h1>
       <div className='container'>
         <img src='/images/Sarrah/window-of-tolerance.jpg' id='windowOfTolerance'></img>
+        <img src='/images/Sarrah/stressed.gif' id='stressed'></img>
         <img src='/images/Sarrah/emotional-thinking-mind.gif' id='emotionalThinking'></img>
       </div>
       <p id="stressRegulationPoints">
@@ -72,7 +73,7 @@ class Sarrah extends Room {
 
   internalDialogue = (
     <div>
-      <h1 className='sarrahTitle'>Interal Dialogue &amp; Acceptance</h1>
+      <h1 className='sarrahTitle'>Internal Dialogue &amp; Acceptance</h1>
       <div className='container'>
         <img src='/images/Sarrah/Internal_Dialogue_01.jpg' id='internalDialogueImg'></img>
         <p className='sarrahPoints'>
