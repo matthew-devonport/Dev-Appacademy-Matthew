@@ -26,7 +26,6 @@ router.get('/quotes/:name', (req, res) => {
 })
 
 router.get('/jv', (req, res) => {
-  console.log('hit')
   db.getVideos()
     .then(results => {
       let data = {

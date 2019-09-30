@@ -225,13 +225,6 @@
 /* Sarrah
 ---------------------------------- */
 
-/* #sarrah {
-	position: relative;
-	width: 10vw;
-	height: 15vh;
-	top:1vh;
-	left: 15vh;
-} */
 
 #sarrahRoom {
 	background-image: url('images/sarrah1.JPG')
@@ -251,6 +244,8 @@ a:active {
     color: red;
   
 }
+
+/* ---- Intro & Feedback ---- */
 
 #introFeedback {
 	margin: 0 auto;
@@ -283,7 +278,6 @@ a:active {
 	
 	}
 	
-
 	#compass-img {
 		height: 40vh;
 		width: auto;
@@ -297,6 +291,8 @@ a:active {
 	font-family: 'Indie Flower', cursive;
 }
 
+/* ---- Stress & Regulation ---- */
+
 #stressRegulation {
 	margin: 0 auto;
 	top: 13vh;
@@ -306,6 +302,28 @@ a:active {
 	position: relative;
 	
 }
+
+#windowOfTolerance {
+	padding-top: 3vh;
+	height: 45vh;
+	width: auto;
+	
+}
+
+#emotionalThinking {
+	height: 35vh;
+	width: auto;
+	padding-left: 5vw;
+}
+
+#stressRegulationPoints {
+	font-size: 2vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+
+}
+
+/* ---- Internal Dialogue & Acceptance ---- */
 
 #internalDialogue {
 	margin: 0 auto;
@@ -317,6 +335,16 @@ a:active {
 	
 }
 
+#internalDialogueImg {
+	padding-right: 20vh;
+	height: 55vh;
+	width: auto;
+}
+
+
+
+/* ---- Bias & Ally ---- */
+
 #biasAlly {
 	margin: 0 auto;
 	bottom: 2vh;
@@ -326,6 +354,30 @@ a:active {
 	position: relative;
 	
 }
+
+#allyQuestion {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+}
+
+#unconsciousBiasImg {
+	padding-top: 5vh;
+	height: 35vh;
+	width: auto;
+}
+
+#allyImg {
+	height: 40vh;
+	padding-left: 8vh;
+	padding-top: 5vh;
+	padding-bottom: 3vh;
+	width: auto;
+}
+
+
+
+/* ---- Agile & Teamwork ---- */
 
 #agileTeamwork {
 	margin: 0 auto;
