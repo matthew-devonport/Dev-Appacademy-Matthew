@@ -12,7 +12,6 @@
     "dev:server": "nodemon server",
     "build": "webpack --config client/webpack.config.js",
     "start": "node server",
-    // "start": "run-s build server",
     "test": "jest --verbose --watchAll",
     "postinstall": "knex migrate:latest"
   },
