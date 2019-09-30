@@ -241,16 +241,29 @@ a:visited {
 
 a:hover,
 a:active {
-    color: red;
+		color: red;
+		transition: color 0.3s;
   
+}
+
+#sarrahLinkTitles {
+	font-size: 3vh;
+	font-family: 'Cabin', sans-serif;
+	background-color: rgba(0, 0, 0, 0.1)
+}
+
+#humanSkillsTitle {
+	font-size: 10vh;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
 }
 
 /* ---- Intro & Feedback ---- */
 
 #introFeedback {
 	margin: 0 auto;
-	top: 5vh;
-	right: 70vh;
+	top: 2vh;
+	right: 81.5vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -296,7 +309,7 @@ a:active {
 #stressRegulation {
 	margin: 0 auto;
 	top: 13vh;
-	right: 70vh;
+	right: 80vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -332,8 +345,8 @@ a:active {
 
 #internalDialogue {
 	margin: 0 auto;
-	top: 5vh;
-	right: 40vh;
+	top: 3vh;
+	right: 39vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -352,8 +365,8 @@ a:active {
 
 #biasAlly {
 	margin: 0 auto;
-	bottom: 2vh;
-	right: 10vh;
+	bottom: 10vh;
+	right: 0vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -386,8 +399,8 @@ a:active {
 
 #agileTeamwork {
 	margin: 0 auto;
-	top: 7vh;
-	right: 10vh;
+	bottom: 14vh;
+	left: 70vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -420,8 +433,8 @@ a:active {
 
 #communicationConflict {
 	margin: 0 auto;
-	bottom: 2vh;
-	left: 17vh;
+	bottom: 8vh;
+	left: 35vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -459,8 +472,8 @@ a:active {
 
 #trustEmpathy {
 	margin: 0 auto;
-	bottom: 10vh;
-	left: 50vh;
+	bottom: 5vh;
+	left: 75vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;

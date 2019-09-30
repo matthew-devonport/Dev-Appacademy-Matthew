@@ -188,11 +188,12 @@ class Sarrah extends Room {
     return (
       <React.Fragment>
         <div className='room' id='sarrahRoom'>
-          <p>Human Skills</p>
-          <button onClick={() => this.handleClick(0)}>Home</button>
+        
+         
           {/* {this.state.quoteIsShowing && <QuoteBox />} */}
           <div>
-            <div>
+            <div id='sarrahLinkTitles'>
+            <h1 id='humanSkillsTitle'>Human Skills</h1>
               <a
                 onClick={() => this.setPopup(this.introFeedback)}
                 id='introFeedback'
@@ -252,6 +253,7 @@ class Sarrah extends Room {
               togglePopup={this.togglePopup}
             />}
           </div>
+          <button onClick={() => this.handleClick(0)}>Home</button>
         </div>
       </React.Fragment>
     )
