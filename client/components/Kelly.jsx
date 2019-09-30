@@ -17,6 +17,7 @@ class Kelly extends Room {
     <div>
       <h1>You clicked the POTATO!</h1>
       <p>Congratulations!</p>
+      
     </div>
   )
 
