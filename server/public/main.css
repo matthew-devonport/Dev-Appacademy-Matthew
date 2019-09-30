@@ -462,6 +462,41 @@ a:active {
 	
 }
 
+#bravingTitle {
+	font-size: 4vw;
+	color: #16A085;
+	font-family: 'Indie Flower', cursive;
+}
+
+#bravingWords {
+	font-size: 1.7vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+	padding-bottom: 2vh;
+}
+
+#trustCircleImg {
+	padding-top: 2vh;
+	padding-right: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+#empathyImg {
+	padding-top: 2vh;
+	padding-right: 4vh;
+	height: 35vh;
+	width: auto;
+}
+
+#trustFlowImg {
+	padding-top: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+/* ---- Retrospective & Reflection---- */
+
 #retroReflection {
 	margin: 0 auto;
 	top: 0vh;

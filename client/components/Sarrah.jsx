@@ -124,11 +124,11 @@ class Sarrah extends Room {
 
       </div>
       <p id="agileFlow">
-       Planning &rarr;
-       Sprints &rarr;
-       Stand Ups&rarr;
-       Review &amp; Needs &rarr;
-       Retrospective
+        Planning &rarr;
+        Sprints &rarr;
+        Stand Ups&rarr;
+        Review &amp; Needs &rarr;
+        Retrospective
     </p>
       <div id='popupLinks'>
         <a href='https://drive.google.com/open?id=1JQjp8g9Q52AayACc22w8rrKGo8F3MJxT' target='_blank'>Student Notes</a>
@@ -144,22 +144,43 @@ class Sarrah extends Room {
       <h1 className='sarrahTitle'>Communication &amp; Conflict</h1>
       <p id='commValues'>Self Awareness - Communication - Listening</p>
       <div className='container'>
-       
+
         <img src='/images/Sarrah/conflict.jpg' id='conflictImg'></img>
         <img src='/images/Sarrah/communication.jpg' id='commImg'></img>
 
       </div>
       <p id="commSteps">
-      &hearts;&nbsp;&nbsp;
-       Observations&nbsp;&nbsp;&hearts;&nbsp;&nbsp;
-       Feelings&nbsp;&nbsp;&hearts;&nbsp;&nbsp;
-       Needs&nbsp;&nbsp;&hearts;&nbsp;&nbsp;
-       Requests&nbsp;&nbsp;&hearts;
+        &hearts;&nbsp;&nbsp;
+         Observations&nbsp;&nbsp;&hearts;&nbsp;&nbsp;
+         Feelings&nbsp;&nbsp;&hearts;&nbsp;&nbsp;
+         Needs&nbsp;&nbsp;&hearts;&nbsp;&nbsp;
+         Requests&nbsp;&nbsp;&hearts;
     </p>
       <div id='popupLinks'>
         <a href='https://drive.google.com/open?id=10DxGDF5_WMlDrWIz0B3yZHgdjqSE4O9u' target='_blank'>Student Notes</a>
         <a href='https://drive.google.com/open?id=0B9G7h-RgpQk6VlpfV0dxczlVX3ZLN2Z4RXFIOExpWUE2NFJJ' target='_blank'>Feelings, Needs and Judgements</a>
-      
+
+
+      </div>
+    </div>
+  )
+
+  trustEmpathy = (
+    <div>
+      <h1 className='sarrahTitle'>Trust &amp; Empathy in Teams</h1>
+      <p id='bravingTitle'><strong>B &nbsp; R &nbsp; A &nbsp; V &nbsp; I &nbsp; N &nbsp; G</strong></p>
+      <p id='bravingWords'>Boundaries - Reliability - Accountability - Vault - Integrity - Non-Judgement - Generosity</p>
+      <div className='container'>
+
+        <img src='/images/Sarrah/Trust.jpg' id='trustCircleImg'></img>
+        <img src='/images/Sarrah/empathy.jpeg' id='empathyImg'></img>
+        <img src='/images/Sarrah/Trust.png' id='trustFlowImg'></img> 
+      </div>
+      <div id='popupLinks'>
+        <a href='https://drive.google.com/open?id=1AXlGFuaL_cmnhrhsJDsFM8kVH4oPMRvs' target='_blank'>Student Notes</a>
+        <a href='https://drive.google.com/open?id=1c2DAmbrKOu3kh51kw2zebLNu09L0vyb6' target='_blank'>Student Notes (Variation)</a>
+        <a href='https://docs.google.com/document/d/1I36Wy8sK0QFQJlf5N8Xzcoh03myTJnezLmOUbeUGpb4/edit' target='_blank'>Resources</a>
+
 
       </div>
     </div>
@@ -205,7 +226,7 @@ class Sarrah extends Room {
               </a>
               <br />
               <a
-                onClick={() => this.setPopup(this.agileTeamwork)} 
+                onClick={() => this.setPopup(this.agileTeamwork)}  
                 target='_blank'
                 id='agileTeamwork'
               >
@@ -213,7 +234,7 @@ class Sarrah extends Room {
               </a>
               <br />
               <a
-                onClick={() => this.setPopup(this.communicationConflict)} 
+                onClick={() => this.setPopup(this.communicationConflict)}
                 target='_blank'
                 id='communicationConflict'
               >
@@ -221,8 +242,7 @@ class Sarrah extends Room {
               </a>
               <br />
               <a
-                href='https://drive.google.com/folderview?id=1xO78F0rOVHJDOWYKog7vK-7vx3GFP7sK'
-                target='_blank'
+                onClick={() => this.setPopup(this.trustEmpathy)} 
                 id='trustEmpathy'
               >
                 Trust &#38; Empathy in Teams
