@@ -117,7 +117,7 @@ class Sarrah extends Room {
 
   agileTeamwork = (
     <div>
-      <h1 className='sarrahTitle'>Bias &amp; Ally Skills</h1>
+      <h1 className='sarrahTitle'>Agile &amp; Teamwork</h1>
       <div className='container'>
         <img src='/images/Sarrah/scrum-agile.jpg' id='agileFlowImg'></img>
         <img src='/images/Sarrah/scrum-values.png' id='agileValues'></img>
@@ -134,6 +134,32 @@ class Sarrah extends Room {
         <a href='https://drive.google.com/open?id=1JQjp8g9Q52AayACc22w8rrKGo8F3MJxT' target='_blank'>Student Notes</a>
         <a href='https://docs.google.com/document/d/1kSdE6N3JnK_izJQJ-1Y1kGWJjTAPvJZaRymqqKkZi88/edit' target='_blank'>Resources</a>
         <a href='https://drive.google.com/open?id=19N9goVu68nWmHS7H1FbvIvhsE905KfQB' target='_blank'>Agile in Te Reo Maori</a>
+
+      </div>
+    </div>
+  )
+
+  communicationConflict  = (
+    <div>
+      <h1 className='sarrahTitle'>Communication &amp; Conflict</h1>
+      <p id='commValues'>Self Awareness - Communication - Listening</p>
+      <div className='container'>
+       
+        <img src='/images/Sarrah/conflict.jpg' id='conflictImg'></img>
+        <img src='/images/Sarrah/communication.jpg' id='commImg'></img>
+
+      </div>
+      <p id="commSteps">
+      &hearts;&nbsp;&nbsp;
+       Observations&nbsp;&nbsp;&hearts;&nbsp;&nbsp;
+       Feelings&nbsp;&nbsp;&hearts;&nbsp;&nbsp;
+       Needs&nbsp;&nbsp;&hearts;&nbsp;&nbsp;
+       Requests&nbsp;&nbsp;&hearts;
+    </p>
+      <div id='popupLinks'>
+        <a href='https://drive.google.com/open?id=10DxGDF5_WMlDrWIz0B3yZHgdjqSE4O9u' target='_blank'>Student Notes</a>
+        <a href='https://drive.google.com/open?id=0B9G7h-RgpQk6VlpfV0dxczlVX3ZLN2Z4RXFIOExpWUE2NFJJ' target='_blank'>Feelings, Needs and Judgements</a>
+      
 
       </div>
     </div>
@@ -187,7 +213,7 @@ class Sarrah extends Room {
               </a>
               <br />
               <a
-                href='https://drive.google.com/folderview?id=1IfM1H48n1-bf7GbOgMU9YuakFJG1hmUh'
+                onClick={() => this.setPopup(this.communicationConflict)} 
                 target='_blank'
                 id='communicationConflict'
               >

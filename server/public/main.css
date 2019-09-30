@@ -423,6 +423,35 @@ a:active {
 	
 }
 
+#commValues {
+	font-size: 2vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+}
+
+#conflictImg {
+	padding-top: 2vh;
+	padding-right: 20vh;
+	height: 35vh;
+	width: auto;
+}
+
+#commImg {
+	padding-top: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+#commSteps {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
+
+/* ---- Trust & Empathy---- */
+
 #trustEmpathy {
 	margin: 0 auto;
 	bottom: 10vh;
