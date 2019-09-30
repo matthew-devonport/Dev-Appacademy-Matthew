@@ -21,7 +21,7 @@ class Jv extends Room {
   left = '18vh'
 
   setPopup = (e) => {
-    console.log(e.target.textContent)
+    console.log(e.target.attributes[0].value)
     this.togglePopup(),
     this.popupContent = (
       <React.Fragment>
@@ -56,6 +56,7 @@ class Jv extends Room {
       }
       
     </div>
+    <div value='https://www.youtube.com/embed/CUC2DuAd2CQ' onClick = {(e) => this.setPopup(e)} className = 'glasses' ></div>
     {this.state.popupIsShowing && <PopUpBox
           content={this.popupContent}
           togglePopup={this.togglePopup}
