@@ -10,7 +10,8 @@
     "build": "webpack --config client/webpack.config.js",
     "server": "node server",
     "start": "run-s build server",
-    "test": "jest --verbose --watchAll"
+    "test": "jest --verbose --watchAll",
+    "postinstall": "webpack && knex migrate:latest"
   },
   "babel": {
     "presets": [
@@ -32,8 +33,7 @@
     "express": "^4.16.4",
     "knex": "^0.19.4",
     "pg": "^7.12.1",
-    "sqlite3": "^4.1.0",
-    "supertest": "^4.0.2"
+    "sqlite3": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -57,6 +57,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "superagent": "^5.0.2",
+    "supertest": "^4.0.2",
     "webpack": "4",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
