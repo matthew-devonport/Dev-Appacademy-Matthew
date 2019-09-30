@@ -389,6 +389,30 @@ a:active {
 	
 }
 
+#agileFlow {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
+
+#agileFlowImg {
+	padding-top: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+#agileValues {
+	height: 40vh;
+	padding-left: 8vh;
+	padding-top: 2vh;
+	padding-bottom: 3vh;
+	width: auto;
+}
+
+/* ---- Communication & Conflict ---- */
+
 #communicationConflict {
 	margin: 0 auto;
 	bottom: 2vh;

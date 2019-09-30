@@ -40,11 +40,8 @@ class Sarrah extends Room {
         </div>
       </div>
       <div id='popupLinks'>
-        <a href='https://docs.google.com/document/d/1mXGydSKXC8J3WAXIyHJoT_r7SNHlouXj8nzFDbxzmyc/edit' target='_blank'>Facilitator Notes</a>
         <a href='https://docs.google.com/document/d/1sOqLO0KTRDm8Fo-Ge-fcA11jgrHyWYoChwZ6D64PEzA/edit' target='_blank'>Facilitator Recommended Reading</a>
-        <a href='https://docs.google.com/document/d/178QAtvlPYSpVOdQf2zlnHOHKZRO8uyjbE3t3obhH0_I/edit' target='_blank'>Facilitator Runsheet</a>
-        <a href='https://docs.google.com/document/d/1Vjwpml96tPkcWO9bXsKmuCD_8BvxhuMiizpLUG5RJJQ/edit' target='_blank'>Student Notes</a>
-        <a href='https://drive.google.com/open?id=1KQzhvZr8jTgilNJuHifDNxfBDDEtMiTx' target='_blank'>Student Notes (PDF)</a>
+        <a href='https://drive.google.com/open?id=1KQzhvZr8jTgilNJuHifDNxfBDDEtMiTx' target='_blank'>Student Notes</a>
         <a href='https://drive.google.com/open?id=1AA3yQ7Z55Prt8j-rL7WBxxag3IkPJ-ZT' target='_blank'>Human Skills<br /> Session 1 Workbook PDF</a>
         <a href='https://docs.google.com/document/d/16sxw6CnGI987h97AsR6bZuTwShAmn-gOic7tTvZqs7A/edit' target='_blank'>Additional Student Resources</a>
       </div>
@@ -66,11 +63,8 @@ class Sarrah extends Room {
         ~
     </p>
       <div id='popupLinks'>
-        <a href='https://docs.google.com/document/d/1YQtYh43HHlqdOAftx4yMFAqiEkc--9tlbBO7d0cPn6Q/edit' target='_blank'>Facilitator Notes</a>
-        <a href='https://docs.google.com/document/d/1784GHsFn7F-2Kc2G8xwm0VINjbu4U9J1OpmZlAunIFY/edit' target='_blank'>Facilitator Runsheet</a>
         <a href='https://docs.google.com/document/d/1KKvnfOjmpgMCoNNpS1W24AuzCA2Cb8mzwuFHuVeqjio/edit' target='_blank'>Recommended Reading</a>
-        <a href='https://docs.google.com/document/d/1v5Fm24_z_eqQOs3QJesphXwsPTPv0pzxppw2VhUKswU/edit' target='_blank'>Student Notes</a>
-        <a href='https://drive.google.com/open?id=1QGTO3TQejwB5Ncv_jHF8h3k-ZLw62Rmh' target='_blank'>Student Notes (PDF)</a>
+        <a href='https://drive.google.com/open?id=1QGTO3TQejwB5Ncv_jHF8h3k-ZLw62Rmh' target='_blank'>Student Notes</a>
         <a href='https://drive.google.com/drive/folders/13wzi0w2w8p46sCJaIkxkl4ShEc0QT0rJ' target='_blank'>Checklist: I'm Not OK</a>
       </div>
     </div>
@@ -91,9 +85,7 @@ class Sarrah extends Room {
       </div>
 
       <div id='popupLinks'>
-        <a href='https://docs.google.com/document/d/1McYKXvF_LN5pmwL8v48DqWCS3p7YTqXB_TQITbcDVVM/edit' target='_blank'>Facilitator Notes</a>
-        <a href='https://docs.google.com/document/d/1x-fBRYSqryLRxDAL9B5LSp28qhhOTwesnII7hXic1To/edit' target='_blank'>Facilitator Recommended Reading</a>
-        <a href='https://docs.google.com/document/d/1J2EvQ0Ov1d-LmjW50PloDZxncAAzGPyeKbcOTeGWlOg/edit' target='_blank'>Facilitator Runsheet</a>
+        <a href='https://docs.google.com/document/d/1x-fBRYSqryLRxDAL9B5LSp28qhhOTwesnII7hXic1To/edit' target='_blank'>Recommended Reading</a>
         <a href='https://docs.google.com/document/d/1ReGImSjg5-xGTv97ZGz4z3C5ouyBU052MNtr4gh6hfk/edit' target='_blank'>Student Notes</a>
         <a href='https://docs.google.com/document/d/16B0vPu58BH61fNMyt5tdtNqphzm8y6e9roBqES6Cb68/edit' target='_blank'> More Student Notes</a>
         <a href='https://drive.google.com/open?id=1b2P5HROjP0ICxIyWlgib5aLzfYg5Odki' target='_blank'>Student Notes (PDF)</a>
@@ -111,16 +103,37 @@ class Sarrah extends Room {
       <div className='container'>
         <img src='/images/Sarrah/unconscious-bias.jpg' id='unconsciousBiasImg'></img>
         <img src='/images/Sarrah/ally.jpg' id='allyImg'></img>
-   
+
       </div>
-     
+
       <div id='popupLinks'>
         <a href='https://docs.google.com/document/d/1fqOBF7VZIToEtA-ESpynO_ZyJpEH0u7_I4N9N3_PGWo/edit' target='_blank'>Bias, Diversity &amp; Growth Mindset</a>
-        <a href='https://docs.google.com/document/d/1tWbdfjseh4ggPfzBcSIiYt37LpqocQLwaW4WLXRm-jg/edit' target='_blank'>Facilitator Notes</a>
         <a href='https://docs.google.com/document/d/1iCjkv637O0XU0mT6cFu8I250byF75Woh2BLLhLuRTRU/edit' target='_blank'>Resources</a>
-        <a href='https://docs.google.com/document/d/1Uigp00nIS-SETioNU3j3dS1DhxjFw4SLSysfRPomVoA/edit' target='_blank'>Runsheet</a>
-        <a href='https://docs.google.com/document/d/1j1k5zTsgYDdRHURYpS3hnPXux7337GExlzjDnmLkxX4/edit' target='_blank'>Student Notes</a>
-        <a href='https://drive.google.com/open?id=19AD_fFV45QztRGC_zb6ftpQKLqr_7Z0o' target='_blank'>Student Notes (PDF)</a>
+        <a href='https://drive.google.com/open?id=19AD_fFV45QztRGC_zb6ftpQKLqr_7Z0o' target='_blank'>Student Notes</a>
+
+      </div>
+    </div>
+  )
+
+  agileTeamwork = (
+    <div>
+      <h1 className='sarrahTitle'>Bias &amp; Ally Skills</h1>
+      <div className='container'>
+        <img src='/images/Sarrah/scrum-agile.jpg' id='agileFlowImg'></img>
+        <img src='/images/Sarrah/scrum-values.png' id='agileValues'></img>
+
+      </div>
+      <p id="agileFlow">
+       Planning &rarr;
+       Sprints &rarr;
+       Stand Ups&rarr;
+       Review &amp; Needs &rarr;
+       Retrospective
+    </p>
+      <div id='popupLinks'>
+        <a href='https://drive.google.com/open?id=1JQjp8g9Q52AayACc22w8rrKGo8F3MJxT' target='_blank'>Student Notes</a>
+        <a href='https://docs.google.com/document/d/1kSdE6N3JnK_izJQJ-1Y1kGWJjTAPvJZaRymqqKkZi88/edit' target='_blank'>Resources</a>
+        <a href='https://drive.google.com/open?id=19N9goVu68nWmHS7H1FbvIvhsE905KfQB' target='_blank'>Agile in Te Reo Maori</a>
 
       </div>
     </div>
@@ -166,7 +179,7 @@ class Sarrah extends Room {
               </a>
               <br />
               <a
-                href='https://drive.google.com/folderview?id=1rgKGDw0owXTcWKq-EzyTbpZM-a2plRzU'
+                onClick={() => this.setPopup(this.agileTeamwork)} 
                 target='_blank'
                 id='agileTeamwork'
               >
