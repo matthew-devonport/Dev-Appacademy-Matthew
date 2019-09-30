@@ -20,8 +20,7 @@ export function getQuotesByName (name) {
   return request.get(rootUrl + `/quotes/${name}`).catch(e => console.log(e))
 }
 
-export function getVideos (name) {
-  
+export function getVideos () {
   return request.get(rootUrl + '/jv')
   .then(res => {
     return res.body
