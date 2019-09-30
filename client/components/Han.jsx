@@ -81,11 +81,11 @@ class Han extends Room {
               <div className="arrow-right"></div>
               Body Scan
             </div>
-            <div className='technic deg45' href='#popup'>
+            <div className='technic deg45'>
               <div className="arrow-right"></div>
               Breath
             </div>
-            <div className='technic deg90' href='#popup'>
+            <div className='technic deg90' onClick={() => this.setAudio('./sounds/mindfulness')}>
               <div className="arrow-right"></div>
               Here & Now
             </div>
