@@ -7,3 +7,12 @@ Enzyme.configure({adapter: new Adapter()})
 test('test runner is working', () => {
   expect(true).toBeTruthy()
 })
+
+describe('<Han /> component', () => {
+  test('test', (done) => {
+    done()
+  })
+  test('test', (done) => {
+    done()
+  })
+})
