@@ -495,17 +495,10 @@ a:active {
 	width: auto;
 }
 
-/* ---- Retrospective & Reflection---- */
 
-#retroReflection {
-	margin: 0 auto;
-	top: 0vh;
-	left: 50vh;
-	width: 50vh;
-	height: 50vh;
-	position: relative;
-	
-}
+
+
+/* ---- Pop up ---- */
 
 #sarrahPopup {
 	margin: 0 auto;

@@ -159,8 +159,6 @@ class Sarrah extends Room {
       <div id='popupLinks'>
         <a href='https://drive.google.com/open?id=10DxGDF5_WMlDrWIz0B3yZHgdjqSE4O9u' target='_blank'>Student Notes</a>
         <a href='https://drive.google.com/open?id=0B9G7h-RgpQk6VlpfV0dxczlVX3ZLN2Z4RXFIOExpWUE2NFJJ' target='_blank'>Feelings, Needs and Judgements</a>
-
-
       </div>
     </div>
   )
@@ -180,8 +178,6 @@ class Sarrah extends Room {
         <a href='https://drive.google.com/open?id=1AXlGFuaL_cmnhrhsJDsFM8kVH4oPMRvs' target='_blank'>Student Notes</a>
         <a href='https://drive.google.com/open?id=1c2DAmbrKOu3kh51kw2zebLNu09L0vyb6' target='_blank'>Student Notes (Variation)</a>
         <a href='https://docs.google.com/document/d/1I36Wy8sK0QFQJlf5N8Xzcoh03myTJnezLmOUbeUGpb4/edit' target='_blank'>Resources</a>
-
-
       </div>
     </div>
   )
@@ -246,14 +242,6 @@ class Sarrah extends Room {
                 id='trustEmpathy'
               >
                 Trust &#38; Empathy in Teams
-              </a>
-              <br />
-              <a
-                href='https://drive.google.com/folderview?id=1o7J7W7IFF0bFWN7zNImHLLXzAQ1LgLmP'
-                target='_blank'
-                id='retroReflection'
-              >
-                Retrospective &#38; Reflection
               </a>
               <br />
             </div>
