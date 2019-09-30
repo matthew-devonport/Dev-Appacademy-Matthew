@@ -1,4 +1,5 @@
 import React from 'react'
+import { getQuestions } from '../apiClient'
 
 class PopUpBox extends React.Component {
   constructor(props) {
@@ -8,7 +9,6 @@ class PopUpBox extends React.Component {
       content
     }
   }
-
 
   render() {
     let { content } = this.state
