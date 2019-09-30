@@ -3,7 +3,7 @@
 - SERVER
   - (DONE) index.js needs to listen for a port from process.env 
   - it looks like this hasn't been deployed to heroku yet, I suggest you do that asap so you aren't debugging at the last minute
-  - html title in public/index.html still says fruits
+  - (DONE) html title in public/index.html still says fruits
   - none of the routes have catch methods on the db calls - add them in case there is adb error
   - there is no test for the /api/v1/jv route
   - in the server tests you could make the mock db functions jest mocks so you can test whether they were called instead of just counting the number of items they return - like you did with getQuotesByName
