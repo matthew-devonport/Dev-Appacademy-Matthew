@@ -215,6 +215,12 @@
 .deg180 { transform: translate(-30vh); }
 .deg220 { transform: rotate(220deg) translate(30vh) rotate(-220deg); }
 
+#hanRoom audio {
+	position: absolute;
+	top: 5vh;
+	left: 140vh;
+}
+
 /* --------------------------------*/
 /* Sarrah
 ---------------------------------- */
@@ -232,10 +238,19 @@
 
 }
 
-/* .popupScroller {
-	overflow-y: auto;
-  height: 100px;
-} */
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+    color: red;
+  
+}
 
 #introFeedback {
 	margin: 0 auto;
@@ -245,6 +260,41 @@
 	height: 50vh;
 	position: relative;
 	
+}
+
+.sarrahTitle {
+	font-size: 3vw;
+	font-family: 'Cabin', sans-serif;
+}
+
+.sarrahAsk {
+	font-size: 4vw;
+	padding-left: 8.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+}
+
+#popupLinks {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 3.5vh;
+	font-size: 1.3vw;
+	font-family: 'Cabin', sans-serif;
+	
+	}
+	
+
+	#compass-img {
+		height: 40vh;
+		width: auto;
+		padding-left: 6vw;
+
+	}
+
+.sarrahPoints {
+	font-size: 2.5vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
 }
 
 #stressRegulation {
@@ -327,6 +377,14 @@
 	
 }
 
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	/* padding-top: 2vh; */
+}
+
 
 /* --------------------------------*/
 /* Ollie
@@ -355,6 +413,7 @@
 	height: 60px;
 }
 
+	
 /* --------------------------------*/
 /* Kelly
 ---------------------------------- */

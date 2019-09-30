@@ -9,44 +9,45 @@ class Sarrah extends Room {
   top = '33vh'
   left = '42vw'
 
-  popupEasterEgg = (
+  popupContent = ''
+
+  setPopup = (content) => {
+    this.togglePopup(),
+    this.popupContent = content
+  }
+
+  easterEgg = (
     <div><h1>Sarrah's Popup</h1>
       <p>This is a popup for Sarrah</p>
     </div>)
-
-
+  
   introFeedback = (
     <div>
-      <h1>Intro &amp; Feedback</h1>
-      <div class='container'>
-        <img src="/images/Sarrah/compass-of-shame.jpg" id="compass-img"></img>
-        <p>
+      <h1 className='sarrahTitle'>Intro &amp; Feedback</h1>
+      <div className='container'>
+       
+        <p className='sarrahPoints'>
           - Gratitude<br />
           - Pause &amp; Reflect<br />
-          - Take Only What's Useful<br />
-          - Seek For More Feedback<br />
+          - Take What's Useful<br />
+          - Seek More Feedback<br />
         </p>
-        <p>
+        <img src="/images/Sarrah/compass-of-shame.jpg" id="compass-img"></img>
+        <div className='sarrahAsk'>
           <h3>ASK</h3>
           Actionable<br />
           Specific<br />
           Kind<br />
-          </p>
+          </div>
 </div>
         <div id='popupLinks'>
 
-          <a href='https://docs.google.com/document/d/1mXGydSKXC8J3WAXIyHJoT_r7SNHlouXj8nzFDbxzmyc/edit' target='_blank'>Communication and Feedback - Facilitator Notes</a>
-          <br />  <br />
-          <a href='https://docs.google.com/document/d/1sOqLO0KTRDm8Fo-Ge-fcA11jgrHyWYoChwZ6D64PEzA/edit' target='_blank'>Feedback - Facilitator Recommended Reading</a>
-          <br />  <br />
-          <a href='https://docs.google.com/document/d/178QAtvlPYSpVOdQf2zlnHOHKZRO8uyjbE3t3obhH0_I/edit' target='_blank'>Feedback - Facilitator Runsheet</a>
-          <br />  <br />
-          <a href='https://docs.google.com/document/d/1Vjwpml96tPkcWO9bXsKmuCD_8BvxhuMiizpLUG5RJJQ/edit' target='_blank'>Feedback - Student Notes</a>
-          &nbsp;-&nbsp;
-      <a href='https://drive.google.com/open?id=1KQzhvZr8jTgilNJuHifDNxfBDDEtMiTx' target='_blank'>(Feedback - Student Notes PDF)</a>
-          <br />  <br />
-          <a href='https://drive.google.com/open?id=1AA3yQ7Z55Prt8j-rL7WBxxag3IkPJ-ZT' target='_blank'>Human Skills - Session 1 Workbook PDF</a>
-          <br />  <br />
+          <a href='https://docs.google.com/document/d/1mXGydSKXC8J3WAXIyHJoT_r7SNHlouXj8nzFDbxzmyc/edit' target='_blank'>Facilitator Notes</a>
+          <a href='https://docs.google.com/document/d/1sOqLO0KTRDm8Fo-Ge-fcA11jgrHyWYoChwZ6D64PEzA/edit' target='_blank'>Facilitator Recommended Reading</a>
+          <a href='https://docs.google.com/document/d/178QAtvlPYSpVOdQf2zlnHOHKZRO8uyjbE3t3obhH0_I/edit' target='_blank'>Facilitator Runsheet</a>
+          <a href='https://docs.google.com/document/d/1Vjwpml96tPkcWO9bXsKmuCD_8BvxhuMiizpLUG5RJJQ/edit' target='_blank'>Student Notes</a> 
+      <a href='https://drive.google.com/open?id=1KQzhvZr8jTgilNJuHifDNxfBDDEtMiTx' target='_blank'>Student Notes (PDF)</a>
+          <a href='https://drive.google.com/open?id=1AA3yQ7Z55Prt8j-rL7WBxxag3IkPJ-ZT' target='_blank'>Human Skills<br /> Session 1 Workbook PDF</a>
           <a href='https://docs.google.com/document/d/16sxw6CnGI987h97AsR6bZuTwShAmn-gOic7tTvZqs7A/edit' target='_blank'>Additional Student Resources</a>
 
         </div>
@@ -62,9 +63,16 @@ class Sarrah extends Room {
         <div className='room' id='sarrahRoom'>
           <p>Human Skills</p>
           <button onClick={() => this.handleClick(0)}>Home</button>
-          {this.state.quoteIsShowing && <QuoteBox />}
+          {/* {this.state.quoteIsShowing && <QuoteBox />} */}
           <div>
             <div>
+              <a
+                onClick={()=> this.setPopup(this.introFeedback)}
+                id='introFeedback'
+              >
+                Intro &#38; Feedback
+              </a>
+              <br />
               <a
                 href='https://drive.google.com/folderview?id=13wzi0w2w8p46sCJaIkxkl4ShEc0QT0rJ'
                 target='_blank'
@@ -122,22 +130,11 @@ class Sarrah extends Room {
               </a>
               <br />
             </div>
-
-            <PopUpBox
-              content={this.popupEasterEgg}
-              top='57vh'
-              left='150vh'
-              height='10vh'
-              width='5vh' />
-            <PopUpBox
-              content={this.introFeedback}
-              margin='0 auto'
-              top='5vh'
-              right='70vh'
-              width='50vh'
-              height='50vh'
-              position='relative' />
-
+            <div id="temporary" onClick={()=> this.setPopup(this.easterEgg)}>Easter egg: Click me!</div>
+            {this.state.popupIsShowing && <PopUpBox
+              content={this.popupContent}
+              togglePopup={this.togglePopup}
+            />}
           </div>
         </div>
       </React.Fragment>
