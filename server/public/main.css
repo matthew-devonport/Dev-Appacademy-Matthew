@@ -227,7 +227,8 @@
 
 
 #sarrahRoom {
-	background-image: url('images/sarrah1.JPG')
+	background-image: url('images/sarrahye.png');
+	
 
 }
 
@@ -247,9 +248,10 @@ a:active {
 }
 
 #sarrahLinkTitles {
-	font-size: 3vh;
+	font-size: 3.5vh;
 	font-family: 'Cabin', sans-serif;
-	background-color: rgba(35, 201, 192, 0.1)
+	background-color: rgba(0, 0, 0, 0.253);
+    height: 40vh;
 }
 
 #humanSkillsTitle {
@@ -273,15 +275,20 @@ a:active {
 	position: relative;
 }
 
+#sarrahPopUpBox {
+	color: black
+}
+
 /* ---- Intro & Feedback ---- */
 
 #introFeedback {
 	margin: 0 auto;
-	top: 2vh;
-	right: 81.5vh;
+	top: 0vh;
+	right: 79.5vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
+	color: #FFBF00
 	
 }
 
@@ -328,12 +335,13 @@ a:active {
 	width: 50vh;
 	height: 50vh;
 	position: relative;
-	
+	color: #FFBF00
 }
 
 #windowOfTolerance {
 	padding-top: 3vh;
-	height: 45vh;
+	padding-right: 3vh;
+	height: 30vh;
 	width: auto;
 	
 }
@@ -344,24 +352,31 @@ a:active {
 }
 
 #emotionalThinking {
-	height: 35vh;
+	height: 30vh;
 	width: auto;
-	padding-left: 6vh;
+	padding-left: 3vh;
 }
 
 #stressRegulationPoints {
 	font-size: 2vw;
 	color: #f5c507;
 	font-family: 'Indie Flower', cursive;
+	padding-top: 8vh;
+	padding-bottom: 4vh;
 
+}
+
+.stressImgs {
+	padding-top: 4vh;
 }
 
 /* ---- Internal Dialogue & Acceptance ---- */
 
 #internalDialogue {
+	color:#FFBF00;
 	margin: 0 auto;
-	top: 3vh;
-	right: 39vh;
+	top: 1vh;
+	right:42vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -379,9 +394,10 @@ a:active {
 /* ---- Bias & Ally ---- */
 
 #biasAlly {
+	color:#FFBF00;
 	margin: 0 auto;
 	bottom: 10vh;
-	right: 0vh;
+	right: 1.2vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -413,9 +429,10 @@ a:active {
 /* ---- Agile & Teamwork ---- */
 
 #agileTeamwork {
+	color:#FFBF00;
 	margin: 0 auto;
-	bottom: 14vh;
-	left: 70vh;
+	bottom: 17vh;
+	left: 75vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -447,9 +464,10 @@ a:active {
 /* ---- Communication & Conflict ---- */
 
 #communicationConflict {
+	color:rgb(255, 191, 0);
 	margin: 0 auto;
-	bottom: 8vh;
-	left: 35vh;
+	bottom: 12vh;
+	left: 36vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -486,8 +504,9 @@ a:active {
 /* ---- Trust & Empathy---- */
 
 #trustEmpathy {
+	color:#FFBF00;
 	margin: 0 auto;
-	bottom: 5vh;
+	bottom: 9vh;
 	left: 75vh;
 	width: 50vh;
 	height: 50vh;

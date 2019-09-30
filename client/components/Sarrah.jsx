@@ -51,10 +51,10 @@ class Sarrah extends Room {
   stressRegulation = (
     <div>
       <h1 className='sarrahTitle'>Stress &amp; Regulation</h1>
-      <div className='container'>
+      <div className='container stressImgs'>
         <img src='/images/Sarrah/window-of-tolerance.jpg' id='windowOfTolerance'></img>
         <img src='/images/Sarrah/stressed.gif' id='stressed'></img>
-        <img src='/images/Sarrah/emotional-thinking-mind.gif' id='emotionalThinking'></img>
+        <img src='/images/Sarrah/wise-mind.jpg' id='emotionalThinking'></img>
       </div>
       <p id="stressRegulationPoints">
         ~ Deep Breathing
@@ -189,8 +189,9 @@ class Sarrah extends Room {
       <React.Fragment>
         <div className='room' id='sarrahRoom'>
         
-         
+         <div id='sarrahPopUpBox'>
           {this.state.quoteIsShowing && <QuoteBox />}
+          </div>
           <div>
             <div id='sarrahLinkTitles'>
             <h1 id='humanSkillsTitle'>Human Skills</h1>
