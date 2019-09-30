@@ -15,9 +15,8 @@ class Ollie extends Room {
     }
     getQuestions().then(result => {
       this.setState({
-        questions:
-      result.questions.map((question, i) => <p id ='QOTD' key={i}>{question}</p>)  
-    })
+        questions: result.questions.map((question, i) => <p id ='QOTD' key={i}>{question}</p>)  
+      })
     })
   }
 

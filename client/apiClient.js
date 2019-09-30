@@ -21,7 +21,6 @@ export function getQuotesByName (name) {
 }
 
 export function getVideos (name) {
-  
   return request.get(rootUrl + '/jv')
   .then(res => {
     return res.body

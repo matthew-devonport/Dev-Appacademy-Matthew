@@ -1,10 +1,11 @@
+import { connect } from 'react-redux'
+
 import React from 'react'
 import Jv from './Jv'
 import Han from './Han'
 import Ollie from './Ollie'
 import Sarrah from './Sarrah'
 import Kelly from './Kelly'
-import { connect } from 'react-redux'
 import Room from './Room'
 
 

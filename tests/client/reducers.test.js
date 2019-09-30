@@ -24,6 +24,5 @@ describe('quoteBox', () => {
       expect(state.quote).toBe('hi')
       expect(state.top).toBe('20vh');
       expect(state.left).toBe('30vh');
-
   })
 });
