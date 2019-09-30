@@ -18,7 +18,7 @@
 }
 
 #home-button {
-	position: fixed;
+	position: absolute;
 	top: 5vh;
 	left: 5vh;
 	padding: 1vh;
@@ -215,27 +215,37 @@
 .deg180 { transform: translate(-30vh); }
 .deg220 { transform: rotate(220deg) translate(30vh) rotate(-220deg); }
 
+#hanRoom audio {
+	position: absolute;
+	top: 5vh;
+	left: 140vh;
+}
+
 /* --------------------------------*/
 /* Sarrah
 ---------------------------------- */
 
-/* #sarrah {
-	position: relative;
-	width: 10vw;
-	height: 15vh;
-	top:1vh;
-	left: 15vh;
-} */
 
 #sarrahRoom {
 	background-image: url('images/sarrah1.JPG')
 
 }
 
-/* .popupScroller {
-	overflow-y: auto;
-  height: 100px;
-} */
+a:link,
+a:visited {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+    color: red;
+  
+}
+
+/* ---- Intro & Feedback ---- */
 
 #introFeedback {
 	margin: 0 auto;
@@ -247,6 +257,42 @@
 	
 }
 
+.sarrahTitle {
+	font-size: 3vw;
+	font-family: 'Cabin', sans-serif;
+}
+
+.sarrahAsk {
+	font-size: 4vw;
+	padding-left: 8.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+}
+
+#popupLinks {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 3.5vh;
+	font-size: 1.3vw;
+	font-family: 'Cabin', sans-serif;
+	
+	}
+	
+	#compass-img {
+		height: 40vh;
+		width: auto;
+		padding-left: 6vw;
+
+	}
+
+.sarrahPoints {
+	font-size: 2.5vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+}
+
+/* ---- Stress & Regulation ---- */
+
 #stressRegulation {
 	margin: 0 auto;
 	top: 13vh;
@@ -256,6 +302,28 @@
 	position: relative;
 	
 }
+
+#windowOfTolerance {
+	padding-top: 3vh;
+	height: 45vh;
+	width: auto;
+	
+}
+
+#emotionalThinking {
+	height: 35vh;
+	width: auto;
+	padding-left: 5vw;
+}
+
+#stressRegulationPoints {
+	font-size: 2vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+
+}
+
+/* ---- Internal Dialogue & Acceptance ---- */
 
 #internalDialogue {
 	margin: 0 auto;
@@ -267,6 +335,16 @@
 	
 }
 
+#internalDialogueImg {
+	padding-right: 20vh;
+	height: 55vh;
+	width: auto;
+}
+
+
+
+/* ---- Bias & Ally ---- */
+
 #biasAlly {
 	margin: 0 auto;
 	bottom: 2vh;
@@ -276,6 +354,30 @@
 	position: relative;
 	
 }
+
+#allyQuestion {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+}
+
+#unconsciousBiasImg {
+	padding-top: 5vh;
+	height: 35vh;
+	width: auto;
+}
+
+#allyImg {
+	height: 40vh;
+	padding-left: 8vh;
+	padding-top: 5vh;
+	padding-bottom: 3vh;
+	width: auto;
+}
+
+
+
+/* ---- Agile & Teamwork ---- */
 
 #agileTeamwork {
 	margin: 0 auto;
@@ -327,6 +429,14 @@
 	
 }
 
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	/* padding-top: 2vh; */
+}
+
 
 /* --------------------------------*/
 /* Ollie
@@ -353,6 +463,25 @@
 	left: 50vh;
 	width: 28vw;
 	height: 60px;
+	cursor: pointer;
+}
+
+#ollie-popUp {
+	position: absolute;
+	top: 10vh;
+	left: 5vw;
+	height: 7vh;
+	width: 25vw;
+	cursor: pointer;
+}
+
+#gong-noise {
+	position: absolute;
+	top: 69vh;
+	left: 91vw;
+	width: 5vw;
+	height: 5vh;
+	cursor: pointer;
 }
 
 /* --------------------------------*/
@@ -370,15 +499,15 @@
 
 #potato-box {
 	width: 25vh;
-	height: 13vh;
-	position: fixed;
-	top: 87vh;
-	left: 35vh;
+	height: 16vh;
+	position: absolute;
+	top: 84vh;
+	left: 38vh;
 	cursor: pointer;
 }
 
 #codewars-link {
-	position: fixed;
+	position: absolute;
 	top: 62vh;
 	left: 116vh;
 	width: 70vh;
@@ -514,5 +643,14 @@
 display: block;
 padding: 7px;
 font-family: 'Indie Flower', cursive;
-font-size: 10vh
+font-size: 10vh;
+cursor: pointer;
+}
+.glasses {
+	width: 8vh;
+	height: 3vh;
+	top: 87vh;
+	position: absolute;
+	left: 135vh;
+	cursor: pointer;
 }
