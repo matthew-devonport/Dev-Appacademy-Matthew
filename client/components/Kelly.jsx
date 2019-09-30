@@ -40,6 +40,7 @@ class Kelly extends Room {
 
         {this.state.quoteIsShowing && <QuoteBox />}
         <div onClick={() => this.setPopup(this.content)} id='potato-box'></div>
+
         {this.state.popupIsShowing && (
           <PopUpBox
             content={this.popupContent}
