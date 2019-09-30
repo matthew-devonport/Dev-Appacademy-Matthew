@@ -4,7 +4,7 @@ import Room from './Room'
 import QuoteBox from './QuoteBox';
 import PopUpBox from './PopUpBox'
 
-
+import Mindfulness from './Mindfulness'
 
 class Han extends Room {
 
@@ -13,24 +13,29 @@ class Han extends Room {
     this.state = {
       playing: false,
       track: '',
+      popupTopic: '',
     }
   }
-  
+
   name = 'Han'
   top = '80vh'
   left = '33vw'
 
-  setPopup = (content) => {
+  setPopup = (topic) => {
     this.togglePopup(),
-    this.popupContent = content
+      this.setState({
+        popupTopic: topic
+      })
   }
 
-  mindfulness = (
-    <React.Fragment>
-    <h1>Mindfulness</h1>
-    <p>test</p>
-    </React.Fragment>
-  )
+  setPopupContent = () => {
+    switch (this.state.popupTopic) {
+      case 'mindfulness':
+        return <Mindfulness />;
+      default:
+        return undefined;
+    }
+  }
 
   setAudio = (track) => {
     this.setState({
@@ -38,39 +43,40 @@ class Han extends Room {
       track: track
     })
   }
-  
+
   play = () => {
     let audio = document.querySelector("audio")
     if (audio.canPlayType('audio/mpeg;')) {
-      audio.type= 'audio/mpeg';
-      audio.src= this.state.track + '.mp3';
-      } else {
-      audio.type= 'audio/ogg';
-      audio.src= this.state.track + '.ogg';
+      audio.type = 'audio/mpeg';
+      audio.src = this.state.track + '.mp3';
+    } else {
+      audio.type = 'audio/ogg';
+      audio.src = this.state.track + '.ogg';
     }
     audio.load()
     audio.play()
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if(this.state.track != prevState.track) {
+    if (this.state.track != prevState.track) {
       this.play()
     }
   }
 
   render() {
-    
+    let popupContent = this.setPopupContent();
+
     return (
       <React.Fragment>
         <div id='hanBackground'></div>
         <div className='room' id='hanRoom'>
           <button onClick={() => this.handleClick(0)}>Home</button>
           {this.state.playing &&
-          <audio controls>
-            <source src="" type="" />
-          </audio>}
+            <audio controls>
+              <source src="" type="" />
+            </audio>}
           <div id='mindfulness'>
-            <div className='technic deg270' onClick={() => this.setPopup(this.mindfulness)}>
+            <div className='technic deg270' onClick={() => this.setPopup("mindfulness")}>
               Mindfulness
             </div>
             <div className='technic deg320' onClick={() => this.setAudio('./sounds/forest')}>
@@ -103,14 +109,12 @@ class Han extends Room {
             </div>
           </div>
 
-          {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}/>}
           {this.state.quoteIsShowing && <QuoteBox />}
+          {this.state.popupIsShowing && <PopUpBox content={popupContent} togglePopup={this.togglePopup} />}
+          
         </div>
-        
       </React.Fragment>
-    
     )
-    
   }
 }
 
