@@ -360,6 +360,15 @@
 	cursor: pointer;
 }
 
+#gong-noise {
+	position: absolute;
+	top: 69vh;
+	left: 91vw;
+	width: 50px;
+	height: 20px;
+	cursor: pointer;
+}
+
 /* --------------------------------*/
 /* Kelly
 ---------------------------------- */
