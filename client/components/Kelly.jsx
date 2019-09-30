@@ -8,43 +8,45 @@ import PopUpBox from './PopUpBox'
 
 class Kelly extends Room {
   name = 'Kelly'
-  top = '8vh'
-  left = '58vw'
+  top = '1vh'
+  left = '120vh'
 
-  popupContent1 = (
+  popupContent = ''
+
+  content = (
     <div>
-      <h1>You clicked the head!</h1>
+      <h1>You clicked the POTATO!</h1>
       <p>Congratulations!</p>
     </div>
   )
 
-  popupContent2 = (
-    <div>
-      <h1>You clicked the second head!</h1>
-      <p>Congratulations!</p>
-    </div>
-  )
+  setPopup = content => {
+    this.togglePopup(), (this.popupContent = content)
+  }
 
   render() {
     return (
       <div id='kelly-background'>
         <p>Hello, I am Kelly</p>
-        <button onClick={() => this.handleClick(0)}>Home</button>
+        <button onClick={() => this.handleClick(0)} id='home-button'>
+          Home
+        </button>
+
+        <a
+          href='https://www.codewars.com/'
+          target='blank'
+          id='codewars-link'
+        ></a>
+
         {this.state.quoteIsShowing && <QuoteBox />}
-        <PopUpBox
-          content={this.popupContent1}
-          top='70vh'
-          left='32vw'
-          height='10vh'
-          width='5vw'
-        />
-        <PopUpBox
-          content={this.popupContent2}
-          top='40vh'
-          left='32vw'
-          height='10vh'
-          width='5vw'
-        />
+        <div onClick={() => this.setPopup(this.content)} id='potato-box'></div>
+
+        {this.state.popupIsShowing && (
+          <PopUpBox
+            content={this.popupContent}
+            togglePopup={this.togglePopup}
+          />
+        )}
       </div>
     )
   }
