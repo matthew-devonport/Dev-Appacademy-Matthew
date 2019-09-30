@@ -67,40 +67,40 @@ class Han extends Room {
           <button onClick={() => this.handleClick(0)}>Home</button>
           {this.state.playing &&
           <audio controls>
-            <source src="" type="audio/ogg" />
-            <source src="" type="audio/mpeg" />
-          </audio>
-        }
+            <source src="" type="" />
+          </audio>}
           <div id='mindfulness'>
-            <a className='technic button deg270' onClick={() => this.setPopup(this.mindfulness)}>
-              {/* trigger popup */}
+            <div className='technic deg270' onClick={() => this.setPopup(this.mindfulness)}>
               Mindfulness
-            </a>
-            <div className='technic button deg0' onClick={() => this.setAudio('./sounds/forest')}>
+            </div>
+            <div className='technic deg320' onClick={() => this.setAudio('./sounds/forest')}>
               <div className="arrow-right"></div>
               Sounds
             </div>
-            <div className='technic button deg135' onClick={() => this.setAudio('./sounds/river')}>
+            <div className='technic deg0' onClick={() => this.setAudio('./sounds/river')}>
               <div className="arrow-right"></div>
               Body Scan
             </div>
-            <div className='technic button deg180' href='#popup'>
+            <div className='technic deg45' href='#popup'>
               <div className="arrow-right"></div>
               Breath
             </div>
-            <div className='technic button deg220' href='#popup'>
+            <div className='technic deg90' href='#popup'>
               <div className="arrow-right"></div>
-              Metta
+              Here & Now
             </div>
-            <div className='technic button deg320' href='#popup'>
-              <div className="arrow-right"></div>
-              5 Senses
-            </div>
-            <div className='technic button deg45' href='#popup'>
+            <div className='technic deg135' href='#popup'>
               <div className="arrow-right"></div>
               R.A.I.N
             </div>
-
+            <div className='technic deg180' href='#popup'>
+              <div className="arrow-right"></div>
+              5 Senses
+            </div>
+            <div className='technic deg220' href='#popup'>
+              <div className="arrow-right"></div>
+              Metta
+            </div>
           </div>
 
           {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}/>}
