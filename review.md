@@ -17,7 +17,7 @@
   - console.log in jv component (you'd better be trolling....)
   - in JV setupPopup I would just store the src value of the iframe in the state and then build the popupContent var in the render method - stashing it on the component object is messy
   - MainRoom is acting like your App component in that it is conditionally displaying all the rooms as well as showing the actual mainroom - I'd suggest separating that functionality into two separate components (perhaps bring App back)
-  - in Han component avoid storing mindfulness html on component - build it in render with a helper method
+  - (DONE) in Han component avoid storing mindfulness html on component - build it in render with a helper method
   - in PopupBox you don't ned to store the content in the state - just change line 14 to `let {content} = this.props` and delete the constructor
   - in QuoteBox don't set the css directly in the componentDidMount - pass in an inline style in the render method - e.g. `<div id="quote-box" style={{top: this.props.quoteBox.top //etc/}}>`
 
