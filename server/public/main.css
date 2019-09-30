@@ -627,7 +627,7 @@ a:active {
 
 #jv-box {
 	height: 64vh;
-	overflow: scroll;
+	overflow-y: scroll;
 	width: 110vh;
 	display: flex;
 	flex-direction: row;
@@ -645,6 +645,12 @@ font-family: 'Indie Flower', cursive;
 font-size: 10vh;
 cursor: pointer;
 }
+
+#jv-box p:hover {
+color: white;
+transition: .25s ease-in-out;
+}
+
 .glasses {
 	width: 8vh;
 	height: 3vh;
