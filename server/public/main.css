@@ -640,5 +640,14 @@ a:active {
 display: block;
 padding: 7px;
 font-family: 'Indie Flower', cursive;
-font-size: 10vh
+font-size: 10vh;
+cursor: pointer;
+}
+.glasses {
+	width: 8vh;
+	height: 3vh;
+	top: 87vh;
+	position: absolute;
+	left: 135vh;
+	cursor: pointer;
 }
