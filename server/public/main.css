@@ -17,6 +17,15 @@
 	position: relative;
 }
 
+#home-button {
+	position: absolute;
+	top: 5vh;
+	left: 5vh;
+	padding: 1vh;
+	border: none;
+	background-color: #6d9297;
+}
+
 /* --------------------------------*/
 /* Main room */
 /* -------------------------------- */
@@ -377,6 +386,33 @@ a:active {
 }
 
 
+/* --------------------------------*/
+/* Ollie
+---------------------------------- */
+
+#ollieRoom {
+  background-image: url('./images/ollieBackground1.jpg');
+  width: 100vw;
+}
+
+#QOTD {
+	font-size: 50px;
+	text-align: center;
+	margin-top: 180px;
+}
+
+#QOTD-Title {
+	font-size: 60px;
+}
+
+#clap-box {
+	position: absolute;
+	top: 45vh;
+	left: 50vh;
+	width: 28vw;
+	height: 60px;
+}
+
 	
 /* --------------------------------*/
 /* Kelly
@@ -385,10 +421,27 @@ a:active {
 #kelly-background {
 	margin: 0 auto;
 	height: 100vh;
-	width: 203vh;
+	width: 195vh;
 	background-size: cover;
 	position: relative;
 	background-image: url('images/kelly5.JPG');
+}
+
+#potato-box {
+	width: 25vh;
+	height: 16vh;
+	position: absolute;
+	top: 84vh;
+	left: 38vh;
+	cursor: pointer;
+}
+
+#codewars-link {
+	position: absolute;
+	top: 62vh;
+	left: 116vh;
+	width: 70vh;
+	height: 34vh;
 }
 
 /* --------------------------------*/
@@ -411,7 +464,7 @@ a:active {
   left: 30vw;
   padding: 2vw;
   text-align: center;
-  background: #afbcbe;
+  background: #6d9297;
   border-radius: 0.4em;
   width: 20vw;
 }
@@ -424,7 +477,7 @@ a:active {
 	width: 0;
 	height: 0;
 	border: 41px solid transparent;
-	border-top-color: #afbcbe;
+	border-top-color: #6d9297;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -20.5px;
@@ -443,7 +496,7 @@ a:active {
   width: 0;
   height: 0;
   border: 41px solid transparent;
-  border-bottom-color: #afbcbe;
+  border-bottom-color: #6d9297;
   border-top: 0;
   margin-left: -25.5px;
   margin-top: -25.5px;
@@ -486,11 +539,12 @@ a:active {
   font-size: 5vw;
   font-weight: bold;
   text-decoration: none;
-  color: #333;
+	color: #333;
+	cursor: pointer;
 }
 
 #popup-close:hover {
-  color: #06d85f;
+  color: #6d9297;
 }
 
 #jv-image {
@@ -500,4 +554,24 @@ a:active {
 	background-size: cover;
 	position: relative;
 	background-image: url('images/jv.JPG')
+}
+
+#jv-box {
+	height: 64vh;
+	overflow: scroll;
+	width: 110vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: absolute;	
+	justify-content: space-around;
+	top: 24vh;
+	left: 62vh	
+}	
+
+#jv-box p {
+display: block;
+padding: 7px;
+font-family: 'Indie Flower', cursive;
+font-size: 10vh
 }

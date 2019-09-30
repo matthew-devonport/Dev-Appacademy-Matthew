@@ -104,7 +104,7 @@ class Han extends Room {
           </div>
 
           {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}/>}
-          {/* {this.state.quoteIsShowing && <QuoteBox />} */}
+          {this.state.quoteIsShowing && <QuoteBox />}
         </div>
         
       </React.Fragment>
