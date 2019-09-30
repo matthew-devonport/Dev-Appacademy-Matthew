@@ -2,7 +2,7 @@
   - delete branches once they've been merged into master
 - SERVER
   - (DONE) index.js needs to listen for a port from process.env 
-  - it looks like this hasn't been deployed to heroku yet, I suggest you do that asap so you aren't debugging at the last minute
+  - (DONE) it looks like this hasn't been deployed to heroku yet, I suggest you do that asap so you aren't debugging at the last minute
   - (DONE) html title in public/index.html still says fruits
   - (DONE) none of the routes have catch methods on the db calls - add them in case there is adb error
   - (DONE) there is no test for the /api/v1/jv route
