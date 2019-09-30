@@ -28,8 +28,8 @@ class Jv extends Room {
      <h1>{e.target.textContent}</h1>
      <br/>
       <iframe
-          width='560'
-          height='315'
+          width='900'
+          height='525'
           src={e.target.attributes[0].value}
           frameBorder='0'
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
