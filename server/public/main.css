@@ -475,7 +475,15 @@ a:active {
 	cursor: pointer;
 }
 
-	
+#gong-noise {
+	position: absolute;
+	top: 69vh;
+	left: 91vw;
+	width: 5vw;
+	height: 5vh;
+	cursor: pointer;
+}
+
 /* --------------------------------*/
 /* Kelly
 ---------------------------------- */
