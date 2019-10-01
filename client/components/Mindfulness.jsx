@@ -21,7 +21,7 @@ const Mindfulness = () => {
            <h2>5 Senses</h2>
            <p>Mindfulness is a form of meditation</p>
            <h2>Metta</h2>
-           <p>Mindfulness is a form of meditation</p>
+           <p>Mindfulness is a form of meditation dvnqou;bgwr ;qwgw</p>
         </React.Fragment>
     )
 }
