@@ -229,6 +229,25 @@
 	left: 140vh;
 }
 
+#winnie {
+	height: 10vh;
+	width: 10vh;
+	top: 70vh;
+	left: 10vh;
+	cursor: pointer;
+}
+
+#winniePics {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#winniePics img {
+	height: 50vh;
+	border-radius: 5vh;
+}
+
+
 /* --------------------------------*/
 /* Sarrah
 ---------------------------------- */
@@ -573,7 +592,9 @@ a:active {
 }
 
 
-/* Pop Up Box */
+/* --------------------------------*/
+/* PopupBox
+---------------------------------- */
 
 #popup-overlay {
   position: fixed;
@@ -616,6 +637,16 @@ a:active {
 #popup-close:hover {
   color: #6d9297;
 }
+
+.popupTitle {
+	font-size: 3vw;
+	font-family: 'Cabin', sans-serif;
+	margin-bottom: 5vh;
+}
+
+/* --------------------------------*/
+/* JV
+---------------------------------- */
 
 #jv-image {
 	margin: 0 auto;
