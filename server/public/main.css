@@ -17,15 +17,30 @@
 	position: relative;
 }
 
-#home-button {
+/* #home-button {
 	position: absolute;
 	top: 5vh;
 	left: 5vh;
 	padding: 1vh;
 	border: none;
 	background-color: #6d9297;
-}
+} */
 
+.arrow {
+	border: solid red;
+	border-width: 0 2vh 2vh 0;
+	display: inline-block;
+	padding: 1vh;
+	position: absolute;
+	top: 5vh;
+	left: 5vh;
+  }
+
+  .left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+
+  }
 /* --------------------------------*/
 /* Main room */
 /* -------------------------------- */
@@ -283,6 +298,24 @@ a:active {
 
 #sarrahPopUpBox {
 	color: black
+}
+
+.gradient:hover,
+.gradient:active {
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }
 
 /* ---- Intro & Feedback ---- */
