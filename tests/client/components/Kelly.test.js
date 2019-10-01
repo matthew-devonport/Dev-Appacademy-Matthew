@@ -30,11 +30,6 @@ describe('<Kelly /> Component', () => {
     await instance.componentDidMount()
   })
 
-  test('quotes get placed onto state', () => {
-    expect.assertions(1)
-    expect(instance.state.quotes.length).toBe(2)
-  })
-
   test('clicking button calls dispatch', () => {
     expect.assertions(1)
     let button = wrapper.find('button')
