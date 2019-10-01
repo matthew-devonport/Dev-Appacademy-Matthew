@@ -15,32 +15,32 @@ class Sarrah extends Room {
     return (
       <React.Fragment>
         <div className='room' id='sarrahRoom'>
-          <div id='sarrahPopUpBox'>
-            {this.state.quoteIsShowing && <QuoteBox />}
-          </div>
           <div>
             <div id='sarrahLinkTitles'>
               <h1 id='humanSkillsTitle'>Human Skills</h1>
-              <a onClick={() => this.setPopup(this.introFeedback)} id='introFeedback' class='gradient'>Intro &#38; Feedback</a>
+              <a onClick={() => this.setPopup(this.introFeedback)} id='introFeedback' className='gradient'>Intro &#38; Feedback</a>
               <br />
-              <a onClick={() => this.setPopup(this.stressRegulation)} id='stressRegulation' class='gradient'>Stress &#38; Regulation</a>
+              <a onClick={() => this.setPopup(this.stressRegulation)} id='stressRegulation' className='gradient'>Stress &#38; Regulation</a>
               <br />
-              <a onClick={() => this.setPopup(this.internalDialogue)} id='internalDialogue' class='gradient'>Internal Dialogue &#38; Acceptance</a>
+              <a onClick={() => this.setPopup(this.internalDialogue)} id='internalDialogue' className='gradient'>Internal Dialogue &#38; Acceptance</a>
               <br />
-              <a onClick={() => this.setPopup(this.biasAlly)} id='biasAlly' class='gradient'>Bias &#38; Ally Skills</a>
+              <a onClick={() => this.setPopup(this.biasAlly)} id='biasAlly' className='gradient'>Bias &#38; Ally Skills</a>
               <br />
-              <a onClick={() => this.setPopup(this.agileTeamwork)} id='agileTeamwork' class='gradient'>Agile &#38; Teamwork</a>
+              <a onClick={() => this.setPopup(this.agileTeamwork)} id='agileTeamwork' className='gradient'>Agile &#38; Teamwork</a>
               <br />
-              <a onClick={() => this.setPopup(this.communicationConflict)} id='communicationConflict' class='gradient'>Communication &#38; Conflict</a>
+              <a onClick={() => this.setPopup(this.communicationConflict)} id='communicationConflict' className='gradient'>Communication &#38; Conflict</a>
               <br />
-              <a onClick={() => this.setPopup(this.trustEmpathy)} id='trustEmpathy' class='gradient'>Trust &#38; Empathy in Teams</a>
+              <a onClick={() => this.setPopup(this.trustEmpathy)} id='trustEmpathy' className='gradient'>Trust &#38; Empathy in Teams</a>
               <br />
             </div>
             <div id='sarrahEasterEgg' onClick={() => this.setPopup(this.easterEgg)}></div>
+            <div id='sarrahPopUpBox'>
+            {this.state.quoteIsShowing && <QuoteBox />}
+          </div>
             {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}
             />}
           </div>
-          <div id='sarrahArrow' class="arrow left" onClick={() => this.handleClick(0)}></div>
+          <div id='sarrahArrow' className="arrow left" onClick={() => this.handleClick(0)}></div>
         </div>
       </React.Fragment>
     )

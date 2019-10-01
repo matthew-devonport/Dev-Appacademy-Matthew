@@ -1,7 +1,9 @@
-
 * {
 	margin: 0;
-    /* background: black */
+}
+
+body {
+	background-color: #6d9297;
 }
 
 #content {
@@ -308,7 +310,7 @@ a:active {
 #sarrahLinkTitles {
 	font-size: 3.5vh;
 	font-family: 'Cabin', sans-serif;
-	background-color: rgba(0, 0, 0, 0.253);
+	background-color: rgba(23, 158, 199, 0.253);
     height: 40vh;
 }
 
@@ -843,7 +845,7 @@ a:active {
 .popupTitle {
 	font-size: 3vw;
 	font-family: 'Cabin', sans-serif;
-	margin-bottom: 5vh;
+	margin-bottom: 4vh;
 }
 
 /* --------------------------------*/
@@ -893,6 +895,10 @@ transition: .25s ease-in-out;
 	left: 135vh;
 	cursor: pointer;
 }
+
+/* --------------------------------*/
+/* JV
+---------------------------------- */
 
 .homeSpace{
 	background:transparent;
