@@ -17,15 +17,30 @@
 	position: relative;
 }
 
-#home-button {
+/* #home-button {
 	position: absolute;
 	top: 5vh;
 	left: 5vh;
 	padding: 1vh;
 	border: none;
 	background-color: #6d9297;
-}
+} */
 
+.arrow {
+	border: solid red;
+	border-width: 0 2vh 2vh 0;
+	display: inline-block;
+	padding: 1vh;
+	position: absolute;
+	top: 5vh;
+	left: 5vh;
+  }
+
+  .left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+
+  }
 /* --------------------------------*/
 /* Main room */
 /* -------------------------------- */
@@ -233,7 +248,8 @@
 
 
 #sarrahRoom {
-	background-image: url('images/sarrah1.JPG')
+	background-image: url('images/sarrahye.png');
+	
 
 }
 
@@ -247,19 +263,71 @@ a:visited {
 
 a:hover,
 a:active {
-    color: red;
+		color: red;
+		transition: color 0.3s;
   
+}
+
+#sarrahLinkTitles {
+	font-size: 3.5vh;
+	font-family: 'Cabin', sans-serif;
+	background-color: rgba(0, 0, 0, 0.253);
+    height: 40vh;
+}
+
+#humanSkillsTitle {
+	font-size: 10vh;
+	color: #f5f107;
+	font-family: 'Indie Flower', cursive;
+}
+
+#sarrahPhotoBook { 
+	height: 60vh;
+	width: auto;
+	margin-top: 5vh;
+}
+
+#sarrahEasterEgg {
+	margin: 0 auto;
+	top: 34vh;
+	left: 55vh;
+	width: 20vh;
+	height: 10vh;
+	position: relative;
+}
+
+#sarrahPopUpBox {
+	color: black
+}
+
+.gradient:hover,
+.gradient:active {
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }
 
 /* ---- Intro & Feedback ---- */
 
 #introFeedback {
 	margin: 0 auto;
-	top: 5vh;
-	right: 70vh;
+	top: 0vh;
+	right: 79.5vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
+	color: #FFBF00
 	
 }
 
@@ -270,7 +338,7 @@ a:active {
 
 .sarrahAsk {
 	font-size: 4vw;
-	padding-left: 8.5vw;
+	padding-left: 10vh;
 	color: #16A085;
 	font-family: 'Lobster', cursive;
 }
@@ -287,7 +355,7 @@ a:active {
 	#compass-img {
 		height: 40vh;
 		width: auto;
-		padding-left: 6vw;
+		padding-left: 3vw;
 
 	}
 
@@ -302,39 +370,52 @@ a:active {
 #stressRegulation {
 	margin: 0 auto;
 	top: 13vh;
-	right: 70vh;
+	right: 80vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
-	
+	color: #FFBF00
 }
 
 #windowOfTolerance {
 	padding-top: 3vh;
-	height: 45vh;
+	padding-right: 3vh;
+	height: 30vh;
 	width: auto;
 	
 }
 
-#emotionalThinking {
-	height: 35vh;
+#stressed {
+	height: 20vh;
 	width: auto;
-	padding-left: 5vw;
+}
+
+#emotionalThinking {
+	height: 30vh;
+	width: auto;
+	padding-left: 3vh;
 }
 
 #stressRegulationPoints {
 	font-size: 2vw;
 	color: #f5c507;
 	font-family: 'Indie Flower', cursive;
+	padding-top: 8vh;
+	padding-bottom: 4vh;
 
+}
+
+.stressImgs {
+	padding-top: 4vh;
 }
 
 /* ---- Internal Dialogue & Acceptance ---- */
 
 #internalDialogue {
+	color:#FFBF00;
 	margin: 0 auto;
-	top: 5vh;
-	right: 40vh;
+	top: 1vh;
+	right:42vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -352,9 +433,10 @@ a:active {
 /* ---- Bias & Ally ---- */
 
 #biasAlly {
+	color:#FFBF00;
 	margin: 0 auto;
-	bottom: 2vh;
-	right: 10vh;
+	bottom: 10vh;
+	right: 1.2vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -368,7 +450,7 @@ a:active {
 }
 
 #unconsciousBiasImg {
-	padding-top: 5vh;
+	padding-top: 3vh;
 	height: 35vh;
 	width: auto;
 }
@@ -386,44 +468,128 @@ a:active {
 /* ---- Agile & Teamwork ---- */
 
 #agileTeamwork {
+	color:#FFBF00;
 	margin: 0 auto;
-	top: 7vh;
-	right: 10vh;
+	bottom: 17vh;
+	left: 75vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
 	
 }
+
+#agileFlow {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
+
+#agileFlowImg {
+	padding-top: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+#agileValues {
+	height: 40vh;
+	padding-left: 8vh;
+	padding-top: 2vh;
+	padding-bottom: 3vh;
+	width: auto;
+}
+
+/* ---- Communication & Conflict ---- */
 
 #communicationConflict {
+	color:rgb(255, 191, 0);
 	margin: 0 auto;
-	bottom: 2vh;
-	left: 17vh;
+	bottom: 12vh;
+	left: 36vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
 	
 }
+
+#commValues {
+	font-size: 2vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+}
+
+#conflictImg {
+	padding-top: 2vh;
+	padding-right: 20vh;
+	height: 35vh;
+	width: auto;
+}
+
+#commImg {
+	padding-top: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+#commSteps {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
+
+/* ---- Trust & Empathy---- */
 
 #trustEmpathy {
+	color:#FFBF00;
 	margin: 0 auto;
-	bottom: 10vh;
-	left: 50vh;
+	bottom: 9vh;
+	left: 75vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
 	
 }
 
-#retroReflection {
-	margin: 0 auto;
-	top: 0vh;
-	left: 50vh;
-	width: 50vh;
-	height: 50vh;
-	position: relative;
-	
+#bravingTitle {
+	font-size: 4vw;
+	color: #16A085;
+	font-family: 'Indie Flower', cursive;
 }
+
+#bravingWords {
+	font-size: 1.7vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+	padding-bottom: 2vh;
+}
+
+#trustCircleImg {
+	padding-top: 2vh;
+	padding-right: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+#empathyImg {
+	padding-top: 2vh;
+	padding-right: 4vh;
+	height: 35vh;
+	width: auto;
+}
+
+#trustFlowImg {
+	padding-top: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+
+
+
+/* ---- Pop up ---- */
 
 #sarrahPopup {
 	margin: 0 auto;
@@ -645,7 +811,7 @@ a:active {
 
 #jv-box {
 	height: 64vh;
-	overflow: scroll;
+	overflow-y: scroll;
 	width: 110vh;
 	display: flex;
 	flex-direction: row;
@@ -663,6 +829,12 @@ font-family: 'Indie Flower', cursive;
 font-size: 10vh;
 cursor: pointer;
 }
+
+#jv-box p:hover {
+color: white;
+transition: .25s ease-in-out;
+}
+
 .glasses {
 	width: 8vh;
 	height: 3vh;
