@@ -70,6 +70,8 @@ class Room extends React.Component {
     const { dispatch } = this.props
     dispatch(changePage(pageNum))
   }
+
+  render() { null }
 }
 
 export default Room
