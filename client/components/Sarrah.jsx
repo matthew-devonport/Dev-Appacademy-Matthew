@@ -197,7 +197,7 @@ class Sarrah extends Room {
             <h1 id='humanSkillsTitle'>Human Skills</h1>
               <a
                 onClick={() => this.setPopup(this.introFeedback)}
-                id='introFeedback'
+                id='introFeedback' class='gradient'
               >
                 Intro &#38; Feedback
               </a>
@@ -205,21 +205,21 @@ class Sarrah extends Room {
               <a
                 onClick={() => this.setPopup(this.stressRegulation)}
 
-                id='stressRegulation'
+                id='stressRegulation' class='gradient'
               >
                 Stress &#38; Regulation
               </a>
               <br />
               <a
                 onClick={() => this.setPopup(this.internalDialogue)}
-                id='internalDialogue'
+                id='internalDialogue' class='gradient'
               >
                 Internal Dialogue &#38; Acceptance
               </a>
               <br />
               <a
                 onClick={() => this.setPopup(this.biasAlly)}
-                id='biasAlly'
+                id='biasAlly' class='gradient'
               >
                 Bias &#38; Ally Skills
               </a>
@@ -227,7 +227,7 @@ class Sarrah extends Room {
               <a
                 onClick={() => this.setPopup(this.agileTeamwork)}  
                 target='_blank'
-                id='agileTeamwork'
+                id='agileTeamwork' class='gradient'
               >
                 Agile &#38; Teamwork
               </a>
@@ -235,14 +235,14 @@ class Sarrah extends Room {
               <a
                 onClick={() => this.setPopup(this.communicationConflict)}
                 target='_blank'
-                id='communicationConflict'
+                id='communicationConflict' class='gradient'
               >
                 Communication &#38; Conflict
               </a>
               <br />
               <a
                 onClick={() => this.setPopup(this.trustEmpathy)} 
-                id='trustEmpathy'
+                id='trustEmpathy' class='gradient'
               >
                 Trust &#38; Empathy in Teams
               </a>
@@ -254,7 +254,7 @@ class Sarrah extends Room {
               togglePopup={this.togglePopup}
             />}
           </div>
-          <button onClick={() => this.handleClick(0)}>Home</button>
+          <i class="arrow left" onClick={() => this.handleClick(0)}></i>
         </div>
       </React.Fragment>
     )
