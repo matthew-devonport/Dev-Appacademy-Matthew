@@ -1,10 +1,9 @@
 import React from 'react'
-import { getQuestions } from '../apiClient'
 
 class PopUpBox extends React.Component {
 
   render() {
-    let { content } = this.props
+    let { content, togglePopup } = this.props
     return (
       <React.Fragment>
         <div id='popup-overlay'>
@@ -12,7 +11,7 @@ class PopUpBox extends React.Component {
             <div id='popup-content'>
             {content}
             </div>
-            <a id='popup-close' onClick={this.props.togglePopup}>
+            <a id='popup-close' onClick={togglePopup}>
               &times;
             </a>
           </div>
