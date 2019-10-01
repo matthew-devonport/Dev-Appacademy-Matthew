@@ -679,6 +679,24 @@ a:active {
 	height: 34vh;
 }
 
+.gif {
+	position: relative;
+	width: 20vh;
+}
+
+#gif-container {
+	position: fixed;
+	height: 65vh;
+	width: 130vh;
+	background-image: url('images/gifs/stars.gif')
+}
+
+#potato {
+	background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
 /* --------------------------------*/
 /* QuoteBox
 ---------------------------------- */
