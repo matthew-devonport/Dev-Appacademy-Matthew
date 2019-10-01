@@ -5,6 +5,7 @@ import QuoteBox from './QuoteBox';
 import PopUpBox from './PopUpBox'
 
 import Mindfulness from './Mindfulness'
+import Winnie from './Winnie'
 
 class Han extends Room {
 
@@ -32,6 +33,8 @@ class Han extends Room {
     switch (this.state.popupTopic) {
       case 'mindfulness':
         return <Mindfulness />;
+      case 'winnie':
+        return <Winnie />
       default:
         return undefined;
     }
@@ -70,7 +73,7 @@ class Han extends Room {
       <React.Fragment>
         <div id='hanBackground'></div>
         <div className='room' id='hanRoom'>
-          <button onClick={() => this.handleClick(0)}>Home</button>
+          <div className="arrow left" onClick={() => this.handleClick(0)}>Home</div>
           {this.state.playing &&
             <audio controls>
               <source src="" type="" />
@@ -108,6 +111,7 @@ class Han extends Room {
               Metta
             </div>
           </div>
+          <div id='winnie' onClick={() => this.setPopup("winnie")}></div>
 
           {this.state.quoteIsShowing && <QuoteBox />}
           {this.state.popupIsShowing && <PopUpBox content={popupContent} togglePopup={this.togglePopup} />}

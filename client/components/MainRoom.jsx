@@ -1,16 +1,17 @@
 import React from 'react'
-import Jv from './Jv'
-import Han from './Han'
-import Ollie from './Ollie'
-import Sarrah from './Sarrah'
-import Kelly from './Kelly'
 import { connect } from 'react-redux'
 import Room from './Room'
+import PopUpBox from './PopUpBox'
 
 
 class MainRoom extends Room {
-  popupContent = ``
+  name = `MainRoom`
 
+  setPopup = (content) => {
+    this.togglePopup(),
+    this.popupContent = content
+  }
+  
   play = () => {
     let audio = new Audio("./sounds/Gong.mp3")
     audio.play()
@@ -19,9 +20,8 @@ class MainRoom extends Room {
   render() {
     return (
       <div id='content'>
-        {this.props.page == 0 && (
           <div className='room' id='mainroom'>
-            {/* Changing the order of the divs will break the CSS */}
+            <div id='mainRoomEasterEgg' onClick={()=> this.setPopup(this.groupPhoto)}></div>
             <div
               className='teachers'
               id='han'
@@ -52,25 +52,19 @@ class MainRoom extends Room {
               onClick={() => this.handleClick(5)}
             ></div>
             <div className="exclamation" id="exclam-kelly"></div>
-          </div>
- 
-        )}         
-        <div id ='gong-noise' onClick={() => this.play()}> </div>
 
-        {this.props.page == 1 && <Jv />}
-        {this.props.page == 2 && <Han />}
-        {this.props.page == 3 && <Ollie />}
-        {this.props.page == 4 && <Sarrah />}
-        {this.props.page == 5 && <Kelly />}
+            {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}/>}
+          </div>
+         
+        <div id ='gong-noise' onClick={() => this.play()}> </div>
       </div>
     )
   }
+
+  groupPhoto = (
+    <img id='cohortPic' src="./images/roa2019.JPG" alt="Roa cohort"/>
+  )
+
 }
 
-function mapStateToProps(state) {
-  return {
-    page: state.page
-  }
-}
-
-export default connect(mapStateToProps)(MainRoom)
+export default connect()(MainRoom)

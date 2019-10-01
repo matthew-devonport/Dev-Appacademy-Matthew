@@ -13,11 +13,7 @@ class Ollie extends Room {
       play: false,
       questions: ''
     }
-    getQuestions().then(result => {
-      this.setState({
-        questions: result.questions 
-    })
-    })
+    this.setQuestions()
   }
 
   name = 'Ollie'
@@ -32,12 +28,20 @@ class Ollie extends Room {
     let audio = new Audio("./sounds/groupClap.mp3")
     audio.play()
   }
+
+  setQuestions = () => {
+    getQuestions().then(result => {
+      this.setState({
+        questions: result.questions 
+    })
+    })
+  }
   
   render() {
     return (
       <div className='room' id="ollieRoom">
         <button onClick={() => this.handleClick(0)}>Home</button>
-      <div id ='ollie-popUp' onClick={() => this.setPopup()}></div>
+      <div id='ollie-popUp' onClick={() => this.setPopup()}></div>
       {this.state.quoteIsShowing && <QuoteBox />}
 
       {this.state.questions && this.state.popupIsShowing && <PopUpBox

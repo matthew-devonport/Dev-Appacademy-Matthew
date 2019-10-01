@@ -17,15 +17,30 @@
 	position: relative;
 }
 
-#home-button {
+/* #home-button {
 	position: absolute;
 	top: 5vh;
 	left: 5vh;
 	padding: 1vh;
 	border: none;
 	background-color: #6d9297;
-}
+} */
 
+.arrow {
+	border: solid red;
+	border-width: 0 2vh 2vh 0;
+	display: inline-block;
+	padding: 1vh;
+	position: absolute;
+	top: 5vh;
+	left: 5vh;
+  }
+
+  .left {
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+
+  }
 /* --------------------------------*/
 /* Main room */
 /* -------------------------------- */
@@ -34,8 +49,17 @@
 	background-image: url('images/mainRoom1.JPG');
 }
 
-#mainroom p {
-	margin: 0; /*temporary fix - to remove*/
+#mainRoomEasterEgg {
+	top: 35vh;
+	left: 175vh;
+	width: 10vh;
+	height: 10vh;
+	position: absolute;
+	cursor: pointer;
+}
+
+#cohortPic{
+	height: 70vh;
 }
 
 .teachers {
@@ -172,7 +196,7 @@
 }
 
 #hanRoom {
-	background-image: url('images/han7.png');
+	background-image: url('images/han8.png');
 }
 
 #mindfulness {
@@ -235,13 +259,34 @@
 	left: 140vh;
 }
 
+#winnie {
+	position: absolute;
+	height: 18vh;
+	width: 20vh;
+	top: 75vh;
+	left: 142vh;
+	cursor: pointer;
+}
+
+#winniePics {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#winniePics img {
+	height: 50vh;
+	border-radius: 5vh;
+}
+
+
 /* --------------------------------*/
 /* Sarrah
 ---------------------------------- */
 
 
 #sarrahRoom {
-	background-image: url('images/sarrah1.JPG')
+	background-image: url('images/sarrahye.png');
+	
 
 }
 
@@ -255,19 +300,71 @@ a:visited {
 
 a:hover,
 a:active {
-    color: red;
+		color: red;
+		transition: color 0.3s;
   
+}
+
+#sarrahLinkTitles {
+	font-size: 3.5vh;
+	font-family: 'Cabin', sans-serif;
+	background-color: rgba(0, 0, 0, 0.253);
+    height: 40vh;
+}
+
+#humanSkillsTitle {
+	font-size: 10vh;
+	color: #f5f107;
+	font-family: 'Indie Flower', cursive;
+}
+
+#sarrahPhotoBook { 
+	height: 60vh;
+	width: auto;
+	margin-top: 5vh;
+}
+
+#sarrahEasterEgg {
+	margin: 0 auto;
+	top: 34vh;
+	left: 55vh;
+	width: 20vh;
+	height: 10vh;
+	position: relative;
+}
+
+#sarrahPopUpBox {
+	color: black
+}
+
+.gradient:hover,
+.gradient:active {
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }
 
 /* ---- Intro & Feedback ---- */
 
 #introFeedback {
 	margin: 0 auto;
-	top: 5vh;
-	right: 70vh;
+	top: 0vh;
+	right: 79.5vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
+	color: #FFBF00
 	
 }
 
@@ -278,7 +375,7 @@ a:active {
 
 .sarrahAsk {
 	font-size: 4vw;
-	padding-left: 8.5vw;
+	padding-left: 10vh;
 	color: #16A085;
 	font-family: 'Lobster', cursive;
 }
@@ -295,7 +392,7 @@ a:active {
 	#compass-img {
 		height: 40vh;
 		width: auto;
-		padding-left: 6vw;
+		padding-left: 3vw;
 
 	}
 
@@ -310,39 +407,52 @@ a:active {
 #stressRegulation {
 	margin: 0 auto;
 	top: 13vh;
-	right: 70vh;
+	right: 80vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
-	
+	color: #FFBF00
 }
 
 #windowOfTolerance {
 	padding-top: 3vh;
-	height: 45vh;
+	padding-right: 3vh;
+	height: 30vh;
 	width: auto;
 	
 }
 
-#emotionalThinking {
-	height: 35vh;
+#stressed {
+	height: 20vh;
 	width: auto;
-	padding-left: 5vw;
+}
+
+#emotionalThinking {
+	height: 30vh;
+	width: auto;
+	padding-left: 3vh;
 }
 
 #stressRegulationPoints {
 	font-size: 2vw;
 	color: #f5c507;
 	font-family: 'Indie Flower', cursive;
+	padding-top: 8vh;
+	padding-bottom: 4vh;
 
+}
+
+.stressImgs {
+	padding-top: 4vh;
 }
 
 /* ---- Internal Dialogue & Acceptance ---- */
 
 #internalDialogue {
+	color:#FFBF00;
 	margin: 0 auto;
-	top: 5vh;
-	right: 40vh;
+	top: 1vh;
+	right:42vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -360,9 +470,10 @@ a:active {
 /* ---- Bias & Ally ---- */
 
 #biasAlly {
+	color:#FFBF00;
 	margin: 0 auto;
-	bottom: 2vh;
-	right: 10vh;
+	bottom: 10vh;
+	right: 1.2vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
@@ -376,7 +487,7 @@ a:active {
 }
 
 #unconsciousBiasImg {
-	padding-top: 5vh;
+	padding-top: 3vh;
 	height: 35vh;
 	width: auto;
 }
@@ -394,44 +505,128 @@ a:active {
 /* ---- Agile & Teamwork ---- */
 
 #agileTeamwork {
+	color:#FFBF00;
 	margin: 0 auto;
-	top: 7vh;
-	right: 10vh;
+	bottom: 17vh;
+	left: 75vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
 	
 }
+
+#agileFlow {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
+
+#agileFlowImg {
+	padding-top: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+#agileValues {
+	height: 40vh;
+	padding-left: 8vh;
+	padding-top: 2vh;
+	padding-bottom: 3vh;
+	width: auto;
+}
+
+/* ---- Communication & Conflict ---- */
 
 #communicationConflict {
+	color:rgb(255, 191, 0);
 	margin: 0 auto;
-	bottom: 2vh;
-	left: 17vh;
+	bottom: 12vh;
+	left: 36vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
 	
 }
+
+#commValues {
+	font-size: 2vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+}
+
+#conflictImg {
+	padding-top: 2vh;
+	padding-right: 20vh;
+	height: 35vh;
+	width: auto;
+}
+
+#commImg {
+	padding-top: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+#commSteps {
+	font-size: 2.5vw;
+	color: #16A085;
+	font-family: 'Lobster', cursive;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+}
+
+/* ---- Trust & Empathy---- */
 
 #trustEmpathy {
+	color:#FFBF00;
 	margin: 0 auto;
-	bottom: 10vh;
-	left: 50vh;
+	bottom: 9vh;
+	left: 75vh;
 	width: 50vh;
 	height: 50vh;
 	position: relative;
 	
 }
 
-#retroReflection {
-	margin: 0 auto;
-	top: 0vh;
-	left: 50vh;
-	width: 50vh;
-	height: 50vh;
-	position: relative;
-	
+#bravingTitle {
+	font-size: 4vw;
+	color: #16A085;
+	font-family: 'Indie Flower', cursive;
 }
+
+#bravingWords {
+	font-size: 1.7vw;
+	color: #f5c507;
+	font-family: 'Indie Flower', cursive;
+	padding-bottom: 2vh;
+}
+
+#trustCircleImg {
+	padding-top: 2vh;
+	padding-right: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+#empathyImg {
+	padding-top: 2vh;
+	padding-right: 4vh;
+	height: 35vh;
+	width: auto;
+}
+
+#trustFlowImg {
+	padding-top: 2vh;
+	height: 35vh;
+	width: auto;
+}
+
+
+
+
+/* ---- Pop up ---- */
 
 #sarrahPopup {
 	margin: 0 auto;
@@ -521,6 +716,24 @@ a:active {
 	height: 34vh;
 }
 
+.gif {
+	position: relative;
+	width: 20vh;
+}
+
+#gif-container {
+	position: fixed;
+	height: 65vh;
+	width: 130vh;
+	background-image: url('images/gifs/stars.gif')
+}
+
+#potato {
+	background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
 /* --------------------------------*/
 /* QuoteBox
 ---------------------------------- */
@@ -536,12 +749,13 @@ a:active {
 
 
 #quote-box {
-  position: fixed;
-  top: 0;
-  left: 30vw;
+  position: absolute;
   padding: 2vw;
   text-align: center;
-  background: #6d9297;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  color: #ea2340;
+  background: #f5eee6;
   border-radius: 0.4em;
   width: 20vw;
 }
@@ -554,7 +768,7 @@ a:active {
 	width: 0;
 	height: 0;
 	border: 41px solid transparent;
-	border-top-color: #6d9297;
+	border-top-color: #f5eee6;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -20.5px;
@@ -580,7 +794,9 @@ a:active {
 }
 
 
-/* Pop Up Box */
+/* --------------------------------*/
+/* PopupBox
+---------------------------------- */
 
 #popup-overlay {
   position: fixed;
@@ -624,6 +840,16 @@ a:active {
   color: #6d9297;
 }
 
+.popupTitle {
+	font-size: 3vw;
+	font-family: 'Cabin', sans-serif;
+	margin-bottom: 5vh;
+}
+
+/* --------------------------------*/
+/* JV
+---------------------------------- */
+
 #jv-image {
 	margin: 0 auto;
 	height: 100vh;
@@ -635,7 +861,7 @@ a:active {
 
 #jv-box {
 	height: 64vh;
-	overflow: scroll;
+	overflow-y: scroll;
 	width: 110vh;
 	display: flex;
 	flex-direction: row;
@@ -653,6 +879,12 @@ font-family: 'Indie Flower', cursive;
 font-size: 10vh;
 cursor: pointer;
 }
+
+#jv-box p:hover {
+color: white;
+transition: .25s ease-in-out;
+}
+
 .glasses {
 	width: 8vh;
 	height: 3vh;
@@ -661,3 +893,43 @@ cursor: pointer;
 	left: 135vh;
 	cursor: pointer;
 }
+
+.homeSpace{
+	background:transparent;
+	color:#fff;
+	border:none;	
+	position:absolute;
+	top: 25px;
+	left: 20px;
+	height:60px;
+	font-size:22px;
+	font-family: 'Indie Flower', cursive;
+	padding-bottom: 50px;
+	cursor:pointer;
+	transition:800ms ease all;
+	outline:none;
+  }
+  .homeSpace:hover{
+	background:transparent;
+	color: white;
+  }
+  .homeSpace:before,button:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background:white;
+	transition:400ms ease all;
+  }
+  .homeSpace:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+  }
+  .homeSpace:hover:before,button:hover:after{
+	width:100%;
+	transition:800ms ease all;
+  }

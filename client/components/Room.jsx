@@ -15,7 +15,7 @@ class Room extends React.Component {
   unmounted = false
 
   componentDidMount() {
-    if (this.props.page == 0) { return }
+    if (this.name == 'MainRoom') { return }
     this.getQuotes()
     this.setQuoteInterval()
   }
@@ -70,6 +70,8 @@ class Room extends React.Component {
     const { dispatch } = this.props
     dispatch(changePage(pageNum))
   }
+
+  render() { null }
 }
 
 export default Room
