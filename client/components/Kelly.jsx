@@ -14,9 +14,22 @@ class Kelly extends Room {
   popupContent = ''
 
   content = (
-    <div>
-      <h1>You clicked the POTATO!</h1>
-      <p>Congratulations!</p>
+    <div id='kelly-pop'>
+      <h1 id='potato'>OMFG you clicked the POTATO!!!!!</h1>
+      <div id = 'gif-container'>
+      <img src='./images/gifs/dolphin.gif' className='gif' />
+      <img src='./images/gifs/rainbowUnicorn.gif' className='gif' />
+      <img src='./images/gifs/octocat.gif' className='gif' />
+      <img src='./images/gifs/birb.gif' className='gif' />
+      <img src='./images/gifs/fluffer.gif' className='gif' />
+      <img src='./images/gifs/dolphin.gif' className='gif' />
+      <img src='./images/gifs/dolphin.gif' className='gif' />
+      <img src='./images/gifs/cutebirb.gif' className='gif' />
+      <img src='./images/gifs/robot.gif' className='gif' />
+      <img src='./images/gifs/toast.gif' className='gif' />
+      <img src='./images/gifs/snek.gif' className='gif' />
+      <img src='./images/gifs/dolphin.gif' className='gif' />
+      </div>
     </div>
   )
 
