@@ -1,15 +1,10 @@
 import React from 'react'
-import Jv from './Jv'
-import Han from './Han'
-import Ollie from './Ollie'
-import Sarrah from './Sarrah'
-import Kelly from './Kelly'
 import { connect } from 'react-redux'
 import Room from './Room'
 
 
 class MainRoom extends Room {
-  popupContent = ``
+  name = `MainRoom`
 
   play = () => {
     let audio = new Audio("./sounds/Gong.mp3")
@@ -19,7 +14,6 @@ class MainRoom extends Room {
   render() {
     return (
       <div id='content'>
-        {this.props.page == 0 && (
           <div className='room' id='mainroom'>
             {/* Changing the order of the divs will break the CSS */}
             <div
@@ -53,24 +47,11 @@ class MainRoom extends Room {
             ></div>
             <div className="exclamation" id="exclam-kelly"></div>
           </div>
- 
-        )}         
+         
         <div id ='gong-noise' onClick={() => this.play()}> </div>
-
-        {this.props.page == 1 && <Jv />}
-        {this.props.page == 2 && <Han />}
-        {this.props.page == 3 && <Ollie />}
-        {this.props.page == 4 && <Sarrah />}
-        {this.props.page == 5 && <Kelly />}
       </div>
     )
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    page: state.page
-  }
-}
-
-export default connect(mapStateToProps)(MainRoom)
+export default connect()(MainRoom)
