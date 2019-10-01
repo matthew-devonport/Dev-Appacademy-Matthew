@@ -166,7 +166,7 @@
 }
 
 #hanRoom {
-	background-image: url('images/han7.png');
+	background-image: url('images/han8.png');
 }
 
 #mindfulness {
@@ -230,10 +230,11 @@
 }
 
 #winnie {
-	height: 10vh;
-	width: 10vh;
-	top: 70vh;
-	left: 10vh;
+	position: absolute;
+	height: 18vh;
+	width: 20vh;
+	top: 75vh;
+	left: 142vh;
 	cursor: pointer;
 }
 
