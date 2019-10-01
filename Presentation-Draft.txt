@@ -1,0 +1,98 @@
+Good evening everyone! My name is Matthew Devonport,
+
+My name is Sylvia Gilbert-Potts,
+
+And welcome to the presentation of our project! A project that we are not only as a
+group proud of, a project that we are 'passionate' about and can't wait to share with
+you!
+
+Through the last 14 weeks everyone in this cohort (which is named Roa) has been
+involved in specific tasks, tests, lectures, groups and projects. The first 5
+weeks being introduced to the course with foundations and the last 9 weeks being
+right here, in this building grinding away on content given to us by the teachers,
+as well as putting up with Ollies bad jokes (ha ha ha ha).
+
+The idea was brought up that we could do a project where we could access all the
+learning content through the weeks of the course while making a visual interactive
+experience for the students to make reviewing or revising the content far more fun.
+Doing so would also activating neuroplasticity which is strengthening the neural
+learning connections in our brain, which is actually content on what we learned about
+through this course!
+
+Amazing right!? This course wasn't just about sitting in front of a screen, typing
+out code all day, there were key human skills to learn about how to interact with
+a group of people or workmates, how to deal with your own emotions as well as
+a great aglie flow structure on how to optimise your work flow.
+
+But enough talking right!? Let's check out our project! We are proud to
+introduce to you:
+
+Dev App-cademy!
+
+Nick Matthews will give you an overview of our application, take it away Nick!
+
+(Nick talks)
+
+Thank you Nick! As you can see we have a fully functional application where students
+can go to revise content and relive memories of the time they spent here at Dev
+Academy.
+
+We are 'certain' that some of the teachers will be visiting this site as well to
+re-live the times they have spent with us, because you love us all right!?
+
+To get this site functioning properly, there a solid foundation of back and front
+end code to make it successful. Each and everyone one of us worked on certain
+components or areas of this project to make it successful. Caleb Thompson here was
+our vision master for the project. With his wealth of coding knowledge helped
+lay a great structure for Dev App-cademy. Caleb is keen to say a few words on
+these topics.
+
+(Caleb talks)
+
+Thank you for the overview Caleb! With coding being the main part of the learning of
+the course and the work that has been done on this project alone shows how effective
+the course has been in teaching us the fundamentals and techniques of learning how
+to code, not only with Javascript, but also any language that we look to learn or
+use.
+
+Knowing or learning code is obviously an important part or aspect in being a software
+developer, although the ground roots rule that was explained to us from the beginning
+is that anyone can learn how to code, it's how you deal with your emotions and how
+you deal with people in a positive way that make you an essential asset to a business
+or workplace. Noemie Ariste had a great time in our Human Skills workshops and would
+like to talk about how we interacted as a team, our group dynamics and how the
+skills we learned in the workshops helped us get through our project through the last
+week.
+
+(Noemie talks)
+
+Thank you Noemie! We had a great group dynamic, we worked out issues effectively and
+we definitely put that down to the Human Skills workshops run by Sarrah in this
+course. We are confident that we will utilise these skills moving forward into
+any workplace we get involved in.
+
+So! In conclusion, we are very proud of not only each other in our project group, but
+as a cohort as a whole. The amount of positive learning and growing done in the last
+2-3 months has been 'phenomenal'. Everyone in the cohort has contributed to our
+project by just being a part of it and the teaching staff have been nothing short
+of attentive to our needs and providing us the necessary skills to be successful
+developers in our future careers.
+
+We thank you very much for your time and attention in our project, so signing off,
+again, 
+
+I am Matthew Devonport,
+
+I am Sylvia Gilbert-Potts,
+
+I am Nick Matthews,
+
+I am Caleb Thompson,
+
+I am Noemie Ariste,
+
+And we will sign off our presentation the same way we signed off each of our stand
+ups in this project.
+
+
+YEAH BUDDY!! 
