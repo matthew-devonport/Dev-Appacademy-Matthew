@@ -57,7 +57,7 @@ describe('<Han> component', () => {
   })
   test('clicking home-button calls dispatch', () => {
     expect.assertions(1)
-    let button = wrapper.find('#home-button')
+    let button = wrapper.find('.homeSpace')
     button.simulate('click')
     expect(dispatch).toHaveBeenCalled()
   })
