@@ -19,14 +19,53 @@ body {
 	position: relative;
 }
 
-/* #home-button {
-	position: absolute;
-	top: 5vh;
-	left: 5vh;
-	padding: 1vh;
-	border: none;
-	background-color: #6d9297;
-} */
+/* --------------------------------*/
+/* Home button
+---------------------------------- */
+
+.homeSpace{
+	background:transparent;
+	color:#fff;
+	border:none;	
+	position:absolute;
+	top: 25px;
+	left: 20px;
+	height:60px;
+	font-size:22px;
+	font-family: 'Indie Flower', cursive;
+	padding-bottom: 50px;
+	cursor:pointer;
+	transition:800ms ease all;
+	outline:none;
+  }
+
+  .homeSpace:hover{
+	background:transparent;
+	color: white;
+  }
+
+  .homeSpace:before, button:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background:white;
+	transition:400ms ease all;
+  }
+
+  .homeSpace:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+  }
+
+  .homeSpace:hover:before, button:hover:after{
+	width:100%;
+	transition:800ms ease all;
+  }
 
 .arrow {
 	border: solid red;
@@ -895,47 +934,3 @@ transition: .25s ease-in-out;
 	left: 135vh;
 	cursor: pointer;
 }
-
-/* --------------------------------*/
-/* JV
----------------------------------- */
-
-.homeSpace{
-	background:transparent;
-	color:#fff;
-	border:none;	
-	position:absolute;
-	top: 25px;
-	left: 20px;
-	height:60px;
-	font-size:22px;
-	font-family: 'Indie Flower', cursive;
-	padding-bottom: 50px;
-	cursor:pointer;
-	transition:800ms ease all;
-	outline:none;
-  }
-  .homeSpace:hover{
-	background:transparent;
-	color: white;
-  }
-  .homeSpace:before,button:after{
-	content:'';
-	position:absolute;
-	top:0;
-	right:0;
-	height:2px;
-	width:0;
-	background:white;
-	transition:400ms ease all;
-  }
-  .homeSpace:after{
-	right:inherit;
-	top:inherit;
-	left:0;
-	bottom:0;
-  }
-  .homeSpace:hover:before,button:hover:after{
-	width:100%;
-	transition:800ms ease all;
-  }
