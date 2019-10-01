@@ -56,8 +56,9 @@ class Room extends React.Component {
 
   setQuote = () => {
     const { dispatch } = this.props
-    let randNum = Math.floor(Math.random() * this.state.quotes.length)
-    dispatch(setQuoteBox(this.state.quotes[randNum].quote, this.top, this.left))
+    const { quotes } = this.state
+    let randNum = Math.floor(Math.random() * quotes.length)
+    dispatch(setQuoteBox(quotes[randNum].quote, this.top, this.left))
   }
 
   togglePopup = () => {
