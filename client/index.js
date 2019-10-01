@@ -5,7 +5,7 @@ import {createStore, applyMiddleware, compose} from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
 import reducers from './reducers'
-import MainRoom from './components/MainRoom'
+import App from './components/App'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(reducers, composeEnhancers(
@@ -15,7 +15,7 @@ const store = createStore(reducers, composeEnhancers(
 document.addEventListener('DOMContentLoaded', () => {
   render(
     <Provider store={store}>
-      <MainRoom />
+      <App />
     </Provider>,
     document.getElementById('app')
   )
