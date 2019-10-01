@@ -933,3 +933,6 @@ transition: .25s ease-in-out;
 	width:100%;
 	transition:800ms ease all;
   }
+  #test{
+	  color: black;
+  }

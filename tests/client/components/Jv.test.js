@@ -50,4 +50,5 @@ describe('<Jv /> Component', () => {
         button.simulate('click')
         expect(instance.setPopup).toHaveBeenCalled()
       })
+      
 })
