@@ -531,7 +531,10 @@ a:active {
   position: absolute;
   padding: 2vw;
   text-align: center;
-  background: #6d9297;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  color: #ea2340;
+  background: #f5eee6;
   border-radius: 0.4em;
   width: 20vw;
 }
@@ -544,7 +547,7 @@ a:active {
 	width: 0;
 	height: 0;
 	border: 41px solid transparent;
-	border-top-color: #6d9297;
+	border-top-color: #f5eee6;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -20.5px;
@@ -661,14 +664,14 @@ transition: .25s ease-in-out;
 .homeSpace{
 	background:transparent;
 	color:#fff;
-	border:none;
+	border:none;	
 	position:absolute;
 	top: 25px;
 	left: 20px;
-	height:50px;
-	font-size:18px;
+	height:60px;
+	font-size:22px;
 	font-family: 'Indie Flower', cursive;
-	padding-bottom:20px;
+	padding-bottom: 50px;
 	cursor:pointer;
 	transition:800ms ease all;
 	outline:none;
