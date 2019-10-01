@@ -142,8 +142,14 @@
 	display: block;
 }
 
-
-/* Add div for the ringing bowl */
+#gong-noise {
+	position: absolute;
+	top: 69vh;
+	left: 159vh;
+	width: 9vh;
+	height: 4vh;
+	cursor: pointer;
+}
 
 /* --------------------------------*/
 /* Han
@@ -444,45 +450,38 @@ a:active {
 
 #ollieRoom {
   background-image: url('./images/ollieBackground1.jpg');
-  width: 100vw;
 }
 
 #QOTD {
-	font-size: 50px;
+	font-size: 7vh;
 	text-align: center;
-	margin-top: 180px;
+	margin-top: 10vh;
+	font-family: 'Indie Flower', cursive;
 }
 
 #QOTD-Title {
-	font-size: 60px;
+	font-size: 10vh;
+	font-family: 'Cabin', sans-serif;
 }
 
 #clap-box {
 	position: absolute;
-	top: 45vh;
+	top: 43vh;
 	left: 50vh;
-	width: 28vw;
-	height: 60px;
+	width: 53vh;
+	height: 7vh;
 	cursor: pointer;
 }
 
 #ollie-popUp {
 	position: absolute;
 	top: 10vh;
-	left: 5vw;
+	left: 15vh;
 	height: 7vh;
-	width: 25vw;
+	width: 43vh;
 	cursor: pointer;
 }
 
-#gong-noise {
-	position: absolute;
-	top: 69vh;
-	left: 91vw;
-	width: 5vw;
-	height: 5vh;
-	cursor: pointer;
-}
 
 /* --------------------------------*/
 /* Kelly
@@ -529,9 +528,7 @@ a:active {
 
 
 #quote-box {
-  position: fixed;
-  top: 0;
-  left: 30vw;
+  position: absolute;
   padding: 2vw;
   text-align: center;
   background: #6d9297;
@@ -628,7 +625,7 @@ a:active {
 
 #jv-box {
 	height: 64vh;
-	overflow: scroll;
+	overflow-y: scroll;
 	width: 110vh;
 	display: flex;
 	flex-direction: row;
@@ -646,6 +643,12 @@ font-family: 'Indie Flower', cursive;
 font-size: 10vh;
 cursor: pointer;
 }
+
+#jv-box p:hover {
+color: white;
+transition: .25s ease-in-out;
+}
+
 .glasses {
 	width: 8vh;
 	height: 3vh;
