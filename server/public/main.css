@@ -49,8 +49,17 @@
 	background-image: url('images/mainRoom1.JPG');
 }
 
-#mainroom p {
-	margin: 0; /*temporary fix - to remove*/
+#mainRoomEasterEgg {
+	top: 35vh;
+	left: 175vh;
+	width: 10vh;
+	height: 10vh;
+	position: absolute;
+	cursor: pointer;
+}
+
+#cohortPic{
+	height: 70vh;
 }
 
 .teachers {
