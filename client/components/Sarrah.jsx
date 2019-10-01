@@ -11,6 +11,41 @@ class Sarrah extends Room {
 
   popupContent = ''
 
+  render() {
+    return (
+      <React.Fragment>
+        <div className='room' id='sarrahRoom'>
+          <div id='sarrahPopUpBox'>
+            {this.state.quoteIsShowing && <QuoteBox />}
+          </div>
+          <div>
+            <div id='sarrahLinkTitles'>
+              <h1 id='humanSkillsTitle'>Human Skills</h1>
+              <a onClick={() => this.setPopup(this.introFeedback)} id='introFeedback' class='gradient'>Intro &#38; Feedback</a>
+              <br />
+              <a onClick={() => this.setPopup(this.stressRegulation)} id='stressRegulation' class='gradient'>Stress &#38; Regulation</a>
+              <br />
+              <a onClick={() => this.setPopup(this.internalDialogue)} id='internalDialogue' class='gradient'>Internal Dialogue &#38; Acceptance</a>
+              <br />
+              <a onClick={() => this.setPopup(this.biasAlly)} id='biasAlly' class='gradient'>Bias &#38; Ally Skills</a>
+              <br />
+              <a onClick={() => this.setPopup(this.agileTeamwork)} id='agileTeamwork' class='gradient'>Agile &#38; Teamwork</a>
+              <br />
+              <a onClick={() => this.setPopup(this.communicationConflict)} id='communicationConflict' class='gradient'>Communication &#38; Conflict</a>
+              <br />
+              <a onClick={() => this.setPopup(this.trustEmpathy)} id='trustEmpathy' class='gradient'>Trust &#38; Empathy in Teams</a>
+              <br />
+            </div>
+            <div id='sarrahEasterEgg' onClick={() => this.setPopup(this.easterEgg)}></div>
+            {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}
+            />}
+          </div>
+          <div class="arrow left" onClick={() => this.handleClick(0)}></div>
+        </div>
+      </React.Fragment>
+    )
+  }
+
   setPopup = (content) => {
     this.togglePopup(),
       this.popupContent = content
@@ -18,7 +53,7 @@ class Sarrah extends Room {
 
   easterEgg = (
     <div>
-      <a href='https://drive.google.com/drive/folders/1L-l1U3Mxl0aIev2fHtdtiDKysfbvglYf' target='_blank'><img src ='/images/Sarrah/Photobook.jpg' id="sarrahPhotoBook"></img></a>
+      <a href='https://drive.google.com/drive/folders/1L-l1U3Mxl0aIev2fHtdtiDKysfbvglYf' target='_blank'><img src='/images/Sarrah/Photobook.jpg' id="sarrahPhotoBook"></img></a>
     </div>)
 
   introFeedback = (
@@ -140,7 +175,7 @@ class Sarrah extends Room {
     </div>
   )
 
-  communicationConflict  = (
+  communicationConflict = (
     <div>
       <h1 className='sarrahTitle'>Communication &amp; Conflict</h1>
       <p id='commValues'>Self Awareness - Communication - Listening</p>
@@ -173,7 +208,7 @@ class Sarrah extends Room {
 
         <img src='/images/Sarrah/Trust.jpg' id='trustCircleImg'></img>
         <img src='/images/Sarrah/empathy.jpeg' id='empathyImg'></img>
-        <img src='/images/Sarrah/Trust.png' id='trustFlowImg'></img> 
+        <img src='/images/Sarrah/Trust.png' id='trustFlowImg'></img>
       </div>
       <div id='popupLinks'>
         <a href='https://drive.google.com/open?id=1AXlGFuaL_cmnhrhsJDsFM8kVH4oPMRvs' target='_blank'>Student Notes</a>
@@ -182,83 +217,6 @@ class Sarrah extends Room {
       </div>
     </div>
   )
-
-
-  render() {
-    return (
-      <React.Fragment>
-        <div className='room' id='sarrahRoom'>
-        
-         <div id='sarrahPopUpBox'>
-          {this.state.quoteIsShowing && <QuoteBox />}
-          </div>
-          <div>
-            <div id='sarrahLinkTitles'>
-            <h1 id='humanSkillsTitle'>Human Skills</h1>
-              <a
-                onClick={() => this.setPopup(this.introFeedback)}
-                id='introFeedback' class='gradient'
-              >
-                Intro &#38; Feedback
-              </a>
-              <br />
-              <a
-                onClick={() => this.setPopup(this.stressRegulation)}
-
-                id='stressRegulation' class='gradient'
-              >
-                Stress &#38; Regulation
-              </a>
-              <br />
-              <a
-                onClick={() => this.setPopup(this.internalDialogue)}
-                id='internalDialogue' class='gradient'
-              >
-                Internal Dialogue &#38; Acceptance
-              </a>
-              <br />
-              <a
-                onClick={() => this.setPopup(this.biasAlly)}
-                id='biasAlly' class='gradient'
-              >
-                Bias &#38; Ally Skills
-              </a>
-              <br />
-              <a
-                onClick={() => this.setPopup(this.agileTeamwork)}  
-                target='_blank'
-                id='agileTeamwork' class='gradient'
-              >
-                Agile &#38; Teamwork
-              </a>
-              <br />
-              <a
-                onClick={() => this.setPopup(this.communicationConflict)}
-                target='_blank'
-                id='communicationConflict' class='gradient'
-              >
-                Communication &#38; Conflict
-              </a>
-              <br />
-              <a
-                onClick={() => this.setPopup(this.trustEmpathy)} 
-                id='trustEmpathy' class='gradient'
-              >
-                Trust &#38; Empathy in Teams
-              </a>
-              <br />
-            </div>
-            <div id='sarrahEasterEgg' onClick={() => this.setPopup(this.easterEgg)}></div>
-            {this.state.popupIsShowing && <PopUpBox
-              content={this.popupContent}
-              togglePopup={this.togglePopup}
-            />}
-          </div>
-          <i class="arrow left" onClick={() => this.handleClick(0)}></i>
-        </div>
-      </React.Fragment>
-    )
-  }
 }
 
 export default connect()(Sarrah)
