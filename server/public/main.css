@@ -688,6 +688,24 @@ a:active {
 	height: 34vh;
 }
 
+.gif {
+	position: relative;
+	width: 20vh;
+}
+
+#gif-container {
+	position: fixed;
+	height: 65vh;
+	width: 130vh;
+	background-image: url('images/gifs/stars.gif')
+}
+
+#potato {
+	background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
 /* --------------------------------*/
 /* QuoteBox
 ---------------------------------- */
@@ -703,12 +721,13 @@ a:active {
 
 
 #quote-box {
-  position: fixed;
-  top: 0;
-  left: 30vw;
+  position: absolute;
   padding: 2vw;
   text-align: center;
-  background: #6d9297;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  color: #ea2340;
+  background: #f5eee6;
   border-radius: 0.4em;
   width: 20vw;
 }
@@ -721,7 +740,7 @@ a:active {
 	width: 0;
 	height: 0;
 	border: 41px solid transparent;
-	border-top-color: #6d9297;
+	border-top-color: #f5eee6;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -20.5px;
@@ -834,3 +853,43 @@ transition: .25s ease-in-out;
 	left: 135vh;
 	cursor: pointer;
 }
+
+.homeSpace{
+	background:transparent;
+	color:#fff;
+	border:none;	
+	position:absolute;
+	top: 25px;
+	left: 20px;
+	height:60px;
+	font-size:22px;
+	font-family: 'Indie Flower', cursive;
+	padding-bottom: 50px;
+	cursor:pointer;
+	transition:800ms ease all;
+	outline:none;
+  }
+  .homeSpace:hover{
+	background:transparent;
+	color: white;
+  }
+  .homeSpace:before,button:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background:white;
+	transition:400ms ease all;
+  }
+  .homeSpace:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+  }
+  .homeSpace:hover:before,button:hover:after{
+	width:100%;
+	transition:800ms ease all;
+  }

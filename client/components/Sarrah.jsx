@@ -40,7 +40,7 @@ class Sarrah extends Room {
             {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}
             />}
           </div>
-          <div class="arrow left" onClick={() => this.handleClick(0)}></div>
+          <div id='sarrahArrow' class="arrow left" onClick={() => this.handleClick(0)}></div>
         </div>
       </React.Fragment>
     )
