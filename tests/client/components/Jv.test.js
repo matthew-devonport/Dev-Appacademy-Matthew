@@ -43,4 +43,11 @@ describe('<Jv /> Component', () => {
         button.simulate('click')
         expect(dispatch).toHaveBeenCalled()
     })
+    test('clicking glasses calls popup', () => {
+        expect.assertions(1)
+        let button = wrapper.find('.glasses')
+        instance.setPopup = jest.fn()
+        button.simulate('click')
+        expect(instance.setPopup).toHaveBeenCalled()
+      })
 })
