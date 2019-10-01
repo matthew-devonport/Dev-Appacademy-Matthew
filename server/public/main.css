@@ -657,3 +657,43 @@ transition: .25s ease-in-out;
 	left: 135vh;
 	cursor: pointer;
 }
+
+.homeSpace{
+	background:transparent;
+	color:#fff;
+	border:none;
+	position:absolute;
+	top: 25px;
+	left: 20px;
+	height:50px;
+	font-size:18px;
+	font-family: 'Indie Flower', cursive;
+	padding-bottom:20px;
+	cursor:pointer;
+	transition:800ms ease all;
+	outline:none;
+  }
+  .homeSpace:hover{
+	background:transparent;
+	color: white;
+  }
+  .homeSpace:before,button:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background:white;
+	transition:400ms ease all;
+  }
+  .homeSpace:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+  }
+  .homeSpace:hover:before,button:hover:after{
+	width:100%;
+	transition:800ms ease all;
+  }

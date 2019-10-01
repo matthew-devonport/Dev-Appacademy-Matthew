@@ -44,7 +44,7 @@ class Jv extends Room {
     return (
       <React.Fragment>
         <div id='jv-image'>
-          <button onClick={() => this.handleClick(0)}>Home</button>
+          <button className='homeSpace' onClick={() => this.handleClick(0)}>Home</button>
 
           {this.state.quoteIsShowing && <QuoteBox />}
         </div>
