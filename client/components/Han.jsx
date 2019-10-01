@@ -4,7 +4,8 @@ import Room from './Room'
 import QuoteBox from './QuoteBox';
 import PopUpBox from './PopUpBox'
 
-
+import Mindfulness from './Mindfulness'
+import Winnie from './Winnie'
 
 class Han extends Room {
 
@@ -13,24 +14,31 @@ class Han extends Room {
     this.state = {
       playing: false,
       track: '',
+      popupTopic: '',
     }
   }
-  
+
   name = 'Han'
   top = '80vh'
   left = '33vw'
 
-  setPopup = (content) => {
+  setPopup = (topic) => {
     this.togglePopup(),
-    this.popupContent = content
+      this.setState({
+        popupTopic: topic
+      })
   }
 
-  mindfulness = (
-    <React.Fragment>
-    <h1>Mindfulness</h1>
-    <p>test</p>
-    </React.Fragment>
-  )
+  setPopupContent = () => {
+    switch (this.state.popupTopic) {
+      case 'mindfulness':
+        return <Mindfulness />;
+      case 'winnie':
+        return <Winnie />
+      default:
+        return undefined;
+    }
+  }
 
   setAudio = (track) => {
     this.setState({
@@ -38,79 +46,79 @@ class Han extends Room {
       track: track
     })
   }
-  
+
   play = () => {
     let audio = document.querySelector("audio")
     if (audio.canPlayType('audio/mpeg;')) {
-      audio.type= 'audio/mpeg';
-      audio.src= this.state.track + '.mp3';
-      } else {
-      audio.type= 'audio/ogg';
-      audio.src= this.state.track + '.ogg';
+      audio.type = 'audio/mpeg';
+      audio.src = this.state.track + '.mp3';
+    } else {
+      audio.type = 'audio/ogg';
+      audio.src = this.state.track + '.ogg';
     }
     audio.load()
     audio.play()
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if(this.state.track != prevState.track) {
+    if (this.state.track != prevState.track) {
       this.play()
     }
   }
 
   render() {
-    
+    let popupContent = this.setPopupContent();
+
     return (
       <React.Fragment>
         <div id='hanBackground'></div>
         <div className='room' id='hanRoom'>
-          <button onClick={() => this.handleClick(0)}>Home</button>
+          <div className="arrow left" onClick={() => this.handleClick(0)}>Home</div>
           {this.state.playing &&
-          <audio controls>
-            <source src="" type="audio/ogg" />
-            <source src="" type="audio/mpeg" />
-          </audio>
-        }
+            <audio controls>
+              <source src="" type="" />
+            </audio>}
           <div id='mindfulness'>
-            <a className='technic button deg270' onClick={() => this.setPopup(this.mindfulness)}>
-              {/* trigger popup */}
+            <div className='technic deg270' onClick={() => this.setPopup("mindfulness")}>
               Mindfulness
-            </a>
-            <div className='technic button deg0' onClick={() => this.setAudio('./sounds/forest')}>
+            </div>
+            <div className='technic deg320' onClick={() => this.setAudio('./sounds/forest')}>
               <div className="arrow-right"></div>
               Sounds
             </div>
-            <div className='technic button deg135' onClick={() => this.setAudio('./sounds/river')}>
+            <div className='technic deg0' onClick={() => this.setAudio('./sounds/river')}>
               <div className="arrow-right"></div>
               Body Scan
             </div>
-            <div className='technic button deg180' href='#popup'>
+            <div className='technic deg45'>
               <div className="arrow-right"></div>
               Breath
             </div>
-            <div className='technic button deg220' href='#popup'>
+            <div className='technic deg90' onClick={() => this.setAudio('./sounds/mindfulness')}>
               <div className="arrow-right"></div>
-              Metta
+              Here & Now
             </div>
-            <div className='technic button deg320' href='#popup'>
-              <div className="arrow-right"></div>
-              5 Senses
-            </div>
-            <div className='technic button deg45' href='#popup'>
+            <div className='technic deg135' href='#popup'>
               <div className="arrow-right"></div>
               R.A.I.N
             </div>
-
+            <div className='technic deg180' href='#popup'>
+              <div className="arrow-right"></div>
+              5 Senses
+            </div>
+            <div className='technic deg220' href='#popup'>
+              <div className="arrow-right"></div>
+              Metta
+            </div>
           </div>
+          <div id='winnie' onClick={() => this.setPopup("winnie")}></div>
 
-          {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}/>}
           {this.state.quoteIsShowing && <QuoteBox />}
+          {this.state.popupIsShowing && <PopUpBox content={popupContent} togglePopup={this.togglePopup} />}
+          
         </div>
-        
       </React.Fragment>
-    
     )
-    
   }
 }
 
