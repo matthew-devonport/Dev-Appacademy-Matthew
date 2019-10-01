@@ -73,7 +73,7 @@ class Han extends Room {
       <React.Fragment>
         <div id='hanBackground'></div>
         <div className='room' id='hanRoom'>
-          <div className="arrow left" onClick={() => this.handleClick(0)}>Home</div>
+          <div id="home-button" className="arrow left" onClick={() => this.handleClick(0)}>Home</div>
           {this.state.playing &&
             <audio controls>
               <source src="" type="" />
