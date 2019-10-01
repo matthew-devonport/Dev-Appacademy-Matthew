@@ -19,7 +19,13 @@
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-object-rest-spread"
+      "@babel/plugin-proposal-object-rest-spread",
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ]
     ]
   },
   "jest": {
@@ -29,6 +35,7 @@
     ]
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "express": "^4.16.4",
     "knex": "^0.19.4",
     "pg": "^7.12.1",
@@ -39,9 +46,11 @@
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.0",
+    "@babel/runtime": "^7.6.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
