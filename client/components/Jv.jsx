@@ -8,6 +8,10 @@ import { getVideos } from '../apiClient'
 class Jv extends Room {
   constructor(props) {
     super(props)
+    this.setVideos()
+  }
+
+  setVideos = () => {
     getVideos().then(result => {
       this.setState({
         videos: result.videos,
@@ -27,17 +31,17 @@ class Jv extends Room {
   }
 
   render() {
-    console.log("this one's for you JV!  **Thumps chest**")
+    console.log("this one's for you JV!  **Blows Kiss**")
     console.log('               __________')
     console.log("             .'----------`.")
     console.log('             | .--------. |')
     console.log('             | |########| |       __________')
-    console.log('             | |########| |      /__________ ')
+    console.log('             | |########| |      /__________| ')
     console.log("    .--------| `--------' |------|    --=-- |-------------.")
     console.log("    |        `----,-.-----'      |o ======  |             | ")
-    console.log('    |       ______|_|_______     |__________|             | ')
-    console.log('    |      /  %%%%%%%%%%%%                               | ')
-    console.log('    |     /  %%%%%%%%%%%%%%                              | ')
+    console.log('    |       ______|_|_________   |__________|             | ')
+    console.log('    |      /  %%%%%%%%%%%%    |                           | ')
+    console.log('    |     /  %%%%%%%%%%%%%%   |                           | ')
     console.log('    |     ^^^^^^^^^^^^^^^^^^^^                            | ')
     console.log('    +-----------------------------------------------------+')
     console.log('    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ ')
@@ -51,7 +55,7 @@ class Jv extends Room {
         <div id='jv-box'>
           {this.state.videos &&
             this.state.videos.map((video, i) => (
-              <p id = 'test'
+              <p
                 key={i}
                 onClick={e => this.setPopup(e, video.name)}
                 value={video.url}
@@ -69,11 +73,10 @@ class Jv extends Room {
           <PopUpBox
             content={
               <React.Fragment>
-                <h1>{this.videoTitle}</h1>
-                <br />
+                <h1 className='popupTitle'>{this.videoTitle}</h1>
                 <iframe
-                  width='560'
-                  height='315'
+                  width='800'
+                  height='450'
                   src={this.videoSrc}
                   frameBorder='0'
                   allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
