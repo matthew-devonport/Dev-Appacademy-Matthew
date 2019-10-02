@@ -289,6 +289,26 @@ body {
 	left: 140vh;
 }
 
+#technics-container {
+	text-align: justify;
+	display: flex;
+}
+
+#technics-container div {
+	padding: 0 5vh;
+	width: 45%;
+}
+
+#technics-container p {
+	margin-bottom: 3vh;
+}
+
+.technic-title {
+	font-weight: bolder;
+	font-size: 1.5em;
+	color: #16A085;
+}
+
 #winnie {
 	position: absolute;
 	height: 18vh;
