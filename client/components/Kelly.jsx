@@ -39,10 +39,8 @@ class Kelly extends Room {
 
   render() {
     return (
-      <div id='kelly-background'>
-        <button onClick={() => this.handleClick(0)} id='home-button'>
-          Home
-        </button>
+      <div className='room' id='kelly-background'>
+        <button onClick={() => this.handleClick(0)} className='homeSpace'>Home</button>
 
         <a
           href='https://www.codewars.com/'

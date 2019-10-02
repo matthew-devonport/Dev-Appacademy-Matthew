@@ -20,7 +20,7 @@ class Han extends Room {
 
   name = 'Han'
   top = '80vh'
-  left = '33vw'
+  left = '20vh'
 
   setPopup = (topic) => {
     this.togglePopup(),
@@ -73,7 +73,7 @@ class Han extends Room {
       <React.Fragment>
         <div id='hanBackground'></div>
         <div className='room' id='hanRoom'>
-          <div className='homeSpace' onClick={() => this.handleClick(0)}>Home</div>
+          <button className='homeSpace' onClick={() => this.handleClick(0)}>Home</button>
           {this.state.playing &&
             <audio controls>
               <source src="" type="" />

@@ -15,6 +15,7 @@ class Sarrah extends Room {
     return (
       <React.Fragment>
         <div className='room' id='sarrahRoom'>
+        <button onClick={() => this.handleClick(0)} className='homeSpace'>Home</button>
           <div>
             <div id='sarrahLinkTitles'>
               <h1 id='humanSkillsTitle'>Human Skills</h1>
@@ -40,7 +41,6 @@ class Sarrah extends Room {
             {this.state.popupIsShowing && <PopUpBox content={this.popupContent} togglePopup={this.togglePopup}
             />}
           </div>
-          <div id='sarrahArrow' className="arrow left" onClick={() => this.handleClick(0)}></div>
         </div>
       </React.Fragment>
     )
@@ -58,7 +58,7 @@ class Sarrah extends Room {
 
   introFeedback = (
     <div>
-      <h1 className='sarrahTitle'>Intro &amp; Feedback</h1>
+      <h1 className='popupTitle'>Intro &amp; Feedback</h1>
       <div className='container'>
         <p className='sarrahPoints'>
           - Gratitude<br />
@@ -85,7 +85,7 @@ class Sarrah extends Room {
 
   stressRegulation = (
     <div>
-      <h1 className='sarrahTitle'>Stress &amp; Regulation</h1>
+      <h1 className='popupTitle'>Stress &amp; Regulation</h1>
       <div className='container stressImgs'>
         <img src='/images/Sarrah/window-of-tolerance.jpg' id='windowOfTolerance'></img>
         <img src='/images/Sarrah/stressed.gif' id='stressed'></img>
@@ -108,7 +108,7 @@ class Sarrah extends Room {
 
   internalDialogue = (
     <div>
-      <h1 className='sarrahTitle'>Internal Dialogue &amp; Acceptance</h1>
+      <h1 className='popupTitle'>Internal Dialogue &amp; Acceptance</h1>
       <div className='container'>
         <img src='/images/Sarrah/Internal_Dialogue_01.jpg' id='internalDialogueImg'></img>
         <p className='sarrahPoints'>
@@ -132,7 +132,7 @@ class Sarrah extends Room {
 
   biasAlly = (
     <div>
-      <h1 className='sarrahTitle'>Bias &amp; Ally Skills</h1>
+      <h1 className='popupTitle'>Bias &amp; Ally Skills</h1>
       <p id='allyQuestion'>
         "How do I become a good ally?"
         </p>
@@ -153,7 +153,7 @@ class Sarrah extends Room {
 
   agileTeamwork = (
     <div>
-      <h1 className='sarrahTitle'>Agile &amp; Teamwork</h1>
+      <h1 className='popupTitle'>Agile &amp; Teamwork</h1>
       <div className='container'>
         <img src='/images/Sarrah/scrum-agile.jpg' id='agileFlowImg'></img>
         <img src='/images/Sarrah/scrum-values.png' id='agileValues'></img>
@@ -177,7 +177,7 @@ class Sarrah extends Room {
 
   communicationConflict = (
     <div>
-      <h1 className='sarrahTitle'>Communication &amp; Conflict</h1>
+      <h1 className='popupTitle'>Communication &amp; Conflict</h1>
       <p id='commValues'>Self Awareness - Communication - Listening</p>
       <div className='container'>
 
@@ -201,7 +201,7 @@ class Sarrah extends Room {
 
   trustEmpathy = (
     <div>
-      <h1 className='sarrahTitle'>Trust &amp; Empathy in Teams</h1>
+      <h1 className='popupTitle'>Trust &amp; Empathy in Teams</h1>
       <p id='bravingTitle'><strong>B &nbsp; R &nbsp; A &nbsp; V &nbsp; I &nbsp; N &nbsp; G</strong></p>
       <p id='bravingWords'>Boundaries - Reliability - Accountability - Vault - Integrity - Non-Judgement - Generosity</p>
       <div className='container'>
