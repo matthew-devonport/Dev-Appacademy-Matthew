@@ -26,8 +26,18 @@ exports.seed = function(knex) {
         {id: 19, name: 'Ollie', quote: 'I\'m pretty susceptible to peer-pressure'},
         {id: 20, name: 'Kelly', quote: 'Sweet!'},
         {id: 21, name: 'Kelly', quote: 'That\'s cool, it works!'},
-        {id: 22, name: 'Han', quote: 'I\m very easy to frighten!'}
-        
+        {id: 23, name: 'Han', quote: 'I\'m very easy to frighten!'},
+        {id: 24, name: 'Han', quote: 'Yeah! I\'m into that!'}, 
+        {id: 25, name: 'Sarrah', quote: 'Take your time'},
+        {id: 26, name: 'JV', quote: 'Put it as a wrapper, which means you lay sick beats!'},
+        {id: 27, name: 'Kelly', quote: 'Try looking at it this way...'},
+        {id: 28, name: 'Ollie', quote: 'I feel like everyone is picking on me'},
+        {id: 29, name: 'Han', quote: '*Uncontrollable laughter*'},
+        {id: 30, name: 'Sarrah', quote: 'Feel free to approach me at anytime'},
+        {id: 31, name: 'JV', quote: 'Any questions or comments about this code?'},
+        {id: 32, name: 'Kelly', quote: 'So.... How about trying this...'},
+        {id: 33, name: 'Han', quote: 'I don\'t know why I said that!'},
+        {id: 34, name: 'Ollie', quote: 'Let\'s get it done team!'}
       ]);
     });
 };

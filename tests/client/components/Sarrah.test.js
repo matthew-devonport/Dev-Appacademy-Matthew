@@ -37,7 +37,7 @@ describe('<Sarrah /> Component', () => {
 
   test('clicking button calls dispatch', () => {
     expect.assertions(1)
-    let button = wrapper.find('#sarrahArrow')
+    let button = wrapper.find('#sarrahHome')
     button.simulate('click')
     expect(dispatch).toHaveBeenCalled()
   })

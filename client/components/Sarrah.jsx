@@ -7,7 +7,7 @@ import PopUpBox from './PopUpBox'
 class Sarrah extends Room {
   name = 'Sarrah'
   top = '33vh'
-  left = '42vw'
+  left = '80vh'
 
   popupContent = ''
 
@@ -15,7 +15,7 @@ class Sarrah extends Room {
     return (
       <React.Fragment>
         <div className='room' id='sarrahRoom'>
-        <button onClick={() => this.handleClick(0)} className='homeSpace'>Home</button>
+        <button onClick={() => this.handleClick(0)}id='sarrahHome' className='homeSpace'>Home</button>
           <div>
             <div id='sarrahLinkTitles'>
               <h1 id='humanSkillsTitle'>Human Skills</h1>
