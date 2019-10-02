@@ -7,7 +7,7 @@ import PopUpBox from './PopUpBox'
 class Sarrah extends Room {
   name = 'Sarrah'
   top = '33vh'
-  left = '42vw'
+  left = '80vh'
 
   popupContent = ''
 

@@ -18,7 +18,7 @@ class Ollie extends Room {
 
   name = 'Ollie'
   top = '10vh'
-  left = '30vw'
+  left = '65vh'
 
   setPopup = () => {
     this.togglePopup()
