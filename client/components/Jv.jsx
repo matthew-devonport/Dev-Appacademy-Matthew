@@ -8,6 +8,10 @@ import { getVideos } from '../apiClient'
 class Jv extends Room {
   constructor(props) {
     super(props)
+    this.setVideos()
+  }
+
+  setVideos = () => {
     getVideos().then(result => {
       this.setState({
         videos: result.videos,
@@ -27,17 +31,17 @@ class Jv extends Room {
   }
 
   render() {
-    console.log("this one's for you JV!  **Thumps chest**")
+    console.log("this one's for you JV!  **Blows Kiss**")
     console.log('               __________')
     console.log("             .'----------`.")
     console.log('             | .--------. |')
     console.log('             | |########| |       __________')
-    console.log('             | |########| |      /__________ ')
+    console.log('             | |########| |      /__________| ')
     console.log("    .--------| `--------' |------|    --=-- |-------------.")
     console.log("    |        `----,-.-----'      |o ======  |             | ")
-    console.log('    |       ______|_|_______     |__________|             | ')
-    console.log('    |      /  %%%%%%%%%%%%                               | ')
-    console.log('    |     /  %%%%%%%%%%%%%%                              | ')
+    console.log('    |       ______|_|_________   |__________|             | ')
+    console.log('    |      /  %%%%%%%%%%%%    |                           | ')
+    console.log('    |     /  %%%%%%%%%%%%%%   |                           | ')
     console.log('    |     ^^^^^^^^^^^^^^^^^^^^                            | ')
     console.log('    +-----------------------------------------------------+')
     console.log('    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ ')
