@@ -35,8 +35,7 @@ describe('<Ollie /> Component', () => {
   test('Questions get put into state', async () => {
     await instance.setQuestions()
     expect.assertions(1)
-    console.log(instance.state)
-    expect(instance.state.questions.length).toBe(2) 
+    expect(instance.state.questions.length).toBe(2)
   })
 
   test("clicking ollie-popUp div calls popup", () => {
