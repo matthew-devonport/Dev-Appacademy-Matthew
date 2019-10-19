@@ -33,7 +33,7 @@ class Room extends React.Component {
   }
 
   setQuoteInterval = () => {
-    let interval = setInterval(this.toggleQuote, 15000)
+    let interval = setInterval(this.toggleQuote, 8000)
     this.setState({
       interval: interval
     })

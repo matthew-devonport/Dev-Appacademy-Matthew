@@ -75,8 +75,8 @@ class Jv extends Room {
               <React.Fragment>
                 <h1 className='popupTitle'>{this.videoTitle}</h1>
                 <iframe
-                  width='800'
-                  height='450'
+                  width='600'
+                  height='350'
                   src={this.videoSrc}
                   frameBorder='0'
                   allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
