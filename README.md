@@ -1,3 +1,8 @@
+Site is live at:
+
+https://dev-appcademy.herokuapp.com/
+
+
 # Dev-Appcademy
 
 ## Team agreements
